@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ============================================================= -->
+<!--  ROOFING DEMO TEMPLATE  ·  Lakefront Web Studio               -->
+<!--  TO RE-SKIN FOR A NEW CLIENT, EDIT ONLY:                      -->
+<!--   1. The <title> + meta below                                 -->
+<!--   2. Every span/text marked  <!-- EDIT -->                    -->
+<!--   3. The --accent color in :root (one line)                   -->
+<!--   4. Phone number: search & replace 773-555-0199              -->
+<!--  Everything is plain HTML = good for Google SEO.              -->
+<!-- ============================================================= -->
+
+<title>Smart Roofers | Roofing Contractor in Chicago</title>
+<meta name="description" content="Licensed, insured Chicago roofing contractor. Free same-day roof inspections, storm damage repair, and full replacements. Call for a free estimate." /> <!-- EDIT -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --accent:#7c3aed;
+    --accent-dark:#5b21b6;
+    --ink:#14181d;             /* near-black charcoal */
+    --ink-soft:#2a3138;
+    --paper:#f7f5f1;           /* warm off-white */
+    --paper-2:#ece8e1;
+    --line:rgba(255,255,255,.12);
+    --shadow:0 20px 50px -15px rgba(0,0,0,.45);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Hanken Grotesk",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:"Anton",sans-serif;font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  .accent{color:var(--accent)}
+
+  /* ---- Buttons ---- */
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.95rem;padding:15px 26px;border-radius:6px;transition:transform .15s ease,box-shadow .2s ease;cursor:pointer;border:none}
+  .btn-primary{background:var(--accent);color:var(--ink)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px -8px var(--accent)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .btn-lg{padding:18px 34px;font-size:1.05rem}
+
+  /* ---- Header ---- */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(20,24,29,.0);transition:background .3s,box-shadow .3s,padding .3s;padding:18px 0}
+  header.scrolled{background:rgba(20,24,29,.97);box-shadow:0 6px 24px rgba(0,0,0,.25);padding:12px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:"Anton";font-size:1.5rem;color:#fff;text-transform:uppercase;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+  .logo .mark{width:34px;height:34px;background:var(--accent);border-radius:7px;display:grid;place-items:center;color:var(--ink);font-size:1rem;transform:rotate(-8deg)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{color:#e8e6e1;font-weight:600;font-size:.95rem;transition:color .2s}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-cta{display:flex;align-items:center;gap:16px}
+  .nav-phone{color:#fff;font-weight:800;font-size:1.05rem;display:flex;align-items:center;gap:7px}
+  .nav-phone:hover{color:var(--accent)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:2.5px;background:#fff;border-radius:2px;transition:.3s}
+
+  /* ---- Hero ---- */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;
+    background:linear-gradient(105deg,rgba(15,18,22,.96) 0%,rgba(15,18,22,.72) 55%,rgba(15,18,22,.4) 100%),
+    url("https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=1740&auto=format&fit=crop") center/cover}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(245,158,11,.18),transparent 45%);pointer-events:none}
+  .hero-inner{position:relative;z-index:2;padding:120px 0 60px;max-width:760px}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.35);color:var(--accent);padding:8px 16px;border-radius:100px;font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:26px}
+  .hero h1{font-size:clamp(2.8rem,7vw,5.6rem);color:#fff}
+  .hero h1 .accent{display:inline-block}
+  .hero p{font-size:1.2rem;color:#cfcdc8;margin:24px 0 36px;max-width:560px}
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+  .trust-strip{display:flex;gap:34px;flex-wrap:wrap;margin-top:48px;padding-top:30px;border-top:1px solid var(--line)}
+  .trust-strip .item{display:flex;flex-direction:column}
+  .trust-strip .num{font-family:"Anton";font-size:2.2rem;color:var(--accent);line-height:1}
+  .trust-strip .lbl{font-size:.85rem;color:#b9b7b2;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+
+  /* ---- Reveal anim ---- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---- Sections ---- */
+  section{padding:96px 0}
+  .sec-head{max-width:640px;margin-bottom:54px}
+  .sec-head .kicker{color:var(--accent);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem}
+  .sec-head h2{font-size:clamp(2rem,4.5vw,3.2rem);margin-top:14px}
+  .sec-head p{color:#586068;margin-top:16px;font-size:1.08rem}
+
+  /* Services */
+  .services{background:var(--ink);color:#fff}
+  .services .sec-head p{color:#a8a6a1}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:var(--ink-soft);border:1px solid var(--line);border-radius:12px;padding:34px 28px;transition:transform .25s,border-color .25s,background .25s}
+  .card:hover{transform:translateY(-6px);border-color:var(--accent);background:#323a42}
+  .card .ic{width:52px;height:52px;border-radius:10px;background:rgba(245,158,11,.15);display:grid;place-items:center;font-size:1.5rem;margin-bottom:20px}
+  .card h3{font-size:1.3rem;color:#fff;margin-bottom:10px}
+  .card p{color:#a8a6a1;font-size:.97rem}
+
+  /* Process */
+  .process .grid{grid-template-columns:repeat(4,1fr)}
+  .step{padding:8px}
+  .step .n{font-family:"Anton";font-size:3rem;color:var(--paper-2);line-height:1;-webkit-text-stroke:1.5px var(--accent);color:transparent}
+  .step h3{font-size:1.15rem;margin:12px 0 8px}
+  .step p{color:#586068;font-size:.96rem}
+
+  /* Gallery */
+  .gallery{background:var(--paper-2)}
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .gal-grid img{width:100%;height:230px;object-fit:cover;border-radius:10px;transition:transform .4s;cursor:pointer}
+  .gal-grid img:hover{transform:scale(1.04)}
+  .gal-grid .tall{grid-row:span 2;height:auto}
+
+  /* Reviews */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:#fff;border:1px solid var(--paper-2);border-radius:12px;padding:30px;box-shadow:0 6px 24px -16px rgba(0,0,0,.3)}
+  .stars{color:var(--accent);font-size:1.1rem;letter-spacing:2px;margin-bottom:14px}
+  .review p{font-size:1rem;color:var(--ink-soft);font-style:italic}
+  .review .who{margin-top:18px;font-weight:700;font-size:.95rem}
+  .review .who span{display:block;color:#8a9098;font-weight:500;font-size:.85rem}
+
+  /* CTA / Quote */
+  .cta{background:linear-gradient(120deg,var(--ink),#1d242b);color:#fff;position:relative;overflow:hidden}
+  .cta::before{content:"";position:absolute;right:-100px;top:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(245,158,11,.22),transparent 70%)}
+  .cta-flex{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;position:relative;z-index:2}
+  .cta h2{font-size:clamp(2.2rem,5vw,3.6rem)}
+  .cta p{color:#bdbbb6;margin:18px 0 30px;font-size:1.1rem}
+  .qform{background:#fff;border-radius:16px;padding:34px;box-shadow:var(--shadow)}
+  .qform h3{font-family:"Hanken Grotesk";font-weight:800;text-transform:none;color:var(--ink);font-size:1.4rem;margin-bottom:6px}
+  .qform .sub{color:#8a9098;font-size:.92rem;margin-bottom:20px}
+  .qform input,.qform select{width:100%;padding:13px 15px;border:1.5px solid #e2ddd4;border-radius:8px;margin-bottom:13px;font-family:inherit;font-size:.97rem;color:var(--ink)}
+  .qform input:focus,.qform select:focus{outline:none;border-color:var(--accent)}
+  .qform .btn-primary{width:100%;justify-content:center}
+  .area-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:8px}
+  .area-tags span{background:var(--ink-soft);color:#cfcdc8;padding:7px 14px;border-radius:100px;font-size:.85rem;font-weight:600}
+
+  /* Footer */
+  footer{background:#0e1216;color:#9a9893;padding:60px 0 30px;font-size:.95rem}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+  footer .logo{margin-bottom:16px}
+  footer h4{color:#fff;font-weight:800;margin-bottom:14px;font-size:1rem}
+  footer a{display:block;margin-bottom:9px;transition:color .2s}
+  footer a:hover{color:var(--accent)}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.85rem;color:#6b6f74}
+
+  /* Mobile sticky call bar */
+  .callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--accent);padding:14px;text-align:center;font-weight:800;color:var(--ink);box-shadow:0 -4px 20px rgba(0,0,0,.3)}
+
+  /* Responsive */
+  @media(max-width:900px){
+    .grid,.rev-grid,.process .grid{grid-template-columns:1fr 1fr}
+    .gal-grid{grid-template-columns:1fr 1fr}
+    .cta-flex{grid-template-columns:1fr;gap:36px}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:640px){
+    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--ink);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .3s;box-shadow:var(--shadow)}
+    .nav-links.open{transform:none}
+    .nav-links a{font-size:1.2rem}
+    .burger{display:flex;z-index:70}
+    .nav-phone span{display:none}
+    .grid,.rev-grid,.process .grid,.gal-grid,.foot-grid{grid-template-columns:1fr}
+    .nav-cta .btn{display:none}
+    body{padding-bottom:56px}
+    .callbar{display:block}
+    section{padding:64px 0}
+    .trust-strip{gap:24px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="hd">
+  <div class="wrap nav">
+    <a href="#" class="logo"><span class="mark">▲</span>Smart Roofers</a> <!-- EDIT name -->
+    <nav class="nav-links" id="navlinks">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#work">Our Work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#quote">Free Estimate</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:" class="nav-phone">📞 <span>(XXX) XXX-XXXX</span></a> <!-- EDIT phone -->
+      <a href="#quote" class="btn btn-primary">Free Inspection</a>
+      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow reveal">● Licensed & Insured · Serving Chicago & NW Suburbs</span>
+    <h1 class="reveal">A Roof You Can <span class="accent">Trust</span> Over Your Family&#39;s Head.</h1>
+    <p class="reveal">Trusted Chicago roofing for years. Storm damage, leaks, or a full replacement — we&#39;ll be out for a <strong>free inspection today.</strong></p>
+    <div class="hero-btns reveal">
+      <a href="#quote" class="btn btn-primary btn-lg">Get My Free Estimate →</a>
+      <a href="tel:" class="btn btn-ghost btn-lg">📞 Call (XXX) XXX-XXXX</a> <!-- EDIT -->
+    </div>
+    <div class="trust-strip reveal">
+      <div class="item"><span class="num">18+</span><span class="lbl">Years in Business</span></div>
+      <div class="item"><span class="num">1,300+</span><span class="lbl">Roofs Completed</span></div>
+      <div class="item"><span class="num">4.8★</span><span class="lbl">Google Rating</span></div>
+      <div class="item"><span class="num">10yr</span><span class="lbl">Workmanship Warranty</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">What We Do</span>
+      <h2>Full-Service Roofing,<br>Done Right the First Time.</h2>
+    </div>
+    <div class="grid">
+      <div class="card reveal"><div class="ic">🏠</div><h3>Roof Replacement</h3><p>Complete tear-offs and new installs in asphalt shingle, architectural, and designer systems built to last decades.</p></div>
+      <div class="card reveal"><div class="ic">🔧</div><h3>Roof Repair</h3><p>Leaks, missing shingles, flashing, and ventilation fixed fast — before a small problem becomes a ceiling.</p></div>
+      <div class="card reveal"><div class="ic">⛈️</div><h3>Storm &amp; Hail Damage</h3><p>Free damage assessments and full insurance-claim support. We deal with the adjuster so you don&#39;t have to.</p></div>
+      <div class="card reveal"><div class="ic">🏢</div><h3>Flat &amp; Commercial</h3><p>TPO, EPDM, and modified-bitumen flat-roof systems for two-flats, commercial buildings, and additions.</p></div>
+      <div class="card reveal"><div class="ic">💧</div><h3>Gutters &amp; Soffit</h3><p>Seamless gutters, downspouts, soffit, and fascia to move water away and protect your foundation.</p></div>
+      <div class="card reveal"><div class="ic">🔍</div><h3>Free Inspections</h3><p>Honest, no-pressure roof inspections with photos. We&#39;ll tell you if it can wait — and mean it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">How It Works</span>
+      <h2>Four Steps. Zero Surprises.</h2>
+    </div>
+    <div class="grid">
+      <div class="step reveal"><div class="n">01</div><h3>Free Inspection</h3><p>We come out, take photos, and give you a straight answer — usually same day.</p></div>
+      <div class="step reveal"><div class="n">02</div><h3>Clear Quote</h3><p>A written, fixed-price estimate with no hidden fees and a clear scope of work.</p></div>
+      <div class="step reveal"><div class="n">03</div><h3>Expert Install</h3><p>Our own crews — never subbed out — protect your property and finish on schedule.</p></div>
+      <div class="step reveal"><div class="n">04</div><h3>Final Walkthrough</h3><p>We clean up every nail, walk the job with you, and back it with a written warranty.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Recent Work</span>
+      <h2>Recent Work We're Proud Of.</h2>
+    </div>
+    <div class="gal-grid reveal">
+      <img class="tall" src="https://images.unsplash.com/photo-1635424635889-3c8c0a3a1f47?q=80&w=800&auto=format&fit=crop" alt="Roofing project">
+      <img src="https://images.unsplash.com/photo-1599619585752-c3edb42a414c?q=80&w=800&auto=format&fit=crop" alt="New roof">
+      <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=800&auto=format&fit=crop" alt="Roof install">
+      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop" alt="Home exterior">
+      <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=800&auto=format&fit=crop" alt="Shingle roof">
+      <img class="tall" src="https://images.unsplash.com/photo-1591588582259-e675bd2e6088?q=80&w=800&auto=format&fit=crop" alt="Roof detail">
+      <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop" alt="Completed roof">
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Don't Take Our Word For It</span>
+      <h2>Neighbors Who Trust Us.</h2>
+    </div>
+    <div class="rev-grid">
+      <div class="review reveal"><div class="stars">★★★★★</div><p>"They were out the next morning, handled everything including the insurance claim, and the work looks incredible. Couldn't recommend them more."</p><div class="who">Maria G.<span>Jefferson Park, Chicago</span></div></div>
+      <div class="review reveal"><div class="stars">★★★★★</div><p>"Got three quotes. They weren't the cheapest, but they were the only ones who showed up on time and showed me photos of everything. No regrets — crew was spotless."</p><div class="who">Dave R.<span>Oak Park, IL</span></div></div>
+      <div class="review reveal"><div class="stars">★★★★★</div><p>"Honest people. They told me it could wait and just needed a small repair instead of selling me the big job. That earned my business for life."</p><div class="who">Jim & Sandra T.<span>Berwyn, IL</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA / QUOTE ============ -->
+<section class="cta" id="quote">
+  <div class="wrap cta-flex">
+    <div class="reveal">
+      <h2>Get Your Free Roof<br>Inspection Today.</h2>
+      <p>No pressure, no obligation, no gimmicks. We'll take a look, send you photos, and give you an honest assessment — often the same day you call.</p>
+      <a href="tel:" class="btn btn-primary btn-lg">📞 (XXX) XXX-XXXX</a> <!-- EDIT -->
+      <div class="area-tags">
+        <span>Chicago</span><span>Oak Park</span><span>Evanston</span><span>Berwyn</span><span>Cicero</span><span>Skokie</span><span>+ all suburbs</span> <!-- EDIT areas -->
+      </div>
+    </div>
+    <div class="qform reveal">
+      <h3>Request a Free Estimate</h3>
+      <p class="sub">Fill this out and we'll call you back within the hour.</p>
+      <!-- EDIT: replace action with your Formspree endpoint, or leave mailto for the demo -->
+      <form action="https://formspree.io/f/your-id-here" method="POST">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="tel" name="phone" placeholder="Phone number" required>
+        <input type="text" name="address" placeholder="Property address" required>
+        <select name="service">
+          <option value="">What do you need?</option>
+          <option>Roof Replacement</option>
+          <option>Roof Repair</option>
+          <option>Storm / Hail Damage</option>
+          <option>Flat / Commercial Roof</option>
+          <option>Gutters</option>
+          <option>Not sure — need an inspection</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Get My Free Estimate →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="logo"><span class="mark">▲</span>Smart Roofers</a> <!-- EDIT -->
+        <p>Chicago's trusted, family-owned roofing contractor since 2003. Licensed, bonded, and insured. IL Roofing Lic. #XXX-XXXXXX.</p> <!-- EDIT license -->
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Roof Replacement</a>
+        <a href="#services">Roof Repair</a>
+        <a href="#services">Storm Damage</a>
+        <a href="#services">Flat & Commercial</a>
+        <a href="#services">Gutters</a>
+      </div>
+      <div>
+        <h4>Get In Touch</h4>
+        <a href="tel:">📞 (XXX) XXX-XXXX</a> <!-- EDIT -->
+        <a href="mailto:info@smartroofers.com">✉ info@smartroofers.com</a> <!-- EDIT -->
+        <a href="#quote">Free Estimate</a>
+        <p style="margin-top:10px">Mon–Sat · 7am–7pm</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Smart Roofers All rights reserved.</span> <!-- EDIT -->
+      <span>Site by Nimbus Web Studio</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:" class="callbar">📞 Tap to Call — Free Inspection</a> <!-- EDIT -->
+
+<script>
+  // Header background on scroll
+  const hd=document.getElementById('hd');
+  addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>40));
+  // Mobile menu
+  const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+  burger.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+  // Scroll reveals (staggered)
+  const io=new IntersectionObserver((es)=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*60);io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // Demo form guard (so the demo doesn't error before Formspree is set up)
+  document.querySelector('form').addEventListener('submit',function(ev){
+    if(this.action.includes('your-id-here')){ev.preventDefault();alert('✅ Demo form — this is where leads get emailed to the roofer. (Connect Formspree to go live.)');}
+  });
+</script>
+</body>
+</html>
