@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- NIMBUS TEMPLATE I · "Luxury" · near-black ground, metallic accent hairlines, refined serif display, understated upscale -->
+<title>Marek 4Ever Remodeling | Remodeling &amp; General Contractor in Chicago</title>
+<meta name="description" content="Marek 4Ever Remodeling — licensed, insured, serving Niles. Free estimates and quality work backed by a written warranty." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#16a34a; --accent-dark:#15803d;
+    --bg:#0c0d10; --bg-2:#14161b; --bg-3:#1b1e25; --ink:#f3f1ec; --ink-soft:#9a9b9f;
+    --line:rgba(255,255,255,.1); --radius:13px; --shadow:0 36px 80px -30px rgba(0,0,0,.7);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:"Archivo Black",serif;line-height:1.08;letter-spacing:-.005em;font-weight:500}
+  a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;padding:15px 32px;border-radius:var(--radius);transition:transform .2s,background .25s,color .25s,border-color .25s;cursor:pointer;border:none}
+  .btn-gold{background:var(--accent);color:#0c0d10}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px var(--accent)}
+  .btn-line{background:transparent;color:var(--ink);border:1px solid rgba(255,255,255,.28)}
+  .btn-line:hover{border-color:var(--accent);color:var(--accent)}
+  .btn-lg{padding:18px 38px;font-size:.9rem}
+  .kicker{display:inline-flex;align-items:center;gap:12px;color:var(--accent);font-family:"Inter";font-weight:600;letter-spacing:.28em;text-transform:uppercase;font-size:.72rem}
+  .kicker::before{content:"";width:34px;height:1px;background:var(--accent)}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:50;padding:24px 0;transition:.35s}
+  header.scrolled{background:rgba(12,13,16,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:15px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:"Archivo Black";font-size:1.6rem;display:flex;align-items:center;gap:12px;color:var(--ink);font-weight:500}
+  .logo .mark{width:38px;height:38px;border:1px solid var(--accent);color:var(--accent);border-radius:50%;display:grid;place-items:center;font-size:.95rem;font-family:"Inter";font-weight:700}
+  .nav-links{display:flex;gap:34px;align-items:center}
+  .nav-links a{color:var(--ink-soft);font-weight:500;font-size:.88rem;letter-spacing:.04em;transition:color .2s}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-cta{display:flex;align-items:center;gap:18px}
+  .nav-phone{font-weight:600;color:var(--ink);letter-spacing:.03em}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:2px;background:var(--ink);border-radius:2px}
+
+  /* Hero — full-bleed dark image with veil */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.42}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 18%,rgba(12,13,16,.55) 60%,rgba(12,13,16,.78))}
+  .hero-inner{position:relative;z-index:2;max-width:720px;padding:130px 0 70px}
+  .hero .kicker{margin-bottom:26px}
+  .hero h1{font-size:clamp(2.9rem,7vw,5.6rem)}
+  .hero h1 .accent{color:var(--accent);font-style:italic}
+  .hero p{font-size:1.18rem;color:var(--ink-soft);margin:26px 0 38px;max-width:520px}
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+
+  /* Stats — gold hairline strip */
+  .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+  .stat-card{padding:48px 26px;text-align:center;border-right:1px solid var(--line)}
+  .stat-card:last-child{border-right:none}
+  .stat-card .num{font-family:"Archivo Black";font-size:2.9rem;line-height:1;color:var(--accent);font-weight:500}
+  .stat-card .lbl{font-family:"Inter";font-size:.74rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.18em;margin-top:12px;font-weight:600}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}
+  section{padding:110px 0}
+  .sec-head{max-width:680px;margin:0 auto 64px;text-align:center}
+  .sec-head .kicker{justify-content:center}.sec-head .kicker::after{content:"";width:34px;height:1px;background:var(--accent)}
+  .sec-head h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-top:20px}
+  .sec-head h2 .accent{color:var(--accent);font-style:italic}
+
+  /* Services — refined dark cards, gold hairline border */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:42px 34px;transition:transform .3s,border-color .3s,background .3s}
+  .card:hover{transform:translateY(-7px);border-color:var(--accent);background:var(--bg-3)}
+  .card .ic{width:64px;height:64px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;font-size:1.6rem;margin-bottom:24px}
+  .card h3{font-size:1.4rem;margin-bottom:12px;color:var(--ink)}.card p{color:var(--ink-soft);font-size:.97rem}
+
+  /* Why band */
+  .features{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+  .feat .fi{font-size:1.9rem;margin-bottom:18px}
+  .feat h3{font-size:1.3rem;margin-bottom:10px;color:var(--ink)}.feat p{color:var(--ink-soft);font-size:.96rem}
+  .feat-divider{width:1px;height:46px;background:var(--accent);margin:0 auto 22px;opacity:.6}
+
+  /* Gallery */
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:185px;gap:16px}
+  .gal-grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);transition:transform .5s,filter .5s;filter:brightness(.82) saturate(.9)}
+  .gal-grid img:hover{transform:scale(1.03);filter:brightness(1) saturate(1.05)}
+  .gal-grid .tall{grid-row:span 2}
+
+  /* Reviews — understated quote cards */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .review{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:38px 32px;position:relative}
+  .review::before{content:"\201C";font-family:"Archivo Black";font-size:4rem;color:var(--accent);line-height:.6;opacity:.4;position:absolute;top:24px;right:26px}
+  .stars{color:var(--accent);letter-spacing:3px;margin-bottom:16px}
+  .review p{font-family:"Archivo Black";font-size:1.18rem;color:var(--ink);font-style:italic;line-height:1.5}
+  .review .who{margin-top:22px;font-weight:600;font-size:.92rem;letter-spacing:.04em;color:var(--accent)}.review .who span{display:block;color:var(--ink-soft);font-weight:400;font-size:.84rem;letter-spacing:0;margin-top:3px;font-family:"Inter"}
+
+  /* CTA — dark elegant with gold form */
+  .cta{background:var(--bg-2);border-top:1px solid var(--line);text-align:center}
+  .cta h2{font-size:clamp(2.2rem,5.5vw,3.8rem)}
+  .cta h2 .accent{color:var(--accent);font-style:italic}
+  .cta>.wrap>.reveal>p{color:var(--ink-soft);margin:18px auto 36px;max-width:560px;font-size:1.12rem}
+  .qform{background:var(--bg-3);border:1px solid var(--line);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);max-width:560px;margin:0 auto;text-align:left}
+  .qform h3{font-family:"Archivo Black";font-size:1.6rem;margin-bottom:6px;color:var(--ink)}
+  .qform .sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:22px}
+  .qform-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .qform input,.qform select{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:8px;margin-bottom:14px;font-family:inherit;font-size:.97rem;background:var(--bg);color:var(--ink)}
+  .qform input::placeholder{color:var(--ink-soft)}
+  .qform input:focus,.qform select:focus{outline:none;border-color:var(--accent)}
+  .qform option{background:var(--bg-2);color:var(--ink)}
+  .qform .btn-gold{width:100%;justify-content:center;margin-top:4px}
+
+  footer{background:var(--bg);border-top:1px solid var(--line);color:var(--ink-soft);padding:70px 0 32px;font-size:.94rem}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;margin-bottom:46px}
+  footer .logo{color:var(--ink);margin-bottom:16px}
+  footer h4{color:var(--ink);font-weight:600;margin-bottom:15px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase}
+  footer a{display:block;margin-bottom:10px}footer a:hover{color:var(--accent)}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem;color:#6b6c70}
+  .callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--accent);padding:14px;text-align:center;font-weight:700;letter-spacing:.04em;color:#0c0d10}
+
+  @media(max-width:980px){
+    .stat-grid{grid-template-columns:1fr 1fr}.stat-card:nth-child(2){border-right:none}
+    .grid,.feat-grid,.rev-grid{grid-template-columns:1fr 1fr}
+    .gal-grid{grid-template-columns:1fr 1fr}.foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:640px){
+    .nav-links{position:fixed;inset:0 0 0 auto;width:82%;max-width:330px;background:var(--bg-2);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:transform .3s;box-shadow:var(--shadow);z-index:60}
+    .nav-links.open{transform:none}
+    .burger{display:flex;z-index:70}.nav-cta .btn,.nav-phone span{display:none}
+    .stat-grid,.grid,.feat-grid,.rev-grid,.gal-grid,.foot-grid,.qform-row{grid-template-columns:1fr}
+    .stat-card{border-right:none;border-bottom:1px solid var(--line)}
+    .gal-grid .tall{grid-row:span 1}
+    body{padding-bottom:56px}.callbar{display:block}section{padding:70px 0}
+  }
+</style>
+</head>
+<body>
+<header id="hd"><div class="wrap nav">
+  <a href="#" class="logo"><span class="mark">Marek 4Ever Remodeling</span>Marek 4Ever Remodeling</a>
+  <nav class="nav-links" id="navlinks">
+    <a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#quote">Free Estimate</a>
+  </nav>
+  <div class="nav-cta">
+    <a href="tel:3126190968" class="nav-phone">📞 <span>(312) 619-0968</span></a>
+    <a href="#quote" class="btn btn-gold">Free Estimate</a>
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+  </div>
+</div></header>
+
+<section class="hero">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1601760561441-16420502c7e0?q=80&w=1600&auto=format&fit=crop" alt="Marek 4Ever Remodeling work"></div>
+  <div class="wrap"><div class="hero-inner">
+    <span class="kicker reveal">Licensed &amp; Insured · Niles</span>
+    <h1 class="reveal">Remodeling That <span class="accent">Transforms</span> the Way You Live.</h1>
+    <p class="reveal">Trusted Chicago remodeling &amp; general contracting for years. Kitchens, baths, basements, and full renovations — we&#39;ll be out for a <strong>free estimate today.</strong></p>
+    <div class="hero-btns reveal">
+      <a href="#quote" class="btn btn-gold btn-lg">Request a Free Estimate</a>
+      <a href="tel:3126190968" class="btn btn-line btn-lg">📞 (312) 619-0968</a>
+    </div>
+  </div></div>
+</section>
+
+<div class="stats"><div class="wrap stat-grid">
+  <div class="stat-card reveal"><div class="num">15+</div><div class="lbl">Years</div></div>
+  <div class="stat-card reveal"><div class="num">1,000+</div><div class="lbl">Projects Completed</div></div>
+  <div class="stat-card reveal"><div class="num">4.8★</div><div class="lbl">Google Rating</div></div>
+  <div class="stat-card reveal"><div class="num">10yr</div><div class="lbl">Warranty</div></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">What We Do</span><h2>Full-Service Remodeling,<br>Done Right the First Time.</h2></div>
+  <div class="grid"><div class="card reveal"><div class="ic">🍳</div><h3>Kitchen Remodeling</h3><p>Full kitchen renovations — cabinets, counters, flooring, and lighting designed around how you actually cook and live.</p></div>
+      <div class="card reveal"><div class="ic">🛁</div><h3>Bath Remodeling</h3><p>Tubs, walk-in showers, vanities, and tile done clean, sealed right, and built to last.</p></div>
+      <div class="card reveal"><div class="ic">🏠</div><h3>Basement Finishing</h3><p>Turn an unfinished basement into living space — framing, drywall, egress, and waterproofing handled.</p></div>
+      <div class="card reveal"><div class="ic">🔨</div><h3>Additions &amp; Renovations</h3><p>Room additions, open-concept conversions, and whole-home renovations managed end to end.</p></div>
+      <div class="card reveal"><div class="ic">🧱</div><h3>Drywall &amp; Carpentry</h3><p>Drywall, trim, doors, and finish carpentry that make the whole job look right.</p></div>
+      <div class="card reveal"><div class="ic">🔍</div><h3>Free Estimates</h3><p>Honest, no-pressure estimates with a clear scope and timeline. No surprises.</p></div></div>
+</div></section>
+
+<section class="features" id="why"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Why Choose Us</span><h2>Built on Trust, <span class="accent">Backed in Writing.</span></h2></div>
+  <div class="feat-grid">
+    <div class="feat reveal"><div class="feat-divider"></div><div class="fi">🛡️</div><h3>Licensed &amp; Insured</h3><p>Fully licensed, bonded, and insured — your property is protected on every job.</p></div>
+    <div class="feat reveal"><div class="feat-divider"></div><div class="fi">📋</div><h3>Free, Honest Estimates</h3><p>Clear written quotes, no hidden fees, and we'll tell you what can wait.</p></div>
+    <div class="feat reveal"><div class="feat-divider"></div><div class="fi">✅</div><h3>Written Warranty</h3><p>Every job is backed by a workmanship warranty you can hold us to.</p></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Recent Work</span><h2>Projects We're <span class="accent">Proud Of.</span></h2></div>
+  <div class="gal-grid reveal"><img class="tall" src="https://images.unsplash.com/photo-1682888813913-e13f18692019?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1665507279638-5b48073c637b?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1571843439991-dd2b8e051966?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1591924450983-b8f7587ea332?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1682888813789-c39fe30921e2?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="tall" src="https://images.unsplash.com/photo-1687942918532-69295473701d?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy"></div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Reviews</span><h2>Clients Who <span class="accent">Trust Us.</span></h2></div>
+  <div class="rev-grid">
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"They were out the next morning, handled everything, and the work looks incredible."</p><div class="who">Maria G.<span>Jefferson Park, Chicago</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"The only ones who showed up on time and showed me photos of everything. No regrets."</p><div class="who">Dave R.<span>Oak Park, IL</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"Honest people. They told me what could wait instead of overselling me."</p><div class="who">Jim &amp; Sandra T.<span>Berwyn, IL</span></div></div>
+  </div>
+</div></section>
+
+<section class="cta" id="quote"><div class="wrap">
+  <div class="reveal" style="margin-bottom:40px">
+    <span class="kicker" style="margin-bottom:18px">Get Started</span>
+    <h2>Get Your Free Remodeling<br>Estimate Today.</h2>
+    <p>No pressure, no obligation. We'll take a look, send you photos, and give you an honest assessment — often the same day you call.</p>
+  </div>
+  <div class="qform reveal">
+    <h3>Request a Free Estimate</h3>
+    <p class="sub">Fill this out and we'll call you back within the hour.</p>
+    <form action="https://formspree.io/f/your-id-here" method="POST">
+      <div class="qform-row"><input type="text" name="name" placeholder="Your name" required><input type="tel" name="phone" placeholder="Phone number" required></div>
+      <input type="text" name="address" placeholder="Property address" required>
+      <select name="service"><option value="">What do you need?</option><option>New project / installation</option><option>Repair</option><option>Not sure — need an estimate</option></select>
+      <button type="submit" class="btn btn-gold">Get My Free Estimate</button>
+    </form>
+  </div>
+</div></section>
+
+<section id="nbx"><style>#nbx{background:#0f1318;color:#e8eaed;padding:48px 24px;font-family:inherit;line-height:1.6}#nbx *{box-sizing:border-box}#nbx .nbx-wrap{max-width:1080px;margin:0 auto;text-align:center}#nbx .nbx-kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#16a34a;font-weight:800;margin-bottom:16px}#nbx .nbx-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px}#nbx .nbx-chip{border:1px solid #16a34a;color:#fff;border-radius:100px;padding:8px 16px;font-size:.85rem;font-weight:600;white-space:nowrap}#nbx .nbx-line{color:#c2c8d0;font-size:1.02rem;margin:6px 0}#nbx .nbx-line b{color:#fff;font-weight:700}#nbx .nbx-area{color:#9aa1aa;font-size:.92rem;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto}#nbx .nbx-cta{display:inline-flex;align-items:center;gap:8px;margin-top:22px;background:#16a34a;color:#fff;font-weight:800;padding:14px 30px;border-radius:8px;text-decoration:none}</style><div class="nbx-wrap"><div class="nbx-kicker">Why Chicago homeowners choose Marek 4Ever Remodeling</div><div class="nbx-chips"><span class="nbx-chip">✓ Licensed & Insured</span><span class="nbx-chip">✓ Free Design Consultation</span><span class="nbx-chip">✓ Workmanship Warranty</span><span class="nbx-chip">✓ Locally Owned</span></div><div class="nbx-line">💳 <b>Financing & flexible payment plans</b></div><div class="nbx-area">📍 Proudly serving Niles — plus Chicago, Oak Park, Evanston, Berwyn, Cicero, Skokie &amp; all surrounding suburbs.</div><a class="nbx-cta" href="tel:3126190968">📞 (312) 619-0968</a></div></section><footer><div class="wrap">
+  <div class="foot-grid">
+    <div><a href="#" class="logo"><span class="mark">Marek 4Ever Remodeling</span>Marek 4Ever Remodeling</a><p>Chicago's trusted, family-owned Remodeling &amp; General Contractor in Chicago. Licensed, bonded, and insured. Serving Niles.</p></div>
+    <div><h4>Company</h4><a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">Our Work</a><a href="#quote">Free Estimate</a></div>
+    <div><h4>Get In Touch</h4><a href="tel:3126190968">📞 (312) 619-0968</a><a href="mailto:marek4everremodeling@gmail.com">✉ marek4everremodeling@gmail.com</a><p style="margin-top:10px">Mon–Sat · 7am–7pm</p></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Marek 4Ever Remodeling All rights reserved.</span><span>Site by Nimbus Web Studio</span></div>
+</div></footer>
+<a href="tel:3126190968" class="callbar">📞 Tap to Call — Free Estimate</a>
+<script>
+const hd=document.getElementById('hd');if(hd)addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>40));
+const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+if(burger)burger.addEventListener('click',()=>links.classList.toggle('open'));
+if(links)links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const io=new IntersectionObserver((es)=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*55);io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const f=document.querySelector('form');if(f)f.addEventListener('submit',function(ev){if(this.action.includes('your-id-here')){ev.preventDefault();alert('✅ Demo form — this is where leads get emailed to the business. (Connect Formspree to go live.)');}});
+</script>
+</body>
+</html>
