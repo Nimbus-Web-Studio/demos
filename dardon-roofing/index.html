@@ -19,7 +19,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
   :root{
@@ -31,17 +31,18 @@
     --paper-2:#ece8e1;
     --line:rgba(255,255,255,.12);
     --shadow:0 20px 50px -15px rgba(0,0,0,.45);
+    --radius:6px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:"Hanken Grotesk",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,.display{font-family:"Anton",sans-serif;font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+  body{font-family:"Work Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:"Oswald",sans-serif;font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
   .accent{color:var(--accent)}
 
   /* ---- Buttons ---- */
-  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.95rem;padding:15px 26px;border-radius:6px;transition:transform .15s ease,box-shadow .2s ease;cursor:pointer;border:none}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.95rem;padding:15px 26px;border-radius:var(--radius);transition:transform .15s ease,box-shadow .2s ease;cursor:pointer;border:none}
   .btn-primary{background:var(--accent);color:var(--ink)}
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px -8px var(--accent)}
   .btn-ghost{background:transparent;color:#fff;border:1.5px solid var(--line)}
@@ -52,7 +53,7 @@
   header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(20,24,29,.0);transition:background .3s,box-shadow .3s,padding .3s;padding:18px 0}
   header.scrolled{background:rgba(20,24,29,.97);box-shadow:0 6px 24px rgba(0,0,0,.25);padding:12px 0}
   .nav{display:flex;align-items:center;justify-content:space-between}
-  .logo{font-family:"Anton";font-size:1.5rem;color:#fff;text-transform:uppercase;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+  .logo{font-family:"Oswald";font-size:1.5rem;color:#fff;text-transform:uppercase;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
   .logo .mark{width:34px;height:34px;background:var(--accent);border-radius:7px;display:grid;place-items:center;color:var(--ink);font-size:1rem;transform:rotate(-8deg)}
   .nav-links{display:flex;gap:30px;align-items:center}
   .nav-links a{color:#e8e6e1;font-weight:600;font-size:.95rem;transition:color .2s}
@@ -66,9 +67,16 @@
   /* ---- Hero ---- */
   .hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;
     background:linear-gradient(105deg,rgba(15,18,22,.96) 0%,rgba(15,18,22,.72) 55%,rgba(15,18,22,.4) 100%),
-    url("https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=1740&auto=format&fit=crop") center/cover}
+    url("https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?q=80&w=1600&auto=format&fit=crop") center/cover}
   .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(245,158,11,.18),transparent 45%);pointer-events:none}
   .hero-inner{position:relative;z-index:2;padding:120px 0 60px;max-width:760px}
+  /* centered hero variant */
+  .hero.centered{justify-content:center;text-align:center;
+    background:linear-gradient(180deg,rgba(15,18,22,.9) 0%,rgba(15,18,22,.62) 100%),
+    url("https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?q=80&w=1600&auto=format&fit=crop") center/cover}
+  .hero.centered .hero-inner{margin:0 auto;padding-top:140px}
+  .hero.centered .hero p{margin-left:auto;margin-right:auto}
+  .hero.centered .hero-btns,.hero.centered .trust-strip{justify-content:center}
   .eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.35);color:var(--accent);padding:8px 16px;border-radius:100px;font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:26px}
   .hero h1{font-size:clamp(2.8rem,7vw,5.6rem);color:#fff}
   .hero h1 .accent{display:inline-block}
@@ -76,7 +84,7 @@
   .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
   .trust-strip{display:flex;gap:34px;flex-wrap:wrap;margin-top:48px;padding-top:30px;border-top:1px solid var(--line)}
   .trust-strip .item{display:flex;flex-direction:column}
-  .trust-strip .num{font-family:"Anton";font-size:2.2rem;color:var(--accent);line-height:1}
+  .trust-strip .num{font-family:"Oswald";font-size:2.2rem;color:var(--accent);line-height:1}
   .trust-strip .lbl{font-size:.85rem;color:#b9b7b2;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
 
   /* ---- Reveal anim ---- */
@@ -103,7 +111,7 @@
   /* Process */
   .process .grid{grid-template-columns:repeat(4,1fr)}
   .step{padding:8px}
-  .step .n{font-family:"Anton";font-size:3rem;color:var(--paper-2);line-height:1;-webkit-text-stroke:1.5px var(--accent);color:transparent}
+  .step .n{font-family:"Oswald";font-size:3rem;color:var(--paper-2);line-height:1;-webkit-text-stroke:1.5px var(--accent);color:transparent}
   .step h3{font-size:1.15rem;margin:12px 0 8px}
   .step p{color:#586068;font-size:.96rem}
 
@@ -129,7 +137,7 @@
   .cta h2{font-size:clamp(2.2rem,5vw,3.6rem)}
   .cta p{color:#bdbbb6;margin:18px 0 30px;font-size:1.1rem}
   .qform{background:#fff;border-radius:16px;padding:34px;box-shadow:var(--shadow)}
-  .qform h3{font-family:"Hanken Grotesk";font-weight:800;text-transform:none;color:var(--ink);font-size:1.4rem;margin-bottom:6px}
+  .qform h3{font-family:"Work Sans";font-weight:800;text-transform:none;color:var(--ink);font-size:1.4rem;margin-bottom:6px}
   .qform .sub{color:#8a9098;font-size:.92rem;margin-bottom:20px}
   .qform input,.qform select{width:100%;padding:13px 15px;border:1.5px solid #e2ddd4;border-radius:8px;margin-bottom:13px;font-family:inherit;font-size:.97rem;color:var(--ink)}
   .qform input:focus,.qform select:focus{outline:none;border-color:var(--accent)}
@@ -193,7 +201,7 @@
 </header>
 
 <!-- ============ HERO ============ -->
-<section class="hero">
+<section class="hero ">
   <div class="wrap hero-inner">
     <span class="eyebrow reveal">● Licensed & Insured · Serving Chicago</span>
     <h1 class="reveal">A Roof You Can <span class="accent">Trust</span> Over Your Family&#39;s Head.</h1>
@@ -253,13 +261,13 @@
       <h2>Recent Work We're Proud Of.</h2>
     </div>
     <div class="gal-grid reveal">
-      <img class="tall" src="https://images.unsplash.com/photo-1635424635889-3c8c0a3a1f47?q=80&w=800&auto=format&fit=crop" alt="Roofing project">
-      <img src="https://images.unsplash.com/photo-1599619585752-c3edb42a414c?q=80&w=800&auto=format&fit=crop" alt="New roof">
-      <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=800&auto=format&fit=crop" alt="Roof install">
-      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop" alt="Home exterior">
-      <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=800&auto=format&fit=crop" alt="Shingle roof">
-      <img class="tall" src="https://images.unsplash.com/photo-1591588582259-e675bd2e6088?q=80&w=800&auto=format&fit=crop" alt="Roof detail">
-      <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop" alt="Completed roof">
+      <img class="tall" src="https://images.unsplash.com/photo-1635424824800-692767998d07?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1635424709961-f3a150459ad4?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1635424709870-cdc6e64f0e20?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1635424824849-1b09bdcc55b1?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1673645652590-9d21295bf4ac?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="tall" src="https://images.unsplash.com/photo-1518736346281-76873166a64a?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1605450099279-533bd3ce379a?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
     </div>
   </div>
 </section>

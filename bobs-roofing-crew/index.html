@@ -31,6 +31,7 @@
     --paper-2:#ece8e1;
     --line:rgba(255,255,255,.12);
     --shadow:0 20px 50px -15px rgba(0,0,0,.45);
+    --radius:13px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -41,7 +42,7 @@
   .accent{color:var(--accent)}
 
   /* ---- Buttons ---- */
-  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.95rem;padding:15px 26px;border-radius:6px;transition:transform .15s ease,box-shadow .2s ease;cursor:pointer;border:none}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.95rem;padding:15px 26px;border-radius:var(--radius);transition:transform .15s ease,box-shadow .2s ease;cursor:pointer;border:none}
   .btn-primary{background:var(--accent);color:var(--ink)}
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px -8px var(--accent)}
   .btn-ghost{background:transparent;color:#fff;border:1.5px solid var(--line)}
@@ -66,9 +67,16 @@
   /* ---- Hero ---- */
   .hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;
     background:linear-gradient(105deg,rgba(15,18,22,.96) 0%,rgba(15,18,22,.72) 55%,rgba(15,18,22,.4) 100%),
-    url("https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=1740&auto=format&fit=crop") center/cover}
+    url("https://images.unsplash.com/photo-1600612707884-c424a2ba812e?q=80&w=1600&auto=format&fit=crop") center/cover}
   .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(245,158,11,.18),transparent 45%);pointer-events:none}
   .hero-inner{position:relative;z-index:2;padding:120px 0 60px;max-width:760px}
+  /* centered hero variant */
+  .hero.centered{justify-content:center;text-align:center;
+    background:linear-gradient(180deg,rgba(15,18,22,.9) 0%,rgba(15,18,22,.62) 100%),
+    url("https://images.unsplash.com/photo-1600612707884-c424a2ba812e?q=80&w=1600&auto=format&fit=crop") center/cover}
+  .hero.centered .hero-inner{margin:0 auto;padding-top:140px}
+  .hero.centered .hero p{margin-left:auto;margin-right:auto}
+  .hero.centered .hero-btns,.hero.centered .trust-strip{justify-content:center}
   .eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.35);color:var(--accent);padding:8px 16px;border-radius:100px;font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:26px}
   .hero h1{font-size:clamp(2.8rem,7vw,5.6rem);color:#fff}
   .hero h1 .accent{display:inline-block}
@@ -193,7 +201,7 @@
 </header>
 
 <!-- ============ HERO ============ -->
-<section class="hero">
+<section class="hero centered">
   <div class="wrap hero-inner">
     <span class="eyebrow reveal">● Licensed & Insured · Serving Tinley Park</span>
     <h1 class="reveal">A Roof You Can <span class="accent">Trust</span> Over Your Family&#39;s Head.</h1>
@@ -253,13 +261,13 @@
       <h2>Recent Work We're Proud Of.</h2>
     </div>
     <div class="gal-grid reveal">
-      <img class="tall" src="https://images.unsplash.com/photo-1635424635889-3c8c0a3a1f47?q=80&w=800&auto=format&fit=crop" alt="Roofing project">
-      <img src="https://images.unsplash.com/photo-1599619585752-c3edb42a414c?q=80&w=800&auto=format&fit=crop" alt="New roof">
-      <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=800&auto=format&fit=crop" alt="Roof install">
-      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop" alt="Home exterior">
-      <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=800&auto=format&fit=crop" alt="Shingle roof">
-      <img class="tall" src="https://images.unsplash.com/photo-1591588582259-e675bd2e6088?q=80&w=800&auto=format&fit=crop" alt="Roof detail">
-      <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop" alt="Completed roof">
+      <img class="tall" src="https://images.unsplash.com/photo-1644604120663-4e5fcdf33104?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1682106446715-e16b19cfffb5?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1643225523483-e2c434191bba?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="tall" src="https://images.unsplash.com/photo-1635424824800-692767998d07?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1635424709961-f3a150459ad4?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
     </div>
   </div>
 </section>
