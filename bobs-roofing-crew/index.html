@@ -3,372 +3,261 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<!-- ============================================================= -->
-<!--  ROOFING DEMO TEMPLATE  ·  Lakefront Web Studio               -->
-<!--  TO RE-SKIN FOR A NEW CLIENT, EDIT ONLY:                      -->
-<!--   1. The <title> + meta below                                 -->
-<!--   2. Every span/text marked  <!-- EDIT -->                    -->
-<!--   3. The --accent color in :root (one line)                   -->
-<!--   4. Phone number: search & replace 773-555-0199              -->
-<!--  Everything is plain HTML = good for Google SEO.              -->
-<!-- ============================================================= -->
-
+<!-- NIMBUS TEMPLATE D · "Minimal / Swiss" · hairline rules, uppercase labels, near-monochrome, left-aligned grid, text-forward hero with small image -->
 <title>Bob's Roofing Crew | Roofing Contractor in Chicago</title>
-<meta name="description" content="Licensed, insured Chicago roofing contractor. Free same-day roof inspections, storm damage repair, and full replacements. Call for a free estimate." /> <!-- EDIT -->
-
+<meta name="description" content="Bob's Roofing Crew — licensed, insured, serving Tinley Park. Free estimates and quality work backed by a written warranty." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
 <style>
   :root{
-    --accent:#047857;
-    --accent-dark:#065f46;
-    --ink:#14181d;             /* near-black charcoal */
-    --ink-soft:#2a3138;
-    --paper:#f7f5f1;           /* warm off-white */
-    --paper-2:#ece8e1;
-    --line:rgba(255,255,255,.12);
-    --shadow:0 20px 50px -15px rgba(0,0,0,.45);
-    --radius:13px;
+    --accent:#047857; --accent-dark:#065f46;
+    --ink:#111315; --ink-soft:#6c7176; --paper:#ffffff; --paper-2:#f7f7f5;
+    --line:#e3e3e0; --line-strong:#111315; --radius:13px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:"Hanken Grotesk",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,.display{font-family:"Anton",sans-serif;font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
-  a{color:inherit;text-decoration:none}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-  .accent{color:var(--accent)}
+  body{font-family:"Hanken Grotesk",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:"Anton",sans-serif;line-height:1.06;letter-spacing:-.02em;font-weight:600}
+  a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+  .label{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+  .num-lg{font-family:"Anton";font-weight:600}
 
-  /* ---- Buttons ---- */
-  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.95rem;padding:15px 26px;border-radius:var(--radius);transition:transform .15s ease,box-shadow .2s ease;cursor:pointer;border:none}
-  .btn-primary{background:var(--accent);color:var(--ink)}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px -8px var(--accent)}
-  .btn-ghost{background:transparent;color:#fff;border:1.5px solid var(--line)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:15px 30px;transition:.2s;cursor:pointer;border:1px solid var(--line-strong);border-radius:var(--radius)}
+  .btn-solid{background:var(--ink);color:#fff}
+  .btn-solid:hover{background:var(--accent);border-color:var(--accent)}
+  .btn-ghost{background:transparent;color:var(--ink)}
   .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
-  .btn-lg{padding:18px 34px;font-size:1.05rem}
 
-  /* ---- Header ---- */
-  header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(20,24,29,.0);transition:background .3s,box-shadow .3s,padding .3s;padding:18px 0}
-  header.scrolled{background:rgba(20,24,29,.97);box-shadow:0 6px 24px rgba(0,0,0,.25);padding:12px 0}
+  header{position:fixed;top:0;left:0;right:0;z-index:50;padding:22px 0;transition:.3s;border-bottom:1px solid transparent}
+  header.scrolled{background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:15px 0}
   .nav{display:flex;align-items:center;justify-content:space-between}
-  .logo{font-family:"Anton";font-size:1.5rem;color:#fff;text-transform:uppercase;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
-  .logo .mark{width:34px;height:34px;background:var(--accent);border-radius:7px;display:grid;place-items:center;color:var(--ink);font-size:1rem;transform:rotate(-8deg)}
-  .nav-links{display:flex;gap:30px;align-items:center}
-  .nav-links a{color:#e8e6e1;font-weight:600;font-size:.95rem;transition:color .2s}
-  .nav-links a:hover{color:var(--accent)}
-  .nav-cta{display:flex;align-items:center;gap:16px}
-  .nav-phone{color:#fff;font-weight:800;font-size:1.05rem;display:flex;align-items:center;gap:7px}
+  .logo{font-family:"Anton";font-size:1.2rem;font-weight:600;display:flex;align-items:baseline;gap:9px;letter-spacing:-.01em}
+  .logo .dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;transform:translateY(-1px)}
+  .nav-links{display:flex;gap:34px;align-items:center}
+  .nav-links a{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{display:flex;align-items:center;gap:20px}
+  .nav-phone{font-weight:600;font-size:.85rem;letter-spacing:.04em}
   .nav-phone:hover{color:var(--accent)}
   .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
-  .burger span{width:26px;height:2.5px;background:#fff;border-radius:2px;transition:.3s}
+  .burger span{width:24px;height:1.5px;background:var(--ink);border-radius:2px}
 
-  /* ---- Hero ---- */
-  .hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;
-    background:linear-gradient(105deg,rgba(15,18,22,.96) 0%,rgba(15,18,22,.72) 55%,rgba(15,18,22,.4) 100%),
-    url("https://images.unsplash.com/photo-1600612707884-c424a2ba812e?q=80&w=1600&auto=format&fit=crop") center/cover}
-  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(245,158,11,.18),transparent 45%);pointer-events:none}
-  .hero-inner{position:relative;z-index:2;padding:120px 0 60px;max-width:760px}
-  /* centered hero variant */
-  .hero.centered{justify-content:center;text-align:center;
-    background:linear-gradient(180deg,rgba(15,18,22,.9) 0%,rgba(15,18,22,.62) 100%),
-    url("https://images.unsplash.com/photo-1600612707884-c424a2ba812e?q=80&w=1600&auto=format&fit=crop") center/cover}
-  .hero.centered .hero-inner{margin:0 auto;padding-top:140px}
-  .hero.centered .hero p{margin-left:auto;margin-right:auto}
-  .hero.centered .hero-btns,.hero.centered .trust-strip{justify-content:center}
-  .eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.35);color:var(--accent);padding:8px 16px;border-radius:100px;font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:26px}
-  .hero h1{font-size:clamp(2.8rem,7vw,5.6rem);color:#fff}
-  .hero h1 .accent{display:inline-block}
-  .hero p{font-size:1.2rem;color:#cfcdc8;margin:24px 0 36px;max-width:560px}
-  .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
-  .trust-strip{display:flex;gap:34px;flex-wrap:wrap;margin-top:48px;padding-top:30px;border-top:1px solid var(--line)}
-  .trust-strip .item{display:flex;flex-direction:column}
-  .trust-strip .num{font-family:"Anton";font-size:2.2rem;color:var(--accent);line-height:1}
-  .trust-strip .lbl{font-size:.85rem;color:#b9b7b2;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+  /* Hero — text forward, hairlines, small image to the side */
+  .hero{padding:170px 0 70px;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:56px;align-items:end}
+  .hero .label{margin-bottom:26px;display:flex;align-items:center;gap:12px}
+  .hero .label::before{content:"";width:34px;height:1px;background:var(--accent)}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.6rem);letter-spacing:-.03em}
+  .hero h1 .accent{color:var(--accent);font-style:normal}
+  .hero p{font-size:1.12rem;color:var(--ink-soft);margin:28px 0 34px;max-width:440px}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-img{position:relative}
+  .hero-img img{width:100%;height:340px;object-fit:cover;border-radius:var(--radius);filter:grayscale(.18)}
+  .hero-img .cap{margin-top:12px;display:flex;justify-content:space-between;align-items:baseline}
+  .hero-img .cap .label{margin:0}
 
-  /* ---- Reveal anim ---- */
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-  .reveal.in{opacity:1;transform:none}
+  /* Stats — hairline divided row */
+  .stats{border-bottom:1px solid var(--line)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);}
+  .stat{padding:44px 0;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat .v{font-size:2.6rem;color:var(--ink);line-height:1}
+  .stat .v b{color:var(--accent);font-weight:600}
+  .stat .k{margin-top:10px}
 
-  /* ---- Sections ---- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}
   section{padding:96px 0}
-  .sec-head{max-width:640px;margin-bottom:54px}
-  .sec-head .kicker{color:var(--accent);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem}
-  .sec-head h2{font-size:clamp(2rem,4.5vw,3.2rem);margin-top:14px}
-  .sec-head p{color:#586068;margin-top:16px;font-size:1.08rem}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:54px;padding-bottom:22px;border-bottom:1px solid var(--line-strong)}
+  .sec-head h2{font-size:clamp(1.9rem,4vw,2.9rem);max-width:9ch}
+  .sec-head .idx{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;white-space:nowrap}
 
-  /* Services */
-  .services{background:var(--ink);color:#fff}
-  .services .sec-head p{color:#a8a6a1}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .card{background:var(--ink-soft);border:1px solid var(--line);border-radius:12px;padding:34px 28px;transition:transform .25s,border-color .25s,background .25s}
-  .card:hover{transform:translateY(-6px);border-color:var(--accent);background:#323a42}
-  .card .ic{width:52px;height:52px;border-radius:10px;background:rgba(245,158,11,.15);display:grid;place-items:center;font-size:1.5rem;margin-bottom:20px}
-  .card h3{font-size:1.3rem;color:#fff;margin-bottom:10px}
-  .card p{color:#a8a6a1;font-size:.97rem}
+  /* Services — left-aligned grid, hairline cells, no shadows */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+  .card{padding:38px 34px 38px 0;border-bottom:1px solid var(--line);border-right:1px solid var(--line);transition:background .25s}
+  .card:nth-child(3n){border-right:none}
+  .card{padding-left:34px}
+  .card:hover{background:var(--paper-2)}
+  .card .ic{width:auto;height:auto;font-size:1.5rem;margin-bottom:22px;display:block;filter:grayscale(.25)}
+  .card h3{font-size:1.18rem;margin-bottom:10px;font-weight:600}
+  .card h3::before{content:"";display:block;width:26px;height:2px;background:var(--accent);margin-bottom:16px}
+  .card p{color:var(--ink-soft);font-size:.95rem}
 
-  /* Process */
-  .process .grid{grid-template-columns:repeat(4,1fr)}
-  .step{padding:8px}
-  .step .n{font-family:"Anton";font-size:3rem;color:var(--paper-2);line-height:1;-webkit-text-stroke:1.5px var(--accent);color:transparent}
-  .step h3{font-size:1.15rem;margin:12px 0 8px}
-  .step p{color:#586068;font-size:.96rem}
+  /* Why — minimal numbered list */
+  .why{background:var(--paper-2)}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:46px}
+  .feat .n{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px}
+  .feat h3{font-size:1.2rem;margin-bottom:9px;font-weight:600}
+  .feat p{color:var(--ink-soft);font-size:.95rem}
 
   /* Gallery */
-  .gallery{background:var(--paper-2)}
-  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .gal-grid img{width:100%;height:230px;object-fit:cover;border-radius:10px;transition:transform .4s;cursor:pointer}
-  .gal-grid img:hover{transform:scale(1.04)}
-  .gal-grid .tall{grid-row:span 2;height:auto}
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:10px}
+  .gal-grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);filter:grayscale(.15);transition:filter .4s}
+  .gal-grid img:hover{filter:grayscale(0)}
+  .gal-grid .tall{grid-row:span 2}
 
-  /* Reviews */
-  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .review{background:#fff;border:1px solid var(--paper-2);border-radius:12px;padding:30px;box-shadow:0 6px 24px -16px rgba(0,0,0,.3)}
-  .stars{color:var(--accent);font-size:1.1rem;letter-spacing:2px;margin-bottom:14px}
-  .review p{font-size:1rem;color:var(--ink-soft);font-style:italic}
-  .review .who{margin-top:18px;font-weight:700;font-size:.95rem}
-  .review .who span{display:block;color:#8a9098;font-weight:500;font-size:.85rem}
+  /* Reviews — hairline cards */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-strong)}
+  .review{padding:40px 30px 40px 0;border-right:1px solid var(--line)}
+  .review:last-child{border-right:none}
+  .review:not(:first-child){padding-left:30px}
+  .stars{color:var(--accent);letter-spacing:3px;margin-bottom:18px;font-size:.85rem}
+  .review p{font-size:1.05rem;color:var(--ink);line-height:1.6}
+  .review .who{margin-top:22px;font-weight:600;font-size:.85rem;letter-spacing:.04em}
+  .review .who span{display:block;color:var(--ink-soft);font-weight:400;letter-spacing:.12em;text-transform:uppercase;font-size:.7rem;margin-top:5px}
 
-  /* CTA / Quote */
-  .cta{background:linear-gradient(120deg,var(--ink),#1d242b);color:#fff;position:relative;overflow:hidden}
-  .cta::before{content:"";position:absolute;right:-100px;top:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(245,158,11,.22),transparent 70%)}
-  .cta-flex{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;position:relative;z-index:2}
-  .cta h2{font-size:clamp(2.2rem,5vw,3.6rem)}
-  .cta p{color:#bdbbb6;margin:18px 0 30px;font-size:1.1rem}
-  .qform{background:#fff;border-radius:16px;padding:34px;box-shadow:var(--shadow)}
-  .qform h3{font-family:"Hanken Grotesk";font-weight:800;text-transform:none;color:var(--ink);font-size:1.4rem;margin-bottom:6px}
-  .qform .sub{color:#8a9098;font-size:.92rem;margin-bottom:20px}
-  .qform input,.qform select{width:100%;padding:13px 15px;border:1.5px solid #e2ddd4;border-radius:8px;margin-bottom:13px;font-family:inherit;font-size:.97rem;color:var(--ink)}
-  .qform input:focus,.qform select:focus{outline:none;border-color:var(--accent)}
-  .qform .btn-primary{width:100%;justify-content:center}
-  .area-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:8px}
-  .area-tags span{background:var(--ink-soft);color:#cfcdc8;padding:7px 14px;border-radius:100px;font-size:.85rem;font-weight:600}
+  /* CTA — split, restrained */
+  .cta{border-top:1px solid var(--line-strong)}
+  .cta .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+  .cta h2{font-size:clamp(2rem,4.4vw,3.2rem);letter-spacing:-.02em}
+  .cta .lead{color:var(--ink-soft);margin:20px 0 30px;max-width:38ch;font-size:1.05rem}
+  .cta .micro{font-size:.85rem;color:var(--ink-soft)}
+  .qform{border:1px solid var(--line-strong);border-radius:var(--radius);padding:36px}
+  .qform h3{font-family:"Anton";font-weight:600;font-size:1.25rem;margin-bottom:6px}
+  .qform .sub{color:var(--ink-soft);font-size:.9rem;margin-bottom:24px}
+  .qform-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .qform input{width:100%;padding:14px 4px;border:none;border-bottom:1px solid var(--line-strong);margin-bottom:18px;font-family:inherit;font-size:.97rem;background:transparent}
+  .qform input::placeholder{color:var(--ink-soft)}
+  .qform input:focus{outline:none;border-bottom-color:var(--accent)}
+  .qform .btn{width:100%;justify-content:center;margin-top:6px}
 
-  /* Footer */
-  footer{background:#0e1216;color:#9a9893;padding:60px 0 30px;font-size:.95rem}
-  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
-  footer .logo{margin-bottom:16px}
-  footer h4{color:#fff;font-weight:800;margin-bottom:14px;font-size:1rem}
-  footer a{display:block;margin-bottom:9px;transition:color .2s}
-  footer a:hover{color:var(--accent)}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.85rem;color:#6b6f74}
+  footer{border-top:1px solid var(--line);padding:64px 0 32px;font-size:.9rem;color:var(--ink-soft)}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;margin-bottom:48px}
+  footer .logo{color:var(--ink);margin-bottom:16px}
+  footer h4{color:var(--ink);font-weight:600;margin-bottom:16px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+  footer a{display:block;margin-bottom:11px}footer a:hover{color:var(--accent)}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+  .callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--ink);padding:15px;text-align:center;font-weight:600;color:#fff;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
 
-  /* Mobile sticky call bar */
-  .callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--accent);padding:14px;text-align:center;font-weight:800;color:var(--ink);box-shadow:0 -4px 20px rgba(0,0,0,.3)}
-
-  /* Responsive */
   @media(max-width:900px){
-    .grid,.rev-grid,.process .grid{grid-template-columns:1fr 1fr}
-    .gal-grid{grid-template-columns:1fr 1fr}
-    .cta-flex{grid-template-columns:1fr;gap:36px}
-    .foot-grid{grid-template-columns:1fr 1fr}
+    .hero-grid{grid-template-columns:1fr;gap:40px}.hero-img img{height:280px}
+    .grid,.why-grid{grid-template-columns:1fr 1fr}.card:nth-child(3n){border-right:1px solid var(--line)}.card:nth-child(2n){border-right:none}
+    .gal-grid{grid-template-columns:repeat(2,1fr)}.rev-grid{grid-template-columns:1fr}
+    .review{border-right:none;border-bottom:1px solid var(--line);padding-left:0!important;padding-right:0}
+    .cta .wrap{grid-template-columns:1fr;gap:36px}.foot-grid{grid-template-columns:1fr 1fr}
   }
   @media(max-width:640px){
-    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--ink);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .3s;box-shadow:var(--shadow)}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:80%;max-width:320px;background:#fff;flex-direction:column;justify-content:center;align-items:flex-start;gap:30px;transform:translateX(100%);transition:transform .3s;padding:0 40px;border-left:1px solid var(--line)}
     .nav-links.open{transform:none}
-    .nav-links a{font-size:1.2rem}
-    .burger{display:flex;z-index:70}
-    .nav-phone span{display:none}
-    .grid,.rev-grid,.process .grid,.gal-grid,.foot-grid{grid-template-columns:1fr}
-    .nav-cta .btn{display:none}
-    body{padding-bottom:56px}
-    .callbar{display:block}
-    section{padding:64px 0}
-    .trust-strip{gap:24px}
+    .burger{display:flex;z-index:70}.nav-cta .btn,.nav-phone span{display:none}
+    .stats .wrap{grid-template-columns:1fr}.stat{border-right:none;border-bottom:1px solid var(--line);padding:30px 0}
+    .grid,.why-grid,.foot-grid,.qform-row{grid-template-columns:1fr}
+    .card{border-right:none!important}.gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:150px}.gal-grid .tall{grid-row:span 1}
+    .sec-head{flex-direction:column;align-items:flex-start;gap:8px}
+    body{padding-bottom:54px}.callbar{display:block}section{padding:64px 0}.hero{padding:130px 0 56px}
   }
 </style>
 </head>
 <body>
-
-<!-- ============ HEADER ============ -->
-<header id="hd">
-  <div class="wrap nav">
-    <a href="#" class="logo"><span class="mark">▲</span>Bob's Roofing</a> <!-- EDIT name -->
-    <nav class="nav-links" id="navlinks">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#work">Our Work</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#quote">Free Estimate</a>
-    </nav>
-    <div class="nav-cta">
-      <a href="tel:7084444499" class="nav-phone">📞 <span>(708) 444-4499</span></a> <!-- EDIT phone -->
-      <a href="#quote" class="btn btn-primary">Free Inspection</a>
-      <button class="burger" id="burger"><span></span><span></span><span></span></button>
-    </div>
+<header id="hd"><div class="wrap nav">
+  <a href="#" class="logo"><span class="dot"></span>Bob's Roofing</a>
+  <nav class="nav-links" id="navlinks">
+    <a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">Work</a><a href="#reviews">Reviews</a><a href="#quote">Estimate</a>
+  </nav>
+  <div class="nav-cta">
+    <a href="tel:7084444499" class="nav-phone"><span>(708) 444-4499</span></a>
+    <a href="#quote" class="btn btn-ghost">Free Estimate</a>
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
   </div>
-</header>
+</div></header>
 
-<!-- ============ HERO ============ -->
-<section class="hero centered">
-  <div class="wrap hero-inner">
-    <span class="eyebrow reveal">● Licensed & Insured · Serving Tinley Park</span>
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <div class="label reveal">Licensed &amp; Insured — Tinley Park</div>
     <h1 class="reveal">A Roof You Can <span class="accent">Trust</span> Over Your Family&#39;s Head.</h1>
     <p class="reveal">Trusted Chicago roofing for years. Storm damage, leaks, or a full replacement — we&#39;ll be out for a <strong>free inspection today.</strong></p>
     <div class="hero-btns reveal">
-      <a href="#quote" class="btn btn-primary btn-lg">Get My Free Estimate →</a>
-      <a href="tel:7084444499" class="btn btn-ghost btn-lg">📞 Call (708) 444-4499</a> <!-- EDIT -->
-    </div>
-    <div class="trust-strip reveal">
-      <div class="item"><span class="num">15+</span><span class="lbl">Years in Business</span></div>
-      <div class="item"><span class="num">1,000+</span><span class="lbl">Roofs Completed</span></div>
-      <div class="item"><span class="num">4.8★</span><span class="lbl">Google Rating</span></div>
-      <div class="item"><span class="num">10yr</span><span class="lbl">Workmanship Warranty</span></div>
+      <a href="#quote" class="btn btn-solid">Get a Free Estimate</a>
+      <a href="tel:7084444499" class="btn btn-ghost">(708) 444-4499</a>
     </div>
   </div>
-</section>
+  <div class="hero-img reveal">
+    <img src="https://images.unsplash.com/photo-1600612707884-c424a2ba812e?q=80&w=1600&auto=format&fit=crop" alt="Bob's Roofing Crew work">
+    <div class="cap"><span class="label">Recent Project</span><span class="label">Tinley Park</span></div>
+  </div>
+</div></section>
 
-<!-- ============ SERVICES ============ -->
-<section class="services" id="services">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="kicker">What We Do</span>
-      <h2>Full-Service Roofing,<br>Done Right the First Time.</h2>
-    </div>
-    <div class="grid">
-      <div class="card reveal"><div class="ic">🏠</div><h3>Roof Replacement</h3><p>Complete tear-offs and new installs in asphalt shingle, architectural, and designer systems built to last decades.</p></div>
+<div class="stats reveal"><div class="wrap">
+  <div class="stat"><div class="v num-lg">15+</div><div class="k label">Years in Business</div></div>
+  <div class="stat"><div class="v num-lg">1,000+</div><div class="k label">Roofs Completed</div></div>
+  <div class="stat"><div class="v num-lg"><b>4.8★</b></div><div class="k label">Average Rating</div></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="sec-head reveal"><h2>Full-Service Roofing,<br>Done Right the First Time.</h2><span class="idx">01 — Services</span></div>
+  <div class="grid"><div class="card reveal"><div class="ic">🏠</div><h3>Roof Replacement</h3><p>Complete tear-offs and new installs in asphalt shingle, architectural, and designer systems built to last decades.</p></div>
       <div class="card reveal"><div class="ic">🔧</div><h3>Roof Repair</h3><p>Leaks, missing shingles, flashing, and ventilation fixed fast — before a small problem becomes a ceiling.</p></div>
       <div class="card reveal"><div class="ic">⛈️</div><h3>Storm &amp; Hail Damage</h3><p>Free damage assessments and full insurance-claim support. We deal with the adjuster so you don&#39;t have to.</p></div>
       <div class="card reveal"><div class="ic">🏢</div><h3>Flat &amp; Commercial</h3><p>TPO, EPDM, and modified-bitumen flat-roof systems for two-flats, commercial buildings, and additions.</p></div>
       <div class="card reveal"><div class="ic">💧</div><h3>Gutters &amp; Soffit</h3><p>Seamless gutters, downspouts, soffit, and fascia to move water away and protect your foundation.</p></div>
-      <div class="card reveal"><div class="ic">🔍</div><h3>Free Inspections</h3><p>Honest, no-pressure roof inspections with photos. We&#39;ll tell you if it can wait — and mean it.</p></div>
-    </div>
-  </div>
-</section>
+      <div class="card reveal"><div class="ic">🔍</div><h3>Free Inspections</h3><p>Honest, no-pressure roof inspections with photos. We&#39;ll tell you if it can wait — and mean it.</p></div></div>
+</div></section>
 
-<!-- ============ PROCESS ============ -->
-<section class="process" id="process">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="kicker">How It Works</span>
-      <h2>Four Steps. Zero Surprises.</h2>
-    </div>
-    <div class="grid">
-      <div class="step reveal"><div class="n">01</div><h3>Free Inspection</h3><p>We come out, take photos, and give you a straight answer — usually same day.</p></div>
-      <div class="step reveal"><div class="n">02</div><h3>Clear Quote</h3><p>A written, fixed-price estimate with no hidden fees and a clear scope of work.</p></div>
-      <div class="step reveal"><div class="n">03</div><h3>Expert Install</h3><p>Our own crews — never subbed out — protect your property and finish on schedule.</p></div>
-      <div class="step reveal"><div class="n">04</div><h3>Final Walkthrough</h3><p>We clean up every nail, walk the job with you, and back it with a written warranty.</p></div>
-    </div>
+<section class="why" id="why"><div class="wrap">
+  <div class="sec-head reveal"><h2>Built on trust, backed in writing.</h2><span class="idx">02 — Why Us</span></div>
+  <div class="why-grid">
+    <div class="feat reveal"><div class="n">01</div><h3>Licensed &amp; Insured</h3><p>Fully licensed, bonded, and insured — your property is protected on every job.</p></div>
+    <div class="feat reveal"><div class="n">02</div><h3>Free, Honest Estimates</h3><p>Clear written quotes, no hidden fees, and we will tell you what can wait.</p></div>
+    <div class="feat reveal"><div class="n">03</div><h3>Written Warranty</h3><p>Every job is backed by a workmanship warranty you can hold us to.</p></div>
   </div>
-</section>
+</div></section>
 
-<!-- ============ GALLERY ============ -->
-<section class="gallery" id="work">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="kicker">Recent Work</span>
-      <h2>Recent Work We're Proud Of.</h2>
-    </div>
-    <div class="gal-grid reveal">
-      <img class="tall" src="https://images.unsplash.com/photo-1644604120663-4e5fcdf33104?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+<section id="work"><div class="wrap">
+  <div class="sec-head reveal"><h2>Selected work.</h2><span class="idx">03 — Portfolio</span></div>
+  <div class="gal-grid reveal"><img class="tall" src="https://images.unsplash.com/photo-1644604120663-4e5fcdf33104?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
       <img class="" src="https://images.unsplash.com/photo-1682106446715-e16b19cfffb5?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
       <img class="" src="https://images.unsplash.com/photo-1643225523483-e2c434191bba?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
       <img class="" src="https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
       <img class="" src="https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
       <img class="tall" src="https://images.unsplash.com/photo-1635424824800-692767998d07?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
-      <img class="" src="https://images.unsplash.com/photo-1635424709961-f3a150459ad4?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
-    </div>
+      <img class="" src="https://images.unsplash.com/photo-1635424709961-f3a150459ad4?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy"></div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <div class="sec-head reveal"><h2>Neighbors who trust us.</h2><span class="idx">04 — Reviews</span></div>
+  <div class="rev-grid">
+    <div class="review reveal"><div class="stars">★★★★★</div><p>They were out the next morning, handled everything, and the work looks incredible.</p><div class="who">Maria G.<span>Jefferson Park, Chicago</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>The only ones who showed up on time and showed me photos of everything. No regrets.</p><div class="who">Dave R.<span>Oak Park, IL</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>Honest people. They told me what could wait instead of overselling me. Customer for life.</p><div class="who">Jim &amp; Sandra T.<span>Berwyn, IL</span></div></div>
   </div>
-</section>
+</div></section>
 
-<!-- ============ REVIEWS ============ -->
-<section id="reviews">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="kicker">Don't Take Our Word For It</span>
-      <h2>Neighbors Who Trust Us.</h2>
-    </div>
-    <div class="rev-grid">
-      <div class="review reveal"><div class="stars">★★★★★</div><p>"They were out the next morning, handled everything including the insurance claim, and the work looks incredible. Couldn't recommend them more."</p><div class="who">Maria G.<span>Jefferson Park, Chicago</span></div></div>
-      <div class="review reveal"><div class="stars">★★★★★</div><p>"Got three quotes. They weren't the cheapest, but they were the only ones who showed up on time and showed me photos of everything. No regrets — crew was spotless."</p><div class="who">Dave R.<span>Oak Park, IL</span></div></div>
-      <div class="review reveal"><div class="stars">★★★★★</div><p>"Honest people. They told me it could wait and just needed a small repair instead of selling me the big job. That earned my business for life."</p><div class="who">Jim & Sandra T.<span>Berwyn, IL</span></div></div>
-    </div>
+<section class="cta" id="quote"><div class="wrap">
+  <div class="reveal">
+    <span class="label">05 — Free Estimate</span>
+    <h2 style="margin-top:18px">Get Your Free Roof<br>Inspection Today.</h2>
+    <p class="lead">No pressure, no obligation. We will take a look, send you photos, and give you an honest assessment — often the same day you call.</p>
+    <p class="micro">Mon–Sat · 7am–7pm &nbsp;·&nbsp; <a href="tel:7084444499" style="color:var(--accent);font-weight:600">(708) 444-4499</a></p>
   </div>
-</section>
-
-<!-- ============ CTA / QUOTE ============ -->
-<section class="cta" id="quote">
-  <div class="wrap cta-flex">
-    <div class="reveal">
-      <h2>Get Your Free Roof<br>Inspection Today.</h2>
-      <p>No pressure, no obligation, no gimmicks. We'll take a look, send you photos, and give you an honest assessment — often the same day you call.</p>
-      <a href="tel:7084444499" class="btn btn-primary btn-lg">📞 (708) 444-4499</a> <!-- EDIT -->
-      <div class="area-tags">
-        <span>Chicago</span><span>Oak Park</span><span>Evanston</span><span>Berwyn</span><span>Cicero</span><span>Skokie</span><span>+ all suburbs</span> <!-- EDIT areas -->
-      </div>
-    </div>
-    <div class="qform reveal">
-      <h3>Request a Free Estimate</h3>
-      <p class="sub">Fill this out and we'll call you back within the hour.</p>
-      <!-- EDIT: replace action with your Formspree endpoint, or leave mailto for the demo -->
-      <form action="https://formspree.io/f/your-id-here" method="POST">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="tel" name="phone" placeholder="Phone number" required>
-        <input type="text" name="address" placeholder="Property address" required>
-        <select name="service">
-          <option value="">What do you need?</option>
-          <option>Roof Replacement</option>
-          <option>Roof Repair</option>
-          <option>Storm / Hail Damage</option>
-          <option>Flat / Commercial Roof</option>
-          <option>Gutters</option>
-          <option>Not sure — need an inspection</option>
-        </select>
-        <button type="submit" class="btn btn-primary">Get My Free Estimate →</button>
-      </form>
-    </div>
+  <div class="qform reveal">
+    <h3>Request a Free Estimate</h3>
+    <p class="sub">Fill this out and we will call you back within the hour.</p>
+    <form action="https://formspree.io/f/your-id-here" method="POST">
+      <div class="qform-row"><input type="text" name="name" placeholder="Your name" required><input type="tel" name="phone" placeholder="Phone number" required></div>
+      <input type="text" name="address" placeholder="Property address" required>
+      <button type="submit" class="btn btn-solid">Get My Free Estimate</button>
+    </form>
   </div>
-</section>
+</div></section>
 
-<!-- ============ FOOTER ============ -->
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <a href="#" class="logo"><span class="mark">▲</span>Bob's Roofing</a> <!-- EDIT -->
-        <p>Chicago's trusted, family-owned roofing contractor since 2003. Licensed, bonded, and insured. IL Roofing Lic. #XXX-XXXXXX.</p> <!-- EDIT license -->
-      </div>
-      <div>
-        <h4>Services</h4>
-        <a href="#services">Roof Replacement</a>
-        <a href="#services">Roof Repair</a>
-        <a href="#services">Storm Damage</a>
-        <a href="#services">Flat & Commercial</a>
-        <a href="#services">Gutters</a>
-      </div>
-      <div>
-        <h4>Get In Touch</h4>
-        <a href="tel:7084444499">📞 (708) 444-4499</a> <!-- EDIT -->
-        <a href="mailto:info@bobsroofingcrew.com">✉ info@bobsroofingcrew.com</a> <!-- EDIT -->
-        <a href="#quote">Free Estimate</a>
-        <p style="margin-top:10px">Mon–Sat · 7am–7pm</p>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 Bob's Roofing Crew All rights reserved.</span> <!-- EDIT -->
-      <span>Site by Nimbus Web Studio</span>
-    </div>
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div><a href="#" class="logo"><span class="dot"></span>Bob's Roofing</a><p>Chicago's trusted, family-owned Roofing Contractor in Chicago. Licensed, bonded, and insured. Serving Tinley Park.</p></div>
+    <div><h4>Company</h4><a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">Work</a><a href="#quote">Estimate</a></div>
+    <div><h4>Contact</h4><a href="tel:7084444499">(708) 444-4499</a><a href="mailto:info@bobsroofingcrew.com">info@bobsroofingcrew.com</a><p style="margin-top:10px">Mon–Sat · 7am–7pm</p></div>
   </div>
-</footer>
-
-<a href="tel:7084444499" class="callbar">📞 Tap to Call — Free Inspection</a> <!-- EDIT -->
-
+  <div class="foot-bottom"><span>© 2026 Bob's Roofing Crew</span><span>Site by Nimbus Web Studio</span></div>
+</div></footer>
+<a href="tel:7084444499" class="callbar">Tap to Call — (708) 444-4499</a>
 <script>
-  // Header background on scroll
-  const hd=document.getElementById('hd');
-  addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>40));
-  // Mobile menu
-  const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
-  burger.addEventListener('click',()=>links.classList.toggle('open'));
-  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
-  // Scroll reveals (staggered)
-  const io=new IntersectionObserver((es)=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*60);io.unobserve(e.target)}}),{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  // Demo form guard (so the demo doesn't error before Formspree is set up)
-  document.querySelector('form').addEventListener('submit',function(ev){
-    if(this.action.includes('your-id-here')){ev.preventDefault();alert('✅ Demo form — this is where leads get emailed to the roofer. (Connect Formspree to go live.)');}
-  });
+const hd=document.getElementById('hd');if(hd)addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>40));
+const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+if(burger)burger.addEventListener('click',()=>links.classList.toggle('open'));
+if(links)links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const io=new IntersectionObserver((es)=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*55);io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const f=document.querySelector('form');if(f)f.addEventListener('submit',function(ev){if(this.action.includes('your-id-here')){ev.preventDefault();alert('✅ Demo form — this is where leads get emailed to the business. (Connect Formspree to go live.)');}});
 </script>
 </body>
 </html>

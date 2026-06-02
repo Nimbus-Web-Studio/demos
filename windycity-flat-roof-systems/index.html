@@ -3,180 +3,174 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- NIMBUS TEMPLATE B · "Editorial Light" · split hero, light theme, alternating service rows -->
+<!-- NIMBUS TEMPLATE E · "Neo-brutalist" · thick black borders, hard offset shadows, blocky high-contrast panels, chunky buttons, solid accent fills -->
 <title>Windycity Flat Roof Systems | Roofing Contractor in Chicago</title>
-<meta name="description" content="Windycity Flat Roof Systems — licensed, insured, and serving Chicago. Free estimates, fast turnaround, quality work backed by a written warranty." />
+<meta name="description" content="Windycity Flat Roof Systems — licensed, insured, serving Chicago. Free estimates and quality work backed by a written warranty." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --accent:#6d28d9; --accent-dark:#5b21b6;
-    --ink:#1a1f26; --ink-soft:#5b6571; --paper:#fbfaf7; --card:#ffffff;
-    --line:#e9e4da; --radius:13px;
-    --shadow:0 24px 60px -22px rgba(20,25,35,.22);
+    --ink:#0a0a0a; --paper:#fbf7ef; --paper-2:#fff;
+    --radius:13px;
+    --bd:3px solid #0a0a0a; --bd-thick:4px solid #0a0a0a;
+    --sh:7px 7px 0 #0a0a0a; --sh-lg:11px 11px 0 #0a0a0a;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:"Work Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,.display{font-family:"Oswald",sans-serif;line-height:1.04;letter-spacing:-.01em}
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
-  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-  .accent{color:var(--accent)}
-  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.96rem;padding:14px 26px;border-radius:var(--radius);transition:transform .15s,box-shadow .2s;cursor:pointer;border:none}
-  .btn-primary{background:var(--accent);color:#fff}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px var(--accent)}
-  .btn-out{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
-  .btn-out:hover{border-color:var(--accent);color:var(--accent)}
-  .btn-lg{padding:17px 32px;font-size:1.04rem}
+  body{font-family:"Work Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:"Oswald",sans-serif;line-height:1;letter-spacing:-.02em;font-weight:800;text-transform:uppercase}
+  a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 
-  header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(251,250,247,0);transition:.3s;padding:20px 0}
-  header.scrolled{background:rgba(251,250,247,.96);box-shadow:0 4px 22px rgba(20,25,35,.08);padding:13px 0;backdrop-filter:blur(8px)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:.95rem;text-transform:uppercase;letter-spacing:.02em;padding:15px 28px;border:var(--bd);border-radius:0;cursor:pointer;transition:transform .12s,box-shadow .12s;box-shadow:var(--sh)}
+  .btn:hover{transform:translate(-3px,-3px);box-shadow:10px 10px 0 #0a0a0a}
+  .btn:active{transform:translate(0,0);box-shadow:2px 2px 0 #0a0a0a}
+  .btn-accent{background:var(--accent);color:#fff}
+  .btn-ink{background:var(--ink);color:#fff}
+  .btn-paper{background:#fff;color:var(--ink)}
+  .btn-lg{padding:18px 34px;font-size:1.05rem}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:50;padding:16px 0;transition:.2s;background:var(--paper);border-bottom:3px solid transparent}
+  header.scrolled{border-bottom:var(--bd-thick);padding:11px 0;box-shadow:0 6px 0 rgba(10,10,10,.08)}
   .nav{display:flex;align-items:center;justify-content:space-between}
-  .logo{font-family:"Oswald";font-size:1.45rem;display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
-  .logo .mark{width:34px;height:34px;background:var(--accent);border-radius:9px;display:grid;place-items:center;color:#fff;font-size:1rem}
-  .nav-links{display:flex;gap:30px;align-items:center}
-  .nav-links a{color:var(--ink-soft);font-weight:600;font-size:.95rem;transition:color .2s}
-  .nav-links a:hover{color:var(--accent)}
-  .nav-cta{display:flex;align-items:center;gap:16px}
-  .nav-phone{font-weight:800;font-size:1.04rem}
-  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
-  .burger span{width:26px;height:2.5px;background:var(--ink);border-radius:2px}
+  .logo{font-family:"Oswald";font-size:1.45rem;font-weight:800;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+  .logo .mark{width:38px;height:38px;background:var(--accent);color:#fff;border:var(--bd);display:grid;place-items:center;font-size:1.1rem;box-shadow:3px 3px 0 #0a0a0a}
+  .nav-links{display:flex;gap:8px;align-items:center}
+  .nav-links a{font-weight:800;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;padding:8px 12px;border:2px solid transparent}
+  .nav-links a:hover{border:2px solid var(--ink);background:#fff}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .nav-phone{font-weight:800;border:var(--bd);padding:9px 14px;background:#fff;box-shadow:3px 3px 0 #0a0a0a;font-size:.9rem}
+  .burger{display:none;flex-direction:column;gap:5px;background:#fff;border:var(--bd);cursor:pointer;padding:9px;box-shadow:3px 3px 0 #0a0a0a}
+  .burger span{width:24px;height:3px;background:var(--ink);border-radius:0}
 
-  /* Split hero */
-  .hero{padding:150px 0 80px}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent-dark);padding:7px 15px;border-radius:100px;font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:22px}
-  .hero h1{font-size:clamp(2.6rem,5.2vw,4.4rem)}
-  .hero p{font-size:1.18rem;color:var(--ink-soft);margin:22px 0 32px;max-width:520px}
-  .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-  .hero-media{position:relative}
-  .hero-media img{width:100%;height:520px;object-fit:cover;border-radius:calc(var(--radius) + 14px);box-shadow:var(--shadow)}
-  .badge{position:absolute;left:-22px;bottom:32px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 22px;box-shadow:var(--shadow)}
-  .badge .r{font-family:"Oswald";font-size:1.7rem;color:var(--accent)}
-  .badge .l{font-size:.82rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.05em}
+  /* Hero — blocky split panel */
+  .hero{padding:130px 0 60px}
+  .hero-box{border:var(--bd-thick);box-shadow:var(--sh-lg);background:#fff;display:grid;grid-template-columns:1.15fr .85fr}
+  .hero-text{padding:54px 46px}
+  .tag{display:inline-block;background:var(--ink);color:#fff;font-weight:800;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;margin-bottom:24px;border:var(--bd)}
+  .hero h1{font-size:clamp(2.6rem,6vw,5rem)}
+  .hero h1 .accent{background:var(--accent);color:#fff;padding:0 .12em;display:inline-block;box-shadow:5px 5px 0 #0a0a0a;border:var(--bd)}
+  .hero p{font-size:1.15rem;margin:30px 0 32px;max-width:480px;font-weight:500}
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+  .hero-img{border-left:var(--bd-thick);overflow:hidden}
+  .hero-img img{width:100%;height:100%;min-height:380px;object-fit:cover;filter:contrast(1.05) saturate(1.05)}
 
-  .trust{background:var(--ink);color:#fff}
-  .trust .wrap{display:flex;gap:40px;flex-wrap:wrap;justify-content:space-between;padding:34px 24px}
-  .trust .item .num{font-family:"Oswald";font-size:2.1rem;color:var(--accent);line-height:1}
-  .trust .item .lbl{font-size:.82rem;color:#b9bfc7;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+  /* Stats — chunky boxes */
+  .stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-bottom:0}
+  .stat{border:var(--bd);box-shadow:var(--sh);padding:26px 24px;background:#fff}
+  .stat:nth-child(2){background:var(--accent);color:#fff;border-color:#0a0a0a}
+  .stat .v{font-family:"Oswald";font-size:2.7rem;line-height:1;font-weight:800}
+  .stat .k{font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:.78rem;margin-top:8px}
 
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
-  .reveal.in{opacity:1;transform:none}
-  section{padding:92px 0}
-  .sec-head{max-width:620px;margin-bottom:48px}
-  .sec-head .kicker{color:var(--accent);font-weight:800;letter-spacing:.11em;text-transform:uppercase;font-size:.83rem}
-  .sec-head h2{font-size:clamp(2rem,4.3vw,3rem);margin-top:12px}
-  .sec-head p{color:var(--ink-soft);margin-top:14px;font-size:1.06rem}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}
+  section{padding:80px 0}
+  .sec-head{margin-bottom:46px}
+  .sec-head .kicker{display:inline-block;background:var(--accent);color:#fff;font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border:var(--bd);box-shadow:3px 3px 0 #0a0a0a;margin-bottom:18px}
+  .sec-head h2{font-size:clamp(2rem,5vw,3.4rem)}
 
-  /* Services as light cards */
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px 26px;transition:transform .25s,box-shadow .25s}
-  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-  .card .ic{width:54px;height:54px;border-radius:13px;background:color-mix(in srgb,var(--accent) 14%,transparent);display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px}
-  .card h3{font-size:1.25rem;margin-bottom:9px}
-  .card p{color:var(--ink-soft);font-size:.96rem}
+  /* Services — blocky cards, hard shadows */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:#fff;border:var(--bd);box-shadow:var(--sh);padding:30px 28px;transition:transform .12s,box-shadow .12s}
+  .card:hover{transform:translate(-3px,-3px);box-shadow:10px 10px 0 #0a0a0a}
+  .card .ic{width:60px;height:60px;background:var(--accent);color:#fff;border:var(--bd);display:grid;place-items:center;font-size:1.7rem;margin-bottom:20px;box-shadow:3px 3px 0 #0a0a0a}
+  .card h3{font-size:1.2rem;margin-bottom:10px}
+  .card p{font-size:.95rem;font-weight:500;text-transform:none}
 
-  /* Process — horizontal connected band */
-  .process{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:s}
-  .step{position:relative;padding-top:18px}
-  .step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:"Oswald";font-size:1.1rem;color:#fff;background:var(--accent);width:38px;height:38px;border-radius:50%;display:grid;place-items:center;margin-bottom:16px}
-  .step h3{font-size:1.12rem;margin-bottom:6px}
-  .step p{color:var(--ink-soft);font-size:.95rem}
+  /* Why — accent slab */
+  .why{background:var(--ink)}
+  .why .sec-head .kicker{background:#fff;color:var(--ink)}
+  .why .sec-head h2{color:#fff}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .feat{background:var(--paper);border:var(--bd);box-shadow:6px 6px 0 var(--accent);padding:30px 26px}
+  .feat .fi{width:54px;height:54px;background:var(--ink);color:#fff;border:var(--bd);display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px}
+  .feat h3{font-size:1.15rem;margin-bottom:8px}
+  .feat p{font-size:.93rem;font-weight:500;text-transform:none}
 
-  /* Gallery — uniform with one wide */
-  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .gal-grid img{width:100%;height:220px;object-fit:cover;border-radius:14px;transition:transform .4s}
-  .gal-grid img:hover{transform:scale(1.03)}
-  .gal-grid .tall{grid-column:span 2;height:220px}
+  /* Gallery — bordered tiles */
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:175px;gap:16px}
+  .gal-grid img{width:100%;height:100%;object-fit:cover;border:var(--bd);box-shadow:5px 5px 0 #0a0a0a;transition:transform .12s,box-shadow .12s}
+  .gal-grid img:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--accent)}
+  .gal-grid .tall{grid-row:span 2}
 
-  /* Reviews — one feature + grid */
-  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .review{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px}
-  .stars{color:var(--accent);letter-spacing:2px;margin-bottom:12px}
-  .review p{font-size:1rem;color:var(--ink);font-style:italic}
-  .review .who{margin-top:16px;font-weight:700;font-size:.95rem}
-  .review .who span{display:block;color:var(--ink-soft);font-weight:500;font-size:.85rem}
+  /* Reviews */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:#fff;border:var(--bd);box-shadow:var(--sh);padding:30px 28px}
+  .stars{color:var(--accent);letter-spacing:3px;margin-bottom:14px;font-size:1.1rem;-webkit-text-stroke:.5px #0a0a0a}
+  .review p{font-size:1.02rem;font-weight:500}
+  .review .who{margin-top:18px;font-weight:800;text-transform:uppercase;font-size:.85rem;letter-spacing:.03em}
+  .review .who span{display:block;font-weight:600;text-transform:none;letter-spacing:0;font-size:.82rem;margin-top:4px;color:#555}
 
-  /* CTA */
-  .cta{background:var(--ink);color:#fff}
-  .cta-flex{display:grid;grid-template-columns:1fr .9fr;gap:54px;align-items:center}
+  /* CTA — big accent block */
+  .cta{background:var(--accent)}
+  .cta-box{background:#fff;border:var(--bd-thick);box-shadow:var(--sh-lg);padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
   .cta h2{font-size:clamp(2rem,4.6vw,3.2rem)}
-  .cta p{color:#c2c8d0;margin:16px 0 26px;font-size:1.08rem}
-  .area-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
-  .area-tags span{background:rgba(255,255,255,.08);color:#dfe3e8;padding:7px 14px;border-radius:100px;font-size:.84rem;font-weight:600}
-  .qform{background:#fff;border-radius:18px;padding:32px;box-shadow:var(--shadow);color:var(--ink)}
-  .qform h3{font-family:"Work Sans";font-weight:800;font-size:1.35rem;margin-bottom:5px}
-  .qform .sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:18px}
-  .qform input,.qform select{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;margin-bottom:12px;font-family:inherit;font-size:.97rem}
-  .qform input:focus,.qform select:focus{outline:none;border-color:var(--accent)}
-  .qform .btn-primary{width:100%;justify-content:center}
+  .cta .lead{margin:18px 0 0;font-weight:500;font-size:1.08rem}
+  .qform h3{font-family:"Oswald";text-transform:uppercase;font-size:1.3rem;margin-bottom:5px}
+  .qform .sub{font-size:.9rem;margin-bottom:18px;font-weight:600}
+  .qform-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .qform input{width:100%;padding:14px 15px;border:var(--bd);border-radius:0;margin-bottom:14px;font-family:inherit;font-size:.97rem;background:var(--paper);font-weight:600}
+  .qform input::placeholder{color:#777}
+  .qform input:focus{outline:none;background:#fff;box-shadow:3px 3px 0 var(--accent)}
+  .qform .btn{width:100%;justify-content:center}
 
-  footer{background:#0f1318;color:#9aa1aa;padding:58px 0 30px;font-size:.95rem}
-  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:38px}
-  footer .logo{color:#fff;margin-bottom:14px}
-  footer h4{color:#fff;font-weight:800;margin-bottom:13px;font-size:1rem}
-  footer a{display:block;margin-bottom:9px}
-  footer a:hover{color:var(--accent)}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.84rem;color:#6b7178}
-  .callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--accent);padding:14px;text-align:center;font-weight:800;color:#fff}
+  footer{background:var(--ink);color:#cfcfcf;padding:56px 0 28px;border-top:var(--bd-thick)}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;margin-bottom:38px}
+  footer .logo{color:#fff;margin-bottom:16px}
+  footer h4{color:#fff;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;font-size:.85rem}
+  footer a{display:block;margin-bottom:10px;font-weight:500}footer a:hover{color:var(--accent)}
+  footer p{font-weight:500}
+  .foot-bottom{border-top:2px solid rgba(255,255,255,.18);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+  .callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--accent);border-top:var(--bd-thick);padding:14px;text-align:center;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.04em}
 
   @media(max-width:900px){
-    .hero-grid,.cta-flex{grid-template-columns:1fr;gap:34px}
-    .hero-media img{height:380px}
-    .grid,.steps,.rev-grid{grid-template-columns:1fr 1fr}
-    .gal-grid{grid-template-columns:1fr 1fr}
-    .foot-grid{grid-template-columns:1fr 1fr}
+    .hero-box{grid-template-columns:1fr}.hero-img{border-left:none;border-top:var(--bd-thick)}.hero-img img{min-height:280px}
+    .grid,.why-grid,.rev-grid{grid-template-columns:1fr 1fr}.gal-grid{grid-template-columns:repeat(2,1fr)}
+    .cta-box{grid-template-columns:1fr;gap:32px}.foot-grid{grid-template-columns:1fr 1fr}
   }
   @media(max-width:640px){
-    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:#fff;flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .3s;box-shadow:var(--shadow)}
-    .nav-links.open{transform:none}
-    .burger{display:flex;z-index:70}
-    .nav-cta .btn,.nav-phone span{display:none}
-    .grid,.steps,.rev-grid,.gal-grid,.foot-grid{grid-template-columns:1fr}
-    .gal-grid .tall{grid-column:span 1}
-    .badge{left:12px}
-    body{padding-bottom:56px}.callbar{display:block}
-    section{padding:60px 0}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:80%;max-width:320px;background:var(--paper);flex-direction:column;justify-content:center;align-items:stretch;gap:14px;transform:translateX(100%);transition:transform .25s;border-left:var(--bd-thick);padding:0 26px}
+    .nav-links.open{transform:none}.nav-links a{border:var(--bd);background:#fff;text-align:center}
+    .burger{display:flex;z-index:70}.nav-cta .btn,.nav-phone span{display:none}
+    .stats .wrap,.grid,.why-grid,.rev-grid,.foot-grid,.qform-row{grid-template-columns:1fr}
+    .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:150px}.gal-grid .tall{grid-row:span 1}
+    body{padding-bottom:58px}.callbar{display:block}section{padding:56px 0}.hero{padding:104px 0 48px}.hero-text{padding:38px 28px}
   }
 </style>
 </head>
 <body>
 <header id="hd"><div class="wrap nav">
-  <a href="#" class="logo"><span class="mark">◆</span>Windycity Roofing</a>
+  <a href="#" class="logo"><span class="mark">▲</span>Windycity Roofing</a>
   <nav class="nav-links" id="navlinks">
-    <a href="#services">Services</a><a href="#process">Process</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#quote">Free Estimate</a>
+    <a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#quote">Estimate</a>
   </nav>
   <div class="nav-cta">
     <a href="tel:7735015501" class="nav-phone">📞 <span>(773) 501-5501</span></a>
-    <a href="#quote" class="btn btn-primary">Free Estimate</a>
+    <a href="#quote" class="btn btn-accent">Free Estimate</a>
     <button class="burger" id="burger"><span></span><span></span><span></span></button>
   </div>
 </div></header>
 
-<section class="hero"><div class="wrap hero-grid">
-  <div>
-    <span class="eyebrow reveal">● Licensed &amp; Insured · Chicago</span>
-    <h1 class="reveal">A Roof You Can <span class="accent">Trust</span> Over Your Family&#39;s Head.</h1>
-    <p class="reveal">Trusted Chicago roofing for years. Storm damage, leaks, or a full replacement — we&#39;ll be out for a <strong>free inspection today.</strong></p>
-    <div class="hero-btns reveal">
-      <a href="#quote" class="btn btn-primary btn-lg">Get My Free Estimate →</a>
-      <a href="tel:7735015501" class="btn btn-out btn-lg">📞 (773) 501-5501</a>
+<section class="hero"><div class="wrap">
+  <div class="hero-box reveal">
+    <div class="hero-text">
+      <span class="tag">Licensed &amp; Insured · Chicago</span>
+      <h1>A Roof You Can <span class="accent">Trust</span> Over Your Family&#39;s Head.</h1>
+      <p>Trusted Chicago roofing for years. Storm damage, leaks, or a full replacement — we&#39;ll be out for a <strong>free inspection today.</strong></p>
+      <div class="hero-btns">
+        <a href="#quote" class="btn btn-accent btn-lg">Get My Free Estimate →</a>
+        <a href="tel:7735015501" class="btn btn-paper btn-lg">📞 (773) 501-5501</a>
+      </div>
     </div>
-  </div>
-  <div class="hero-media reveal">
-    <img src="https://images.unsplash.com/photo-1635424824800-692767998d07?q=80&w=1600&auto=format&fit=crop" alt="Windycity Flat Roof Systems work">
-    <div class="badge"><div class="r">4.8★</div><div class="l">Google Rated</div></div>
+    <div class="hero-img"><img src="https://images.unsplash.com/photo-1635424824800-692767998d07?q=80&w=1600&auto=format&fit=crop" alt="Windycity Flat Roof Systems work"></div>
   </div>
 </div></section>
 
-<div class="trust"><div class="wrap">
-  <div class="item"><div class="num">15+</div><div class="lbl">Years in Business</div></div>
-  <div class="item"><div class="num">1,000+</div><div class="lbl">Roofs Completed</div></div>
-  <div class="item"><div class="num">4.8★</div><div class="lbl">Google Rating</div></div>
-  <div class="item"><div class="num">10yr</div><div class="lbl">Workmanship Warranty</div></div>
+<div class="stats"><div class="wrap">
+  <div class="stat reveal"><div class="v">15+</div><div class="k">Years in Business</div></div>
+  <div class="stat reveal"><div class="v">1,000+</div><div class="k">Roofs Completed</div></div>
+  <div class="stat reveal"><div class="v">4.8★★</div><div class="k">Google Rating</div></div>
 </div></div>
 
 <section id="services"><div class="wrap">
@@ -189,18 +183,17 @@
       <div class="card reveal"><div class="ic">🔍</div><h3>Free Inspections</h3><p>Honest, no-pressure roof inspections with photos. We&#39;ll tell you if it can wait — and mean it.</p></div></div>
 </div></section>
 
-<section class="process" id="process"><div class="wrap">
-  <div class="sec-head reveal"><span class="kicker">How It Works</span><h2>Four Steps. Zero Surprises.</h2></div>
-  <div class="steps">
-    <div class="step reveal"><h3>Free Estimate</h3><p>We come out, take a look, and give you a straight answer — usually same day.</p></div>
-    <div class="step reveal"><h3>Clear Quote</h3><p>A written, fixed-price estimate with no hidden fees and a clear scope of work.</p></div>
-    <div class="step reveal"><h3>Expert Work</h3><p>Our own crews — never subbed out — protect your property and finish on schedule.</p></div>
-    <div class="step reveal"><h3>Final Walkthrough</h3><p>We clean up, walk the job with you, and back it with a written warranty.</p></div>
+<section class="why" id="why"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Why Choose Us</span><h2>Built on Trust. Backed in Writing.</h2></div>
+  <div class="why-grid">
+    <div class="feat reveal"><div class="fi">🛡️</div><h3>Licensed &amp; Insured</h3><p>Fully licensed, bonded, and insured — your property is protected on every job.</p></div>
+    <div class="feat reveal"><div class="fi">📋</div><h3>Free Honest Estimates</h3><p>Clear written quotes, no hidden fees, and we will tell you what can wait.</p></div>
+    <div class="feat reveal"><div class="fi">✅</div><h3>Written Warranty</h3><p>Every job is backed by a workmanship warranty you can hold us to.</p></div>
   </div>
 </div></section>
 
 <section id="work"><div class="wrap">
-  <div class="sec-head reveal"><span class="kicker">Recent Work</span><h2>Projects We're Proud Of.</h2></div>
+  <div class="sec-head reveal"><span class="kicker">Recent Work</span><h2>Projects We Are Proud Of.</h2></div>
   <div class="gal-grid reveal"><img class="tall" src="https://images.unsplash.com/photo-1635424709961-f3a150459ad4?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
       <img class="" src="https://images.unsplash.com/photo-1635424709870-cdc6e64f0e20?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
       <img class="" src="https://images.unsplash.com/photo-1635424824849-1b09bdcc55b1?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
@@ -211,51 +204,49 @@
 </div></section>
 
 <section id="reviews"><div class="wrap">
-  <div class="sec-head reveal"><span class="kicker">Don't Take Our Word For It</span><h2>Neighbors Who Trust Us.</h2></div>
+  <div class="sec-head reveal"><span class="kicker">Reviews</span><h2>Neighbors Who Trust Us.</h2></div>
   <div class="rev-grid">
-    <div class="review reveal"><div class="stars">★★★★★</div><p>"They were out the next morning, handled everything, and the work looks incredible. Couldn't recommend them more."</p><div class="who">Maria G.<span>Jefferson Park, Chicago</span></div></div>
-    <div class="review reveal"><div class="stars">★★★★★</div><p>"Got three quotes. They were the only ones who showed up on time and showed me photos of everything. No regrets."</p><div class="who">Dave R.<span>Oak Park, IL</span></div></div>
-    <div class="review reveal"><div class="stars">★★★★★</div><p>"Honest people. They told me what could wait instead of overselling me. That earned my business for life."</p><div class="who">Jim &amp; Sandra T.<span>Berwyn, IL</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>They were out the next morning, handled everything, and the work looks incredible.</p><div class="who">Maria G.<span>Jefferson Park, Chicago</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>The only ones who showed up on time and showed me photos of everything. No regrets.</p><div class="who">Dave R.<span>Oak Park, IL</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>Honest people. They told me what could wait instead of overselling me. Customer for life.</p><div class="who">Jim &amp; Sandra T.<span>Berwyn, IL</span></div></div>
   </div>
 </div></section>
 
-<section class="cta" id="quote"><div class="wrap cta-flex">
-  <div class="reveal">
-    <h2>Get Your Free Roof<br>Inspection Today.</h2>
-    <p>No pressure, no obligation. We'll take a look, send you photos, and give you an honest assessment — often the same day you call.</p>
-    <a href="tel:7735015501" class="btn btn-primary btn-lg">📞 (773) 501-5501</a>
-    <div class="area-tags"><span>Chicago</span><span>Oak Park</span><span>Evanston</span><span>Berwyn</span><span>Cicero</span><span>+ all suburbs</span></div>
-  </div>
-  <div class="qform reveal">
-    <h3>Request a Free Estimate</h3>
-    <p class="sub">Fill this out and we'll call you back within the hour.</p>
-    <form action="https://formspree.io/f/your-id-here" method="POST">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="tel" name="phone" placeholder="Phone number" required>
-      <input type="text" name="address" placeholder="Property address" required>
-      <select name="service"><option value="">What do you need?</option><option>New project / installation</option><option>Repair</option><option>Not sure — need an estimate</option></select>
-      <button type="submit" class="btn btn-primary">Get My Free Estimate →</button>
-    </form>
+<section class="cta" id="quote"><div class="wrap">
+  <div class="cta-box reveal">
+    <div>
+      <h2>Get Your Free Roof<br>Inspection Today.</h2>
+      <p class="lead">No pressure, no obligation. We will take a look, send you photos, and give you an honest assessment — often the same day you call.</p>
+    </div>
+    <div class="qform">
+      <h3>Request a Free Estimate</h3>
+      <p class="sub">Fill this out and we will call you back within the hour.</p>
+      <form action="https://formspree.io/f/your-id-here" method="POST">
+        <div class="qform-row"><input type="text" name="name" placeholder="Your name" required><input type="tel" name="phone" placeholder="Phone number" required></div>
+        <input type="text" name="address" placeholder="Property address" required>
+        <button type="submit" class="btn btn-ink">Get My Free Estimate →</button>
+      </form>
+    </div>
   </div>
 </div></section>
 
 <footer><div class="wrap">
   <div class="foot-grid">
-    <div><a href="#" class="logo"><span class="mark">◆</span>Windycity Roofing</a><p>Chicago's trusted, family-owned Roofing Contractor in Chicago. Licensed, bonded, and insured. Serving Chicago.</p></div>
-    <div><h4>Company</h4><a href="#services">Services</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#quote">Free Estimate</a></div>
+    <div><a href="#" class="logo"><span class="mark">▲</span>Windycity Roofing</a><p>Chicago's trusted, family-owned Roofing Contractor in Chicago. Licensed, bonded, and insured. Serving Chicago.</p></div>
+    <div><h4>Company</h4><a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">Our Work</a><a href="#quote">Estimate</a></div>
     <div><h4>Get In Touch</h4><a href="tel:7735015501">📞 (773) 501-5501</a><a href="mailto:info@windycityflatroofsystems.com">✉ info@windycityflatroofsystems.com</a><p style="margin-top:10px">Mon–Sat · 7am–7pm</p></div>
   </div>
-  <div class="foot-bottom"><span>© 2026 Windycity Flat Roof Systems All rights reserved.</span><span>Site by Nimbus Web Studio</span></div>
+  <div class="foot-bottom"><span>© 2026 Windycity Flat Roof Systems</span><span>Site by Nimbus Web Studio</span></div>
 </div></footer>
 <a href="tel:7735015501" class="callbar">📞 Tap to Call — Free Estimate</a>
 <script>
-  const hd=document.getElementById('hd');addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>40));
-  const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
-  burger.addEventListener('click',()=>links.classList.toggle('open'));
-  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
-  const io=new IntersectionObserver((es)=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*55);io.unobserve(e.target)}}),{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  document.querySelector('form').addEventListener('submit',function(ev){if(this.action.includes('your-id-here')){ev.preventDefault();alert('✅ Demo form — this is where leads get emailed to the business. (Connect Formspree to go live.)');}});
+const hd=document.getElementById('hd');if(hd)addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>40));
+const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+if(burger)burger.addEventListener('click',()=>links.classList.toggle('open'));
+if(links)links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const io=new IntersectionObserver((es)=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*55);io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const f=document.querySelector('form');if(f)f.addEventListener('submit',function(ev){if(this.action.includes('your-id-here')){ev.preventDefault();alert('✅ Demo form — this is where leads get emailed to the business. (Connect Formspree to go live.)');}});
 </script>
 </body>
 </html>
