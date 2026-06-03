@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- NIMBUS TEMPLATE D · "Minimal / Swiss" · hairline rules, uppercase labels, near-monochrome, left-aligned grid, text-forward hero with small image -->
+<title>Northwest Fence Company | Deck &amp; Fence Contractor in Chicago</title>
+<meta name="description" content="Northwest Fence Company — licensed, insured, serving Romeoville, IL. Free estimates and quality work backed by a written warranty." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#dc2626; --accent-dark:#991b1b;
+    --ink:#111315; --ink-soft:#6c7176; --paper:#ffffff; --paper-2:#f7f7f5;
+    --line:#e3e3e0; --line-strong:#111315; --radius:6px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Work Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:"Oswald",sans-serif;line-height:1.06;letter-spacing:-.02em;font-weight:600}
+  a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+  .label{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+  .num-lg{font-family:"Oswald";font-weight:600}
+
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:15px 30px;transition:.2s;cursor:pointer;border:1px solid var(--line-strong);border-radius:var(--radius)}
+  .btn-solid{background:var(--ink);color:#fff}
+  .btn-solid:hover{background:var(--accent);border-color:var(--accent)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:50;padding:22px 0;transition:.3s;border-bottom:1px solid transparent}
+  header.scrolled{background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:15px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:"Oswald";font-size:1.2rem;font-weight:600;display:flex;align-items:baseline;gap:9px;letter-spacing:-.01em}
+  .logo .dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;transform:translateY(-1px)}
+  .nav-links{display:flex;gap:34px;align-items:center}
+  .nav-links a{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{display:flex;align-items:center;gap:20px}
+  .nav-phone{font-weight:600;font-size:.85rem;letter-spacing:.04em}
+  .nav-phone:hover{color:var(--accent)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{width:24px;height:1.5px;background:var(--ink);border-radius:2px}
+
+  /* Hero — text forward, hairlines, small image to the side */
+  .hero{padding:170px 0 70px;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:56px;align-items:end}
+  .hero .label{margin-bottom:26px;display:flex;align-items:center;gap:12px}
+  .hero .label::before{content:"";width:34px;height:1px;background:var(--accent)}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.6rem);letter-spacing:-.03em}
+  .hero h1 .accent{color:var(--accent);font-style:normal}
+  .hero p{font-size:1.12rem;color:var(--ink-soft);margin:28px 0 34px;max-width:440px}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-img{position:relative}
+  .hero-img img{width:100%;height:340px;object-fit:cover;border-radius:var(--radius);filter:grayscale(.18)}
+  .hero-img .cap{margin-top:12px;display:flex;justify-content:space-between;align-items:baseline}
+  .hero-img .cap .label{margin:0}
+
+  /* Stats — hairline divided row */
+  .stats{border-bottom:1px solid var(--line)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);}
+  .stat{padding:44px 0;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat .v{font-size:2.6rem;color:var(--ink);line-height:1}
+  .stat .v b{color:var(--accent);font-weight:600}
+  .stat .k{margin-top:10px}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}
+  section{padding:96px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:54px;padding-bottom:22px;border-bottom:1px solid var(--line-strong)}
+  .sec-head h2{font-size:clamp(1.9rem,4vw,2.9rem);max-width:9ch}
+  .sec-head .idx{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;white-space:nowrap}
+
+  /* Services — left-aligned grid, hairline cells, no shadows */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+  .card{padding:38px 34px 38px 0;border-bottom:1px solid var(--line);border-right:1px solid var(--line);transition:background .25s}
+  .card:nth-child(3n){border-right:none}
+  .card{padding-left:34px}
+  .card:hover{background:var(--paper-2)}
+  .card .ic{width:auto;height:auto;font-size:1.5rem;margin-bottom:22px;display:block;filter:grayscale(.25)}
+  .card h3{font-size:1.18rem;margin-bottom:10px;font-weight:600}
+  .card h3::before{content:"";display:block;width:26px;height:2px;background:var(--accent);margin-bottom:16px}
+  .card p{color:var(--ink-soft);font-size:.95rem}
+
+  /* Why — minimal numbered list */
+  .why{background:var(--paper-2)}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:46px}
+  .feat .n{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px}
+  .feat h3{font-size:1.2rem;margin-bottom:9px;font-weight:600}
+  .feat p{color:var(--ink-soft);font-size:.95rem}
+
+  /* Gallery */
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:10px}
+  .gal-grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);filter:grayscale(.15);transition:filter .4s}
+  .gal-grid img:hover{filter:grayscale(0)}
+  .gal-grid .tall{grid-row:span 2}
+
+  /* Reviews — hairline cards */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-strong)}
+  .review{padding:40px 30px 40px 0;border-right:1px solid var(--line)}
+  .review:last-child{border-right:none}
+  .review:not(:first-child){padding-left:30px}
+  .stars{color:var(--accent);letter-spacing:3px;margin-bottom:18px;font-size:.85rem}
+  .review p{font-size:1.05rem;color:var(--ink);line-height:1.6}
+  .review .who{margin-top:22px;font-weight:600;font-size:.85rem;letter-spacing:.04em}
+  .review .who span{display:block;color:var(--ink-soft);font-weight:400;letter-spacing:.12em;text-transform:uppercase;font-size:.7rem;margin-top:5px}
+
+  /* CTA — split, restrained */
+  .cta{border-top:1px solid var(--line-strong)}
+  .cta .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+  .cta h2{font-size:clamp(2rem,4.4vw,3.2rem);letter-spacing:-.02em}
+  .cta .lead{color:var(--ink-soft);margin:20px 0 30px;max-width:38ch;font-size:1.05rem}
+  .cta .micro{font-size:.85rem;color:var(--ink-soft)}
+  .qform{border:1px solid var(--line-strong);border-radius:var(--radius);padding:36px}
+  .qform h3{font-family:"Oswald";font-weight:600;font-size:1.25rem;margin-bottom:6px}
+  .qform .sub{color:var(--ink-soft);font-size:.9rem;margin-bottom:24px}
+  .qform-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .qform input{width:100%;padding:14px 4px;border:none;border-bottom:1px solid var(--line-strong);margin-bottom:18px;font-family:inherit;font-size:.97rem;background:transparent}
+  .qform input::placeholder{color:var(--ink-soft)}
+  .qform input:focus{outline:none;border-bottom-color:var(--accent)}
+  .qform .btn{width:100%;justify-content:center;margin-top:6px}
+
+  footer{border-top:1px solid var(--line);padding:64px 0 32px;font-size:.9rem;color:var(--ink-soft)}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;margin-bottom:48px}
+  footer .logo{color:var(--ink);margin-bottom:16px}
+  footer h4{color:var(--ink);font-weight:600;margin-bottom:16px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+  footer a{display:block;margin-bottom:11px}footer a:hover{color:var(--accent)}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+  .callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--ink);padding:15px;text-align:center;font-weight:600;color:#fff;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}.hero-img img{height:280px}
+    .grid,.why-grid{grid-template-columns:1fr 1fr}.card:nth-child(3n){border-right:1px solid var(--line)}.card:nth-child(2n){border-right:none}
+    .gal-grid{grid-template-columns:repeat(2,1fr)}.rev-grid{grid-template-columns:1fr}
+    .review{border-right:none;border-bottom:1px solid var(--line);padding-left:0!important;padding-right:0}
+    .cta .wrap{grid-template-columns:1fr;gap:36px}.foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:640px){
+    .nav-links{position:fixed;inset:0 0 0 auto;width:80%;max-width:320px;background:#fff;flex-direction:column;justify-content:center;align-items:flex-start;gap:30px;transform:translateX(100%);transition:transform .3s;padding:0 40px;border-left:1px solid var(--line)}
+    .nav-links.open{transform:none}
+    .burger{display:flex;z-index:70}.nav-cta .btn,.nav-phone span{display:none}
+    .stats .wrap{grid-template-columns:1fr}.stat{border-right:none;border-bottom:1px solid var(--line);padding:30px 0}
+    .grid,.why-grid,.foot-grid,.qform-row{grid-template-columns:1fr}
+    .card{border-right:none!important}.gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:150px}.gal-grid .tall{grid-row:span 1}
+    .sec-head{flex-direction:column;align-items:flex-start;gap:8px}
+    body{padding-bottom:54px}.callbar{display:block}section{padding:64px 0}.hero{padding:130px 0 56px}
+  }
+</style>
+</head>
+<body>
+<header id="hd"><div class="wrap nav">
+  <a href="#" class="logo"><span class="dot"></span>Northwest Fence Company</a>
+  <nav class="nav-links" id="navlinks">
+    <a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">Work</a><a href="#reviews">Reviews</a><a href="#quote">Estimate</a>
+  </nav>
+  <div class="nav-cta">
+    <a href="tel:8158368731" class="nav-phone"><span>(815) 836-8731</span></a>
+    <a href="#quote" class="btn btn-ghost">Free Estimate</a>
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+  </div>
+</div></header>
+
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <div class="label reveal">Licensed &amp; Insured — Romeoville, IL</div>
+    <h1 class="reveal">Decks &amp; Fences Built to <span class="accent">Last</span>.</h1>
+    <p class="reveal">Trusted Chicago deck &amp; fence builders for years. New decks, fences, repairs, and staining — we&#39;ll be out for a <strong>free estimate today.</strong></p>
+    <div class="hero-btns reveal">
+      <a href="#quote" class="btn btn-solid">Get a Free Estimate</a>
+      <a href="tel:8158368731" class="btn btn-ghost">(815) 836-8731</a>
+    </div>
+  </div>
+  <div class="hero-img reveal">
+    <img src="https://images.unsplash.com/photo-1613544723371-23b514a78c85?q=80&w=1600&auto=format&fit=crop" alt="Northwest Fence Company work">
+    <div class="cap"><span class="label">Recent Project</span><span class="label">Romeoville, IL</span></div>
+  </div>
+</div></section>
+
+<div class="stats reveal"><div class="wrap">
+  <div class="stat"><div class="v num-lg">15+</div><div class="k label">Years in Business</div></div>
+  <div class="stat"><div class="v num-lg">1,000+</div><div class="k label">Projects Completed</div></div>
+  <div class="stat"><div class="v num-lg"><b>4.8★</b></div><div class="k label">Average Rating</div></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="sec-head reveal"><h2>Full-Service Decks &amp; Fences,<br>Done Right the First Time.</h2><span class="idx">01 — Services</span></div>
+  <div class="grid"><div class="card reveal"><div class="ic">🪵</div><h3>Custom Decks</h3><p>Cedar, composite, and pressure-treated decks designed and built to fit your yard and your budget.</p></div>
+      <div class="card reveal"><div class="ic">🚧</div><h3>Fence Installation</h3><p>Wood, vinyl, aluminum, and chain-link fences installed straight, solid, and to code.</p></div>
+      <div class="card reveal"><div class="ic">🔧</div><h3>Deck &amp; Fence Repair</h3><p>Loose boards, leaning posts, and storm damage fixed before they get worse.</p></div>
+      <div class="card reveal"><div class="ic">🎨</div><h3>Staining &amp; Sealing</h3><p>Power-washing, staining, and sealing to protect the wood and keep it looking new.</p></div>
+      <div class="card reveal"><div class="ic">🏠</div><h3>Pergolas &amp; Railings</h3><p>Pergolas, gates, and railings that finish the space and add real value.</p></div>
+      <div class="card reveal"><div class="ic">🔍</div><h3>Free Estimates</h3><p>Honest, no-pressure estimates with photos. We&#39;ll tell you what actually needs doing.</p></div></div>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+  <div class="sec-head reveal"><h2>Built on trust, backed in writing.</h2><span class="idx">02 — Why Us</span></div>
+  <div class="why-grid">
+    <div class="feat reveal"><div class="n">01</div><h3>Licensed &amp; Insured</h3><p>Fully licensed, bonded, and insured — your property is protected on every job.</p></div>
+    <div class="feat reveal"><div class="n">02</div><h3>Free, Honest Estimates</h3><p>Clear written quotes, no hidden fees, and we will tell you what can wait.</p></div>
+    <div class="feat reveal"><div class="n">03</div><h3>Written Warranty</h3><p>Every job is backed by a workmanship warranty you can hold us to.</p></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="sec-head reveal"><h2>Selected work.</h2><span class="idx">03 — Portfolio</span></div>
+  <div class="gal-grid reveal"><img class="tall" src="https://images.unsplash.com/photo-1593285247650-cd7bb44adcfd?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1601042860368-debed90085e0?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1604015641586-6fa03629f976?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1537407034356-b8f5f1ac2aa8?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1586574208875-cd77c2bfb851?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="tall" src="https://images.unsplash.com/photo-1613756178402-ed5c1ea492b4?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1676268479279-5a7dcf050634?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy"></div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <div class="sec-head reveal"><h2>Neighbors who trust us.</h2><span class="idx">04 — Reviews</span></div>
+  <div class="rev-grid">
+    <div class="review reveal"><div class="stars">★★★★★</div><p>They were out the next morning, handled everything, and the work looks incredible.</p><div class="who">Maria G.<span>Jefferson Park, Chicago</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>The only ones who showed up on time and showed me photos of everything. No regrets.</p><div class="who">Dave R.<span>Oak Park, IL</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>Honest people. They told me what could wait instead of overselling me. Customer for life.</p><div class="who">Jim &amp; Sandra T.<span>Berwyn, IL</span></div></div>
+  </div>
+</div></section>
+
+<section class="cta" id="quote"><div class="wrap">
+  <div class="reveal">
+    <span class="label">05 — Free Estimate</span>
+    <h2 style="margin-top:18px">Get Your Free Deck &amp; Fence<br>Estimate Today.</h2>
+    <p class="lead">No pressure, no obligation. We will take a look, send you photos, and give you an honest assessment — often the same day you call.</p>
+    <p class="micro">Mon–Sat · 7am–7pm &nbsp;·&nbsp; <a href="tel:8158368731" style="color:var(--accent);font-weight:600">(815) 836-8731</a></p>
+  </div>
+  <div class="qform reveal">
+    <h3>Request a Free Estimate</h3>
+    <p class="sub">Fill this out and we will call you back within the hour.</p>
+    <form action="https://formspree.io/f/your-id-here" method="POST">
+      <div class="qform-row"><input type="text" name="name" placeholder="Your name" required><input type="tel" name="phone" placeholder="Phone number" required></div>
+      <input type="text" name="address" placeholder="Property address" required>
+      <button type="submit" class="btn btn-solid">Get My Free Estimate</button>
+    </form>
+  </div>
+</div></section>
+
+<section id="nbx"><style>#nbx{background:#0f1318;color:#e8eaed;padding:48px 24px;font-family:inherit;line-height:1.6}#nbx *{box-sizing:border-box}#nbx .nbx-wrap{max-width:1080px;margin:0 auto;text-align:center}#nbx .nbx-kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#dc2626;font-weight:800;margin-bottom:16px}#nbx .nbx-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px}#nbx .nbx-chip{border:1px solid #dc2626;color:#fff;border-radius:100px;padding:8px 16px;font-size:.85rem;font-weight:600;white-space:nowrap}#nbx .nbx-line{color:#c2c8d0;font-size:1.02rem;margin:6px 0}#nbx .nbx-line b{color:#fff;font-weight:700}#nbx .nbx-area{color:#9aa1aa;font-size:.92rem;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto}#nbx .nbx-cta{display:inline-flex;align-items:center;gap:8px;margin-top:22px;background:#dc2626;color:#fff;font-weight:800;padding:14px 30px;border-radius:8px;text-decoration:none}</style><div class="nbx-wrap"><div class="nbx-kicker">Why Chicago homeowners choose Northwest Fence Company</div><div class="nbx-chips"><span class="nbx-chip">✓ Licensed & Insured</span><span class="nbx-chip">✓ Free On-Site Estimates</span><span class="nbx-chip">✓ Material Warranty</span><span class="nbx-chip">✓ Locally Owned</span></div><div class="nbx-line">💳 <b>Financing available</b></div><div class="nbx-area">📍 Proudly serving Romeoville, IL — plus Chicago, Oak Park, Evanston, Berwyn, Cicero, Skokie &amp; all surrounding suburbs.</div><a class="nbx-cta" href="tel:8158368731">📞 (815) 836-8731</a></div></section><footer><div class="wrap">
+  <div class="foot-grid">
+    <div><a href="#" class="logo"><span class="dot"></span>Northwest Fence Company</a><p>Chicago's trusted, family-owned Deck &amp; Fence Contractor in Chicago. Licensed, bonded, and insured. Serving Romeoville, IL.</p></div>
+    <div><h4>Company</h4><a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">Work</a><a href="#quote">Estimate</a></div>
+    <div><h4>Contact</h4><a href="tel:8158368731">(815) 836-8731</a><a href="mailto:northwest.fence.company@gmail.com">northwest.fence.company@gmail.com</a><p style="margin-top:10px">Mon–Sat · 7am–7pm</p></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Northwest Fence Company</span><span>Site by Nimbus Web Studio</span></div>
+</div></footer>
+<a href="tel:8158368731" class="callbar">Tap to Call — (815) 836-8731</a>
+<script>
+const hd=document.getElementById('hd');if(hd)addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>40));
+const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+if(burger)burger.addEventListener('click',()=>links.classList.toggle('open'));
+if(links)links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const io=new IntersectionObserver((es)=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*55);io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const f=document.querySelector('form');if(f)f.addEventListener('submit',function(ev){if(this.action.includes('your-id-here')){ev.preventDefault();alert('✅ Demo form — this is where leads get emailed to the business. (Connect Formspree to go live.)');}});
+</script>
+</body>
+</html>
