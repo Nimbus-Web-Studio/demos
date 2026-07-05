@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- NIMBUS TEMPLATE G · "Corporate" · top utility bar, blue-chip structure, boxed stat cards, 3-col services -->
+<title>SNE Roofing | Roofing Contractor in Chicago</title>
+<meta name="description" content="SNE Roofing — licensed, insured, serving Naperville, IL. Free estimates and quality work backed by a written warranty." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#0891b2; --accent-dark:#0e7490;
+    --ink:#101826; --ink-soft:#54606f; --paper:#ffffff; --paper-2:#f3f6fa;
+    --line:#dbe2ec; --radius:6px; --shadow:0 20px 48px -22px rgba(16,24,38,.28);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:"Archivo Black",sans-serif;line-height:1.12;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.95rem;padding:13px 26px;border-radius:var(--radius);transition:transform .15s,box-shadow .2s,background .2s;cursor:pointer;border:none}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px var(--accent)}
+  .btn-ghost{background:#fff;color:var(--accent);border:1.5px solid var(--accent)}
+  .btn-ghost:hover{background:var(--accent);color:#fff}
+  .btn-lg{padding:16px 32px;font-size:1.03rem}
+
+  /* Top utility bar */
+  .utility{background:var(--accent-dark);color:#cdd8e6;font-size:.84rem}
+  .utility .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;flex-wrap:wrap}
+  .utility a{color:#e6edf6;font-weight:600}.utility a:hover{color:#fff}
+  .utility .u-left span{margin-right:22px}
+  .utility .u-right a{margin-left:20px}
+
+  header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);transition:.25s}
+  header.scrolled{box-shadow:0 6px 24px rgba(16,24,38,.1)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{font-family:"Archivo Black";font-size:1.42rem;display:flex;align-items:center;gap:11px;color:var(--ink)}
+  .logo .mark{width:40px;height:40px;background:var(--accent);color:#fff;border-radius:8px;display:grid;place-items:center;font-size:1.1rem;font-weight:800}
+  .logo small{display:block;font-family:"Inter";font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{color:var(--ink-soft);font-weight:600;font-size:.95rem}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-cta{display:flex;align-items:center;gap:16px}
+  .nav-phone{font-weight:800;color:var(--accent);font-size:1.05rem}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:2.5px;background:var(--ink);border-radius:2px}
+
+  /* Hero — split, left text right image, on light corporate ground */
+  .hero{background:var(--paper-2);position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;top:0;right:0;width:46%;height:100%;background:linear-gradient(160deg,var(--accent),var(--accent-dark));clip-path:polygon(18% 0,100% 0,100% 100%,0 100%);z-index:0}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:78px 0 84px;position:relative;z-index:2}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);color:var(--accent);padding:7px 16px;border-radius:6px;font-weight:800;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px}
+  .hero h1{font-size:clamp(2.4rem,5vw,4rem);color:var(--ink)}
+  .hero h1 .accent{color:var(--accent);border-bottom:5px solid var(--accent);padding-bottom:2px}
+  .hero p{font-size:1.16rem;color:var(--ink-soft);margin:22px 0 30px;max-width:520px}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-img-box{position:relative}
+  .hero-img-box img{width:100%;height:430px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow)}
+  .hero-badge{position:absolute;bottom:-22px;left:-22px;background:#fff;border-radius:var(--radius);padding:18px 24px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px}
+  .hero-badge .b-num{font-family:"Archivo Black";font-size:2rem;color:var(--accent);line-height:1}
+  .hero-badge .b-lbl{font-size:.82rem;color:var(--ink-soft);font-weight:600;line-height:1.3}
+
+  /* Boxed stat cards */
+  .stats{background:#fff;border-bottom:1px solid var(--line)}
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:54px 0}
+  .stat-card{background:var(--paper-2);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:var(--radius);padding:30px 24px;text-align:center}
+  .stat-card .num{font-family:"Archivo Black";font-size:2.5rem;color:var(--accent);line-height:1}
+  .stat-card .lbl{font-size:.82rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.05em;margin-top:8px;font-weight:600}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}
+  section{padding:88px 0}
+  .sec-head{max-width:680px;margin:0 auto 52px;text-align:center}
+  .sec-head .kicker{color:var(--accent);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.82rem}
+  .sec-head h2{font-size:clamp(2rem,4.2vw,2.9rem);margin-top:12px;color:var(--ink)}
+  .sec-head p{color:var(--ink-soft);margin-top:14px;font-size:1.05rem}
+
+  /* Services 3-col formal cards */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;transition:transform .25s,box-shadow .25s,border-color .25s}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--accent)}
+  .card .ic{width:62px;height:62px;border-radius:12px;background:var(--accent-dark);color:#fff;display:grid;place-items:center;font-size:1.7rem;margin-bottom:18px}
+  .card h3{font-size:1.24rem;margin-bottom:9px;color:var(--ink)}.card p{color:var(--ink-soft);font-size:.97rem}
+
+  /* Why band */
+  .features{background:var(--accent-dark);color:#dfe8f3}
+  .features .sec-head h2{color:#fff}.features .sec-head .kicker{color:#9fc0ea}
+  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .feat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:30px;text-align:center}
+  .feat .fi{font-size:2rem;margin-bottom:12px}
+  .feat h3{font-size:1.18rem;margin-bottom:8px;color:#fff}.feat p{color:#c3d2e6;font-size:.95rem}
+
+  /* Gallery */
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:14px}
+  .gal-grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);transition:transform .4s,filter .4s;filter:saturate(.92)}
+  .gal-grid img:hover{transform:scale(1.03);filter:saturate(1.1)}
+  .gal-grid .tall{grid-row:span 2}
+
+  /* Reviews */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .review{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+  .stars{color:var(--accent);letter-spacing:2px;margin-bottom:14px;font-size:1.05rem}
+  .review p{font-size:1rem;color:var(--ink)}
+  .review .who{margin-top:18px;font-weight:800;font-size:.95rem;color:var(--ink)}.review .who span{display:block;color:var(--ink-soft);font-weight:500;font-size:.85rem;margin-top:2px}
+
+  /* CTA */
+  .cta{background:var(--paper-2)}
+  .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .cta h2{font-size:clamp(2rem,4.4vw,3rem);color:var(--ink)}
+  .cta-grid>div p{color:var(--ink-soft);margin:16px 0 24px;font-size:1.08rem}
+  .cta ul{list-style:none;margin-top:16px}
+  .cta ul li{padding:8px 0 8px 30px;position:relative;color:var(--ink);font-weight:600}
+  .cta ul li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:800}
+  .qform{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow)}
+  .qform h3{font-family:"Archivo Black";font-size:1.4rem;margin-bottom:5px;color:var(--ink)}
+  .qform .sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:18px}
+  .qform-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .qform input,.qform select{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:8px;margin-bottom:12px;font-family:inherit;font-size:.97rem;background:#fff}
+  .qform input:focus,.qform select:focus{outline:none;border-color:var(--accent)}
+  .qform .btn-primary{width:100%;justify-content:center}
+
+  footer{background:var(--ink);color:#9aa6b6;padding:60px 0 30px;font-size:.95rem}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:44px;margin-bottom:40px}
+  footer .logo{color:#fff;margin-bottom:14px}footer .logo .mark{background:var(--accent);color:#fff}
+  footer .logo small{color:#7f8da0}
+  footer h4{color:#fff;font-weight:800;margin-bottom:14px;font-size:1rem}
+  footer a{display:block;margin-bottom:9px}footer a:hover{color:var(--accent)}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.84rem;color:#6b7889}
+  .callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--accent);padding:14px;text-align:center;font-weight:800;color:#fff}
+
+  @media(max-width:980px){
+    .hero-grid,.cta-grid{grid-template-columns:1fr}.hero::after{display:none}
+    .hero-img-box img{height:340px}.hero-badge{left:0}
+    .stat-grid{grid-template-columns:1fr 1fr}.grid,.feat-grid,.rev-grid{grid-template-columns:1fr 1fr}
+    .gal-grid{grid-template-columns:1fr 1fr}.foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:640px){
+    .nav-links{position:fixed;inset:0 0 0 auto;width:80%;max-width:320px;background:#fff;flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .3s;box-shadow:var(--shadow);z-index:60}
+    .nav-links.open{transform:none}
+    .burger{display:flex;z-index:70}.nav-cta .btn,.nav-phone span{display:none}
+    .stat-grid,.grid,.feat-grid,.rev-grid,.gal-grid,.foot-grid,.qform-row{grid-template-columns:1fr}
+    .gal-grid .tall{grid-row:span 1}.utility{display:none}
+    body{padding-bottom:56px}.callbar{display:block}section{padding:56px 0}
+  }
+</style>
+</head>
+<body>
+<div class="utility"><div class="wrap">
+  <div class="u-left"><span>📍 Serving Naperville, IL</span><span>🕐 Mon–Sat · 7am–7pm</span></div>
+  <div class="u-right"><a href="mailto:sneroofing@gmail.com">✉ sneroofing@gmail.com</a><a href="tel:6305421927">📞 (630) 542-1927</a></div>
+</div></div>
+
+<header id="hd"><div class="wrap nav">
+  <a href="#" class="logo"><span class="mark">▲</span><span>SNE Roofing<small>Roofing Contractor in Chicago</small></span></a>
+  <nav class="nav-links" id="navlinks">
+    <a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#quote">Free Estimate</a>
+  </nav>
+  <div class="nav-cta">
+    <a href="tel:6305421927" class="nav-phone">📞 <span>(630) 542-1927</span></a>
+    <a href="#quote" class="btn btn-primary">Free Estimate</a>
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+  </div>
+</div></header>
+
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="eyebrow reveal">● Licensed, Bonded &amp; Insured</span>
+    <h1 class="reveal">A Roof You Can <span class="accent">Trust</span> Over Your Family&#39;s Head.</h1>
+    <p class="reveal">Trusted Chicago roofing for years. Storm damage, leaks, or a full replacement — we&#39;ll be out for a <strong>free inspection today.</strong></p>
+    <div class="hero-btns reveal">
+      <a href="#quote" class="btn btn-primary btn-lg">Request a Free Estimate →</a>
+      <a href="tel:6305421927" class="btn btn-ghost btn-lg">📞 (630) 542-1927</a>
+    </div>
+  </div>
+  <div class="hero-img-box reveal">
+    <img src="https://images.unsplash.com/photo-1518736346281-76873166a64a?q=80&w=1600&auto=format&fit=crop" alt="SNE Roofing work">
+    <div class="hero-badge"><div class="b-num">4.8★</div><div class="b-lbl">Google<br>Rating</div></div>
+  </div>
+</div></section>
+
+<section class="stats"><div class="wrap stat-grid">
+  <div class="stat-card reveal"><div class="num">15+</div><div class="lbl">Years in Business</div></div>
+  <div class="stat-card reveal"><div class="num">1,000+</div><div class="lbl">Roofs Completed</div></div>
+  <div class="stat-card reveal"><div class="num">4.8★</div><div class="lbl">Google Rating</div></div>
+  <div class="stat-card reveal"><div class="num">10yr</div><div class="lbl">Workmanship Warranty</div></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">What We Do</span><h2>Full-Service Roofing,<br>Done Right the First Time.</h2><p>A full-service team trusted by homeowners and businesses across Naperville, IL.</p></div>
+  <div class="grid"><div class="card reveal"><div class="ic">🏠</div><h3>Roof Replacement</h3><p>Complete tear-offs and new installs in asphalt shingle, architectural, and designer systems built to last decades.</p></div>
+      <div class="card reveal"><div class="ic">🔧</div><h3>Roof Repair</h3><p>Leaks, missing shingles, flashing, and ventilation fixed fast — before a small problem becomes a ceiling.</p></div>
+      <div class="card reveal"><div class="ic">⛈️</div><h3>Storm &amp; Hail Damage</h3><p>Free damage assessments and full insurance-claim support. We deal with the adjuster so you don&#39;t have to.</p></div>
+      <div class="card reveal"><div class="ic">🏢</div><h3>Flat &amp; Commercial</h3><p>TPO, EPDM, and modified-bitumen flat-roof systems for two-flats, commercial buildings, and additions.</p></div>
+      <div class="card reveal"><div class="ic">💧</div><h3>Gutters &amp; Soffit</h3><p>Seamless gutters, downspouts, soffit, and fascia to move water away and protect your foundation.</p></div>
+      <div class="card reveal"><div class="ic">🔍</div><h3>Free Inspections</h3><p>Honest, no-pressure roof inspections with photos. We&#39;ll tell you if it can wait — and mean it.</p></div></div>
+</div></section>
+
+<section class="features" id="why"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Why Choose Us</span><h2>Built on Trust, Backed in Writing.</h2></div>
+  <div class="feat-grid">
+    <div class="feat reveal"><div class="fi">🛡️</div><h3>Licensed &amp; Insured</h3><p>Fully licensed, bonded, and insured — your property is protected on every job.</p></div>
+    <div class="feat reveal"><div class="fi">📋</div><h3>Free, Honest Estimates</h3><p>Clear written quotes, no hidden fees, and we'll tell you what can wait.</p></div>
+    <div class="feat reveal"><div class="fi">✅</div><h3>Written Warranty</h3><p>Every job is backed by a workmanship warranty you can hold us to.</p></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Recent Work</span><h2>Projects We're Proud Of.</h2></div>
+  <div class="gal-grid reveal"><img class="tall" src="https://images.unsplash.com/photo-1605450099279-533bd3ce379a?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1528223871781-8f4c984f6164?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1600612707884-c424a2ba812e?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1644604120663-4e5fcdf33104?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1682106446715-e16b19cfffb5?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="tall" src="https://images.unsplash.com/photo-1643225523483-e2c434191bba?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy"></div>
+</div></section>
+
+<section id="reviews" style="background:var(--paper-2)"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Reviews</span><h2>Neighbors Who Trust Us.</h2></div>
+  <div class="rev-grid">
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"They were out the next morning, handled everything, and the work looks incredible."</p><div class="who">Maria G.<span>Jefferson Park, Chicago</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"The only ones who showed up on time and showed me photos of everything. No regrets."</p><div class="who">Dave R.<span>Oak Park, IL</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"Honest people. They told me what could wait instead of overselling me. Customer for life."</p><div class="who">Jim &amp; Sandra T.<span>Berwyn, IL</span></div></div>
+  </div>
+</div></section>
+
+<section class="cta" id="quote"><div class="wrap cta-grid">
+  <div class="reveal">
+    <h2>Get Your Free Roof<br>Inspection Today.</h2>
+    <p>No pressure, no obligation. We'll take a look, send you photos, and give you an honest assessment — often the same day you call.</p>
+    <ul>
+      <li>Same-day response on most requests</li>
+      <li>Written quote with no hidden fees</li>
+      <li>Licensed, bonded, and fully insured</li>
+    </ul>
+  </div>
+  <div class="qform reveal">
+    <h3>Request a Free Estimate</h3>
+    <p class="sub">Fill this out and we'll call you back within the hour.</p>
+    <form action="https://formspree.io/f/your-id-here" method="POST">
+      <div class="qform-row"><input type="text" name="name" placeholder="Your name" required><input type="tel" name="phone" placeholder="Phone number" required></div>
+      <input type="text" name="address" placeholder="Property address" required>
+      <select name="service"><option value="">What do you need?</option><option>New project / installation</option><option>Repair</option><option>Not sure — need an estimate</option></select>
+      <button type="submit" class="btn btn-primary">Get My Free Estimate →</button>
+    </form>
+  </div>
+</div></section>
+
+<section id="nbx"><style>#nbx{background:#0f1318;color:#e8eaed;padding:48px 24px;font-family:inherit;line-height:1.6}#nbx *{box-sizing:border-box}#nbx .nbx-wrap{max-width:1080px;margin:0 auto;text-align:center}#nbx .nbx-kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#0891b2;font-weight:800;margin-bottom:16px}#nbx .nbx-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px}#nbx .nbx-chip{border:1px solid #0891b2;color:#fff;border-radius:100px;padding:8px 16px;font-size:.85rem;font-weight:600;white-space:nowrap}#nbx .nbx-line{color:#c2c8d0;font-size:1.02rem;margin:6px 0}#nbx .nbx-line b{color:#fff;font-weight:700}#nbx .nbx-area{color:#9aa1aa;font-size:.92rem;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto}#nbx .nbx-cta{display:inline-flex;align-items:center;gap:8px;margin-top:22px;background:#0891b2;color:#fff;font-weight:800;padding:14px 30px;border-radius:8px;text-decoration:none}</style><div class="nbx-wrap"><div class="nbx-kicker">Why Chicago homeowners choose SNE Roofing</div><div class="nbx-chips"><span class="nbx-chip">✓ Licensed & Insured</span><span class="nbx-chip">✓ Free Roof Inspections</span><span class="nbx-chip">✓ Workmanship Warranty</span><span class="nbx-chip">✓ Insurance Claims Welcome</span></div><div class="nbx-line">💳 <b>Financing available — flexible monthly plans</b></div><div class="nbx-line">⛑️ <b>24/7 storm & emergency response</b></div><div class="nbx-area">📍 Proudly serving Naperville, IL — plus Chicago, Oak Park, Evanston, Berwyn, Cicero, Skokie &amp; all surrounding suburbs.</div><a class="nbx-cta" href="tel:6305421927">📞 (630) 542-1927</a></div></section><footer><div class="wrap">
+  <div class="foot-grid">
+    <div><a href="#" class="logo"><span class="mark">▲</span><span style="color:#fff">SNE Roofing<small>Roofing Contractor in Chicago</small></span></a><p>Chicago's trusted, family-owned Roofing Contractor in Chicago. Licensed, bonded, and insured. Serving Naperville, IL.</p></div>
+    <div><h4>Company</h4><a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">Our Work</a><a href="#quote">Free Estimate</a></div>
+    <div><h4>Get In Touch</h4><a href="tel:6305421927">📞 (630) 542-1927</a><a href="mailto:sneroofing@gmail.com">✉ sneroofing@gmail.com</a><p style="margin-top:10px">Mon–Sat · 7am–7pm</p></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 SNE Roofing All rights reserved.</span><span>Site by Nimbus Web Studio</span></div>
+</div></footer>
+<a href="tel:6305421927" class="callbar">📞 Tap to Call — Free Estimate</a>
+<script>
+const hd=document.getElementById('hd');if(hd)addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>40));
+const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+if(burger)burger.addEventListener('click',()=>links.classList.toggle('open'));
+if(links)links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const io=new IntersectionObserver((es)=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*55);io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const f=document.querySelector('form');if(f)f.addEventListener('submit',function(ev){if(this.action.includes('your-id-here')){ev.preventDefault();alert('✅ Demo form — this is where leads get emailed to the business. (Connect Formspree to go live.)');}});
+</script>
+</body>
+</html>

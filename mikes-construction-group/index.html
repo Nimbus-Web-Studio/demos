@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- NIMBUS TEMPLATE K · "Split" · 50/50 split hero, strong vertical division carried through sections -->
+<title>Mike's Construction Group | Masonry &amp; Tuckpointing Contractor in Chicago</title>
+<meta name="description" content="Mike's Construction Group — licensed, insured, serving Niles. Free estimates and quality work backed by a written warranty." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#0891b2; --accent-dark:#0e7490;
+    --ink:#14171c; --ink-soft:#5a616b; --paper:#ffffff; --paper-2:#f3f1ec;
+    --line:#e5e2da; --radius:13px; --shadow:0 26px 60px -26px rgba(0,0,0,.32);
+    --panel:#171b22;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:"Archivo Black",sans-serif;line-height:1.05;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.96rem;padding:14px 26px;border-radius:var(--radius);transition:transform .15s,box-shadow .2s;cursor:pointer;border:none}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px var(--accent)}
+  .btn-dark{background:var(--panel);color:#fff}.btn-dark:hover{transform:translateY(-2px)}
+  .btn-out{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}.btn-out:hover{border-color:#fff}
+  .btn-lg{padding:17px 32px;font-size:1.05rem}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:50;padding:16px 0;transition:.3s}
+  header.scrolled{background:#fff;box-shadow:0 4px 22px rgba(0,0,0,.08);padding:11px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:"Archivo Black";font-size:1.45rem;display:flex;align-items:center;gap:10px;color:#fff;transition:color .3s}
+  header.scrolled .logo{color:var(--ink)}
+  .logo .mark{width:36px;height:36px;background:var(--accent);color:#fff;border-radius:9px;display:grid;place-items:center;font-size:1rem}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:rgba(255,255,255,.92);font-weight:600;font-size:.95rem}
+  header.scrolled .nav-links a{color:var(--ink-soft)}
+  .nav-links a:hover{color:#fff}header.scrolled .nav-links a:hover{color:var(--accent)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .nav-phone{font-weight:800;color:#fff}header.scrolled .nav-phone{color:var(--ink)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:2.5px;background:#fff;border-radius:2px}header.scrolled .burger span{background:var(--ink)}
+
+  /* SPLIT HERO — 50/50 */
+  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+  .hero-panel{background:var(--panel);color:#fff;display:flex;align-items:center;padding:140px 6vw 80px;position:relative}
+  .hero-panel::after{content:"";position:absolute;top:0;right:0;width:4px;height:100%;background:var(--accent)}
+  .hero-panel-inner{max-width:520px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);color:#fff;padding:7px 16px;border-radius:100px;font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:24px}
+  .hero-panel h1{font-size:clamp(2.6rem,4.6vw,4.4rem)}
+  .hero-panel h1 .accent{color:var(--accent)}
+  .hero-panel p{font-size:1.18rem;color:rgba(255,255,255,.84);margin:22px 0 32px;max-width:460px}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-img{position:relative;overflow:hidden}
+  .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(23,27,34,.25),transparent 30%)}
+
+  /* Stats — split band */
+  .statband{background:var(--accent);color:#fff}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr)}
+  .stat{padding:34px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.22)}
+  .stat:last-child{border-right:none}
+  .stat .num{font-family:"Archivo Black";font-size:2.3rem;line-height:1}
+  .stat .lbl{font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;margin-top:6px;color:rgba(255,255,255,.85)}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}
+  section{padding:92px 0}
+  .sec-head{max-width:640px;margin-bottom:48px}
+  .sec-head.ctr{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head .kicker{color:var(--accent);font-weight:800;letter-spacing:.11em;text-transform:uppercase;font-size:.83rem}
+  .sec-head h2{font-size:clamp(2rem,4.2vw,3.1rem);margin-top:12px}
+  .sec-head .kicker::before{content:"";display:inline-block;width:34px;height:3px;background:var(--accent);vertical-align:middle;margin-right:10px}
+
+  /* Services — split intro + grid, vertical divider feel via left border */
+  .split{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+  .split-intro{position:sticky;top:110px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .card{background:var(--paper);padding:30px;transition:background .25s}
+  .card:hover{background:var(--paper-2)}
+  .card .ic{width:54px;height:54px;border-radius:12px;background:var(--panel);color:var(--accent);display:grid;place-items:center;font-size:1.55rem;margin-bottom:16px}
+  .card h3{font-size:1.22rem;margin-bottom:7px}.card p{color:var(--ink-soft);font-size:.96rem}
+
+  /* Gallery */
+  .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:200px;gap:14px}
+  .gal-grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);transition:transform .4s}
+  .gal-grid img:hover{transform:scale(1.03)}
+  .gal-grid .tall{grid-row:span 2}
+
+  /* Reviews on paper-2 */
+  .reviews{background:var(--paper-2)}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .review{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:var(--radius);padding:30px}
+  .stars{color:var(--accent);letter-spacing:2px;margin-bottom:12px}
+  .review p{font-size:1rem;color:var(--ink);font-style:italic}
+  .review .who{margin-top:16px;font-weight:700;font-size:.95rem}.review .who span{display:block;color:var(--ink-soft);font-weight:500;font-size:.85rem}
+
+  /* CTA — split: dark text panel + form */
+  .cta{padding:0}
+  .cta-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+  .cta-text{background:var(--panel);color:#fff;padding:80px 6vw;display:flex;flex-direction:column;justify-content:center;position:relative}
+  .cta-text::after{content:"";position:absolute;top:0;right:0;width:4px;height:100%;background:var(--accent)}
+  .cta-text h2{font-size:clamp(2rem,4vw,3.1rem)}
+  .cta-text p{color:rgba(255,255,255,.84);margin-top:16px;max-width:440px;font-size:1.1rem}
+  .cta-form{background:var(--accent);padding:64px 6vw;display:flex;align-items:center}
+  .qform{background:#fff;border-radius:18px;padding:32px;box-shadow:var(--shadow);color:var(--ink);width:100%;max-width:480px;margin:0 auto;text-align:left}
+  .qform h3{font-family:"Inter";font-weight:800;font-size:1.35rem;margin-bottom:5px}
+  .qform .sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:18px}
+  .qform-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .qform input,.qform select{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;margin-bottom:12px;font-family:inherit;font-size:.97rem}
+  .qform input:focus,.qform select:focus{outline:none;border-color:var(--accent)}
+  .qform .btn-primary{width:100%;justify-content:center}
+
+  footer{background:#0f1216;color:#9aa1aa;padding:58px 0 30px;font-size:.95rem}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:38px}
+  footer .logo{color:#fff;margin-bottom:14px}
+  footer h4{color:#fff;font-weight:800;margin-bottom:13px;font-size:1rem}
+  footer a{display:block;margin-bottom:9px}footer a:hover{color:var(--accent)}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.84rem;color:#6b7178}
+  .callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--accent);padding:14px;text-align:center;font-weight:800;color:#fff}
+
+  @media(max-width:900px){
+    .hero{grid-template-columns:1fr;min-height:0}
+    .hero-panel{padding:120px 24px 64px}.hero-panel::after{display:none}
+    .hero-img{height:340px}.hero-img img{position:relative}
+    .split{grid-template-columns:1fr;gap:32px}.split-intro{position:static}
+    .gal-grid{grid-template-columns:1fr 1fr}
+    .cta-grid{grid-template-columns:1fr}.cta-text::after{display:none}
+    .cta-text{padding:60px 24px}.cta-form{padding:48px 24px}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:640px){
+    .nav-links{position:fixed;inset:0 0 0 auto;width:80%;max-width:320px;background:#fff;flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .3s;box-shadow:var(--shadow)}
+    .nav-links.open{transform:none}.nav-links a{color:var(--ink-soft)}
+    .burger{display:flex;z-index:70}.nav-cta .btn,.nav-phone span{display:none}
+    .stats{grid-template-columns:1fr}.stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.22)}.stat:last-child{border-bottom:none}
+    .grid,.rev-grid,.gal-grid,.foot-grid,.qform-row{grid-template-columns:1fr}
+    .gal-grid .tall{grid-row:span 1}
+    body{padding-bottom:56px}.callbar{display:block}section{padding:58px 0}
+  }
+</style>
+</head>
+<body>
+<header id="hd"><div class="wrap nav">
+  <a href="#" class="logo"><span class="mark">▮</span>Mike's Construction</a>
+  <nav class="nav-links" id="navlinks">
+    <a href="#services">Services</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#quote">Free Estimate</a>
+  </nav>
+  <div class="nav-cta">
+    <a href="tel:7086511199" class="nav-phone">📞 <span>(708) 651-1199</span></a>
+    <a href="#quote" class="btn btn-primary">Free Estimate</a>
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+  </div>
+</div></header>
+
+<section class="hero">
+  <div class="hero-panel">
+    <div class="hero-panel-inner">
+      <span class="eyebrow reveal">● Licensed &amp; Insured · Niles</span>
+      <h1 class="reveal">Masonry Built to <span class="accent">Last</span> Generations.</h1>
+      <p class="reveal">Trusted Chicago masonry &amp; tuckpointing for years. Brick, chimney, and tuckpointing repairs — we&#39;ll be out for a <strong>free estimate today.</strong></p>
+      <div class="hero-btns reveal">
+        <a href="#quote" class="btn btn-primary btn-lg">Get My Free Estimate →</a>
+        <a href="tel:7086511199" class="btn btn-out btn-lg">📞 (708) 651-1199</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-img"><img src="https://static.wixstatic.com/media/716f28_68695bedfcda4987a3f8fe85c21749c6.jpg/v1/fill/w_600,h_600,al_c,q_85,enc_avif,quality_auto/716f28_68695bedfcda4987a3f8fe85c21749c6.jpg" alt="Mike's Construction Group work"></div>
+</section>
+
+<div class="statband"><div class="stats">
+  <div class="stat"><div class="num">15+</div><div class="lbl">Years Experience</div></div>
+  <div class="stat"><div class="num">1,000+</div><div class="lbl">Jobs Completed</div></div>
+  <div class="stat"><div class="num">4.8★</div><div class="lbl">Google Rating</div></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="split">
+    <div class="split-intro sec-head reveal" style="margin-bottom:0">
+      <span class="kicker">What We Do</span>
+      <h2>Full-Service Masonry,<br>Done Right the First Time.</h2>
+      <p style="color:var(--ink-soft);margin-top:16px">From the first call to the final walkthrough, every job is done right, on time, and backed in writing.</p>
+    </div>
+    <div class="grid reveal"><div class="card reveal"><div class="ic">🧱</div><h3>Tuckpointing</h3><p>Worn mortar ground out and replaced to stop water intrusion and restore your brick.</p></div>
+      <div class="card reveal"><div class="ic">🏚️</div><h3>Brick Repair</h3><p>Cracked, spalling, or bowing brick rebuilt and color-matched to the original.</p></div>
+      <div class="card reveal"><div class="ic">🏠</div><h3>Chimney Repair</h3><p>Crowns, flashing, and full rebuilds that keep your chimney safe and watertight.</p></div>
+      <div class="card reveal"><div class="ic">🪨</div><h3>Stone &amp; Lintels</h3><p>Stone work and rusted steel lintel replacement before the wall starts to fail.</p></div>
+      <div class="card reveal"><div class="ic">💧</div><h3>Waterproofing</h3><p>Masonry sealing and caulking to keep moisture out of your walls.</p></div>
+      <div class="card reveal"><div class="ic">🔍</div><h3>Free Estimates</h3><p>Honest, no-pressure estimates with photos. We&#39;ll tell you what actually needs doing.</p></div></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="sec-head ctr reveal"><span class="kicker">Recent Work</span><h2>Projects We're Proud Of.</h2></div>
+  <div class="gal-grid reveal"><img class="tall" src="https://static.wixstatic.com/media/716f28_2f4b2409e2c949708315775cd5202616.jpg/v1/fill/w_600,h_600,al_c,q_85,enc_avif,quality_auto/716f28_2f4b2409e2c949708315775cd5202616.jpg" alt="Recent project" loading="lazy">
+      <img class="" src="https://static.wixstatic.com/media/716f28_4649b4a382a247fca4255b7045000dea.jpg/v1/fill/w_600,h_600,al_c,q_85,enc_avif,quality_auto/716f28_4649b4a382a247fca4255b7045000dea.jpg" alt="Recent project" loading="lazy">
+      <img class="" src="https://static.wixstatic.com/media/716f28_1b4965d3f7ae4cb0a28f29a6a14eb0d3.jpg/v1/fill/w_600,h_600,al_c,q_85,enc_avif,quality_auto/716f28_1b4965d3f7ae4cb0a28f29a6a14eb0d3.jpg" alt="Recent project" loading="lazy">
+      <img class="" src="https://static.wixstatic.com/media/716f28_5328fefeaa004e6eae1dd40b48e50e30.jpg/v1/fill/w_600,h_600,al_c,q_85,enc_avif,quality_auto/716f28_5328fefeaa004e6eae1dd40b48e50e30.jpg" alt="Recent project" loading="lazy">
+      <img class="" src="https://static.wixstatic.com/media/716f28_77c186bca49440a1b0331ef06aae3881.jpg/v1/fill/w_600,h_600,al_c,q_85,enc_avif,quality_auto/716f28_77c186bca49440a1b0331ef06aae3881.jpg" alt="Recent project" loading="lazy">
+      <img class="tall" src="https://images.unsplash.com/photo-1585750629386-33bdc1431574?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1495578942200-c5f5d2137def?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy"></div>
+</div></section>
+
+<section class="reviews" id="reviews"><div class="wrap">
+  <div class="sec-head ctr reveal"><span class="kicker">Reviews</span><h2>Neighbors Who Trust Us.</h2></div>
+  <div class="rev-grid">
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"They were out the next morning, handled everything, and the work looks incredible."</p><div class="who">Maria G.<span>Jefferson Park, Chicago</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"The only ones who showed up on time and showed me photos of everything. No regrets."</p><div class="who">Dave R.<span>Oak Park, IL</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"Honest people. They told me what could wait instead of overselling me. Customer for life."</p><div class="who">Jim &amp; Sandra T.<span>Berwyn, IL</span></div></div>
+  </div>
+</div></section>
+
+<section class="cta" id="quote"><div class="cta-grid">
+  <div class="cta-text reveal">
+    <h2>Get Your Free Masonry<br>Estimate Today.</h2>
+    <p>No pressure, no obligation. We'll take a look, send you photos, and give you an honest assessment — often the same day you call.</p>
+  </div>
+  <div class="cta-form reveal">
+    <div class="qform">
+      <h3>Request a Free Estimate</h3>
+      <p class="sub">Fill this out and we'll call you back within the hour.</p>
+      <form action="https://formspree.io/f/your-id-here" method="POST">
+        <div class="qform-row"><input type="text" name="name" placeholder="Your name" required><input type="tel" name="phone" placeholder="Phone number" required></div>
+        <input type="text" name="address" placeholder="Property address" required>
+        <select name="service"><option value="">What do you need?</option><option>New project / installation</option><option>Repair</option><option>Not sure — need an estimate</option></select>
+        <button type="submit" class="btn btn-primary">Get My Free Estimate →</button>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<section id="nbx"><style>#nbx{background:#0f1318;color:#e8eaed;padding:48px 24px;font-family:inherit;line-height:1.6}#nbx *{box-sizing:border-box}#nbx .nbx-wrap{max-width:1080px;margin:0 auto;text-align:center}#nbx .nbx-kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#0891b2;font-weight:800;margin-bottom:16px}#nbx .nbx-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px}#nbx .nbx-chip{border:1px solid #0891b2;color:#fff;border-radius:100px;padding:8px 16px;font-size:.85rem;font-weight:600;white-space:nowrap}#nbx .nbx-line{color:#c2c8d0;font-size:1.02rem;margin:6px 0}#nbx .nbx-line b{color:#fff;font-weight:700}#nbx .nbx-area{color:#9aa1aa;font-size:.92rem;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto}#nbx .nbx-cta{display:inline-flex;align-items:center;gap:8px;margin-top:22px;background:#0891b2;color:#fff;font-weight:800;padding:14px 30px;border-radius:8px;text-decoration:none}</style><div class="nbx-wrap"><div class="nbx-kicker">Why Chicago homeowners choose Mike's Construction</div><div class="nbx-chips"><span class="nbx-chip">✓ Licensed, Bonded & Insured</span><span class="nbx-chip">✓ Tuckpointing & Brick Specialists</span><span class="nbx-chip">✓ Free Estimates</span><span class="nbx-chip">✓ Locally Owned</span></div><div class="nbx-line">💳 <b>Financing available on larger restorations</b></div><div class="nbx-area">📍 Proudly serving Niles — plus Chicago, Oak Park, Evanston, Berwyn, Cicero, Skokie &amp; all surrounding suburbs.</div><a class="nbx-cta" href="tel:7086511199">📞 (708) 651-1199</a></div></section><footer><div class="wrap">
+  <div class="foot-grid">
+    <div><a href="#" class="logo"><span class="mark">▮</span>Mike's Construction</a><p>Chicago's trusted, family-owned Masonry &amp; Tuckpointing Contractor in Chicago. Licensed, bonded, and insured. Serving Niles.</p></div>
+    <div><h4>Company</h4><a href="#services">Services</a><a href="#work">Our Work</a><a href="#quote">Free Estimate</a></div>
+    <div><h4>Get In Touch</h4><a href="tel:7086511199">📞 (708) 651-1199</a><a href="mailto:mikenieradka@gmail.com">✉ mikenieradka@gmail.com</a><p style="margin-top:10px">Mon–Sat · 7am–7pm</p></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Mike's Construction Group All rights reserved.</span><span>Site by Nimbus Web Studio</span></div>
+</div></footer>
+<a href="tel:7086511199" class="callbar">📞 Tap to Call — Free Estimate</a>
+<script>
+const hd=document.getElementById('hd');if(hd)addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>40));
+const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+if(burger)burger.addEventListener('click',()=>links.classList.toggle('open'));
+if(links)links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const io=new IntersectionObserver((es)=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*55);io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const f=document.querySelector('form');if(f)f.addEventListener('submit',function(ev){if(this.action.includes('your-id-here')){ev.preventDefault();alert('✅ Demo form — this is where leads get emailed to the business. (Connect Formspree to go live.)');}});
+</script>
+</body>
+</html>

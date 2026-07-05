@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- NIMBUS TEMPLATE M · "Photo" · full-bleed cinematic, image-backbone, scrim overlays -->
+<title>Upper Deck Builders | Deck &amp; Fence Contractor in Chicago</title>
+<meta name="description" content="Upper Deck Builders — licensed, insured, serving Yorkville, IL. Free estimates and quality work backed by a written warranty." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#ea580c; --accent-dark:#9a3412;
+    --ink:#13151a; --ink-soft:#646b75; --paper:#ffffff; --paper-2:#0d0f13;
+    --line:#e6e3dd; --radius:2px; --shadow:0 30px 70px -28px rgba(0,0,0,.5);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Work Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:"Oswald",sans-serif;line-height:1.04;letter-spacing:-.015em}
+  a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.96rem;padding:15px 28px;border-radius:var(--radius);transition:transform .15s,box-shadow .2s,background .2s;cursor:pointer;border:none;letter-spacing:.01em}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px var(--accent)}
+  .btn-white{background:#fff;color:var(--ink)}
+  .btn-white:hover{transform:translateY(-2px)}
+  .btn-out{background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.45);backdrop-filter:blur(4px)}
+  .btn-out:hover{border-color:#fff;background:rgba(255,255,255,.16)}
+  .btn-lg{padding:18px 34px;font-size:1.06rem}
+
+  /* Minimal floating chrome */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;padding:22px 0;transition:.3s}
+  header.scrolled{background:rgba(13,15,19,.85);backdrop-filter:blur(14px);box-shadow:0 4px 22px rgba(0,0,0,.3);padding:13px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:"Oswald";font-size:1.5rem;display:flex;align-items:center;gap:11px;color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+  .logo .mark{width:36px;height:36px;background:var(--accent);color:#fff;border-radius:10px;display:grid;place-items:center;font-size:1rem;text-shadow:none}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{color:rgba(255,255,255,.92);font-weight:600;font-size:.95rem;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{display:flex;align-items:center;gap:16px}
+  .nav-phone{font-weight:800;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:2.5px;background:#fff;border-radius:2px}
+
+  /* Cinematic full-bleed hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1679797850019-3d0d8659a695?q=80&w=1600&auto=format&fit=crop');background-size:cover;background-position:center;transform:scale(1.05)}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,9,12,.92) 0%,rgba(8,9,12,.5) 40%,rgba(8,9,12,.25) 70%,rgba(8,9,12,.55) 100%)}
+  .hero-inner{position:relative;z-index:2;width:100%;padding-bottom:80px;padding-top:140px}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;padding:8px 17px;border-radius:100px;font-weight:700;font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;margin-bottom:24px;backdrop-filter:blur(6px)}
+  .hero h1{font-size:clamp(2.9rem,7vw,6rem);max-width:14ch;text-shadow:0 2px 30px rgba(0,0,0,.4)}
+  .hero h1 .accent{color:var(--accent);text-shadow:0 2px 26px rgba(0,0,0,.5)}
+  .hero p{font-size:clamp(1.1rem,1.8vw,1.35rem);color:rgba(255,255,255,.92);margin:24px 0 34px;max-width:600px}
+  .hero-btns{display:flex;gap:15px;flex-wrap:wrap}
+  .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.7);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;animation:bob 2s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+  /* Stats strip over dark */
+  .stats{background:var(--paper-2);color:#fff}
+  .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .stat{padding:42px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}
+  .stat:last-child{border-right:none}
+  .stat .num{font-family:"Oswald";font-size:2.6rem;color:var(--accent);line-height:1}
+  .stat .lbl{font-size:.82rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.08em;margin-top:8px}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}
+  section{padding:100px 0}
+  .sec-head{max-width:660px;margin:0 auto 56px;text-align:center}
+  .sec-head .kicker{color:var(--accent);font-weight:800;letter-spacing:.13em;text-transform:uppercase;font-size:.83rem}
+  .sec-head h2{font-size:clamp(2.1rem,4.6vw,3.4rem);margin-top:14px}
+
+  /* Services as image-tinted cards */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:36px 32px;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .card:hover::before{transform:scaleX(1)}
+  .card .ic{width:62px;height:62px;border-radius:16px;background:color-mix(in srgb,var(--accent) 13%,transparent);display:grid;place-items:center;font-size:1.8rem;margin-bottom:20px}
+  .card h3{font-size:1.3rem;margin-bottom:9px}.card p{color:var(--ink-soft);font-size:.97rem}
+
+  /* Full-bleed feature band over hero image */
+  .feature-band{position:relative;color:#fff;padding:120px 0;background-image:url('https://images.unsplash.com/photo-1679797850019-3d0d8659a695?q=80&w=1600&auto=format&fit=crop');background-size:cover;background-position:center;background-attachment:fixed}
+  .feature-band::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,var(--accent-dark) 0%,rgba(13,15,19,.82) 60%,rgba(13,15,19,.72) 100%)}
+  .fb-inner{position:relative;z-index:2}
+  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+  .feat{border-left:2px solid rgba(255,255,255,.25);padding-left:22px}
+  .feat .fi{font-size:2rem;margin-bottom:12px}
+  .feat h3{font-size:1.2rem;margin-bottom:8px}.feat p{color:rgba(255,255,255,.82);font-size:.96rem}
+
+  /* Cinematic gallery — the visual backbone */
+  .gallery-sec{padding:100px 0 0}
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:8px}
+  .gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s,filter .4s;filter:saturate(1.02)}
+  .gal-grid img:hover{transform:scale(1.04);filter:saturate(1.15)}
+  .gal-grid .tall{grid-row:span 2}
+
+  /* Reviews over dark */
+  .reviews{background:var(--paper-2);color:#fff}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .review{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:34px;position:relative}
+  .review::before{content:"\201C";font-family:"Oswald";font-size:3.6rem;color:var(--accent);line-height:.7;opacity:.45;position:absolute;top:18px;right:24px}
+  .stars{color:var(--accent);letter-spacing:2px;margin-bottom:14px}
+  .review p{font-size:1.02rem;color:#fff;font-style:italic}
+  .review .who{margin-top:18px;font-weight:700;font-size:.95rem;color:#fff}.review .who span{display:block;color:rgba(255,255,255,.6);font-weight:500;font-size:.85rem}
+
+  /* CTA full-bleed image */
+  .cta{position:relative;color:#fff;padding:120px 0;background-image:url('https://images.unsplash.com/photo-1679797850019-3d0d8659a695?q=80&w=1600&auto=format&fit=crop');background-size:cover;background-position:center}
+  .cta::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,9,12,.9),rgba(8,9,12,.7))}
+  .cta-inner{position:relative;z-index:2}
+  .cta h2{font-size:clamp(2.2rem,5vw,3.6rem);text-align:center}
+  .cta>.wrap>.cta-inner>p{color:rgba(255,255,255,.9);margin:16px auto 32px;max-width:580px;font-size:1.12rem;text-align:center}
+  .qform{background:#fff;border-radius:18px;padding:36px;box-shadow:var(--shadow);color:var(--ink);max-width:580px;margin:0 auto;text-align:left}
+  .qform h3{font-family:"Work Sans";font-weight:800;font-size:1.4rem;margin-bottom:6px}
+  .qform .sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:20px}
+  .qform-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .qform input,.qform select{width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:10px;margin-bottom:12px;font-family:inherit;font-size:.97rem}
+  .qform input:focus,.qform select:focus{outline:none;border-color:var(--accent)}
+  .qform .btn-primary{width:100%;justify-content:center}
+
+  footer{background:#08090c;color:#9aa1aa;padding:62px 0 30px;font-size:.95rem}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:40px}
+  footer .logo{color:#fff;margin-bottom:14px;text-shadow:none}footer .logo .mark{background:var(--accent);color:#fff}
+  footer h4{color:#fff;font-weight:800;margin-bottom:13px;font-size:1rem}
+  footer a{display:block;margin-bottom:9px}footer a:hover{color:var(--accent)}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.84rem;color:#6b7178}
+  .callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--accent);padding:14px;text-align:center;font-weight:800;color:#fff}
+
+  @media(max-width:980px){.grid,.feat-grid,.rev-grid{grid-template-columns:1fr 1fr}.gal-grid{grid-template-columns:repeat(2,1fr)}.foot-grid{grid-template-columns:1fr 1fr}.stat-row{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:none}.stat{border-bottom:1px solid rgba(255,255,255,.08)}.feature-band{background-attachment:scroll}}
+  @media(max-width:640px){
+    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:#0d0f13;flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .3s;box-shadow:var(--shadow)}
+    .nav-links.open{transform:none}
+    .burger{display:flex;z-index:70}.nav-cta .btn,.nav-phone span{display:none}
+    .grid,.feat-grid,.rev-grid,.foot-grid,.qform-row{grid-template-columns:1fr}
+    .gal-grid{grid-template-columns:1fr;grid-auto-rows:220px}.gal-grid .tall{grid-row:span 1}
+    .stat-row{grid-template-columns:1fr 1fr}
+    body{padding-bottom:56px}.callbar{display:block}section{padding:64px 0}.feature-band,.cta{padding:80px 0}
+    .hero{min-height:90vh}
+  }
+</style>
+</head>
+<body>
+<header id="hd"><div class="wrap nav">
+  <a href="#" class="logo"><span class="mark">◆</span>Upper Deck Builders</a>
+  <nav class="nav-links" id="navlinks">
+    <a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#quote">Free Estimate</a>
+  </nav>
+  <div class="nav-cta">
+    <a href="tel:8152740043" class="nav-phone">📞 <span>(815) 274-0043</span></a>
+    <a href="#quote" class="btn btn-primary">Free Estimate</a>
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+  </div>
+</div></header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow reveal">● Licensed &amp; Insured · Yorkville, IL</span>
+    <h1 class="reveal">Decks &amp; Fences Built to <span class="accent">Last</span>.</h1>
+    <p class="reveal">Trusted Chicago deck &amp; fence builders for years. New decks, fences, repairs, and staining — we&#39;ll be out for a <strong>free estimate today.</strong></p>
+    <div class="hero-btns reveal">
+      <a href="#quote" class="btn btn-white btn-lg">Get My Free Estimate →</a>
+      <a href="tel:8152740043" class="btn btn-out btn-lg">📞 (815) 274-0043</a>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+</section>
+
+<section class="stats" style="padding:0">
+  <div class="stat-row">
+    <div class="stat reveal"><div class="num">15+</div><div class="lbl">Years Serving Chicago</div></div>
+    <div class="stat reveal"><div class="num">1,000+</div><div class="lbl">Projects Completed</div></div>
+    <div class="stat reveal"><div class="num">4.8★</div><div class="lbl">Google Rating</div></div>
+    <div class="stat reveal"><div class="num">10yr</div><div class="lbl">Workmanship Warranty</div></div>
+  </div>
+</section>
+
+<section id="services"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">What We Do</span><h2>Full-Service Decks &amp; Fences,<br>Done Right the First Time.</h2></div>
+  <div class="grid"><div class="card reveal"><div class="ic">🪵</div><h3>Custom Decks</h3><p>Cedar, composite, and pressure-treated decks designed and built to fit your yard and your budget.</p></div>
+      <div class="card reveal"><div class="ic">🚧</div><h3>Fence Installation</h3><p>Wood, vinyl, aluminum, and chain-link fences installed straight, solid, and to code.</p></div>
+      <div class="card reveal"><div class="ic">🔧</div><h3>Deck &amp; Fence Repair</h3><p>Loose boards, leaning posts, and storm damage fixed before they get worse.</p></div>
+      <div class="card reveal"><div class="ic">🎨</div><h3>Staining &amp; Sealing</h3><p>Power-washing, staining, and sealing to protect the wood and keep it looking new.</p></div>
+      <div class="card reveal"><div class="ic">🏠</div><h3>Pergolas &amp; Railings</h3><p>Pergolas, gates, and railings that finish the space and add real value.</p></div>
+      <div class="card reveal"><div class="ic">🔍</div><h3>Free Estimates</h3><p>Honest, no-pressure estimates with photos. We&#39;ll tell you what actually needs doing.</p></div></div>
+</div></section>
+
+<section class="feature-band" id="why"><div class="wrap fb-inner">
+  <div class="sec-head reveal" style="margin-bottom:48px"><span class="kicker">Why Choose Us</span><h2>Built on Trust, Backed in Writing.</h2></div>
+  <div class="feat-grid">
+    <div class="feat reveal"><div class="fi">🛡️</div><h3>Licensed &amp; Insured</h3><p>Fully licensed, bonded, and insured — your property is protected on every job.</p></div>
+    <div class="feat reveal"><div class="fi">📋</div><h3>Free, Honest Estimates</h3><p>Clear written quotes, no hidden fees, and we'll tell you what can wait.</p></div>
+    <div class="feat reveal"><div class="fi">✅</div><h3>Written Warranty</h3><p>Every job is backed by a workmanship warranty you can hold us to.</p></div>
+  </div>
+</div></section>
+
+<section class="gallery-sec" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Recent Work</span><h2>Projects We're Proud Of.</h2></div>
+  </div>
+  <div class="gal-grid reveal"><img class="tall" src="https://images.unsplash.com/photo-1656646549569-e3ad3ff8f9f9?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1656646549607-8fda5837a4ca?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1602860739945-9a61573cd62d?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1527359443443-84a48aec73d2?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1715090576114-c07384af2069?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="tall" src="https://images.unsplash.com/photo-1613544723371-23b514a78c85?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1593285247650-cd7bb44adcfd?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy"></div>
+</section>
+
+<section class="reviews" id="reviews"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Reviews</span><h2>Neighbors Who Trust Us.</h2></div>
+  <div class="rev-grid">
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"They were out the next morning, handled everything, and the work looks incredible."</p><div class="who">Maria G.<span>Jefferson Park, Chicago</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"The only ones who showed up on time and showed me photos of everything. No regrets."</p><div class="who">Dave R.<span>Oak Park, IL</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"Honest people. They told me what could wait instead of overselling me. Customer for life."</p><div class="who">Jim &amp; Sandra T.<span>Berwyn, IL</span></div></div>
+  </div>
+</div></section>
+
+<section class="cta" id="quote"><div class="wrap">
+  <div class="cta-inner">
+    <div class="reveal" style="margin-bottom:36px">
+      <h2>Get Your Free Deck &amp; Fence<br>Estimate Today.</h2>
+      <p>No pressure, no obligation. We'll take a look, send you photos, and give you an honest assessment — often the same day you call.</p>
+    </div>
+    <div class="qform reveal">
+      <h3>Request a Free Estimate</h3>
+      <p class="sub">Fill this out and we'll call you back within the hour.</p>
+      <form action="https://formspree.io/f/your-id-here" method="POST">
+        <div class="qform-row"><input type="text" name="name" placeholder="Your name" required><input type="tel" name="phone" placeholder="Phone number" required></div>
+        <input type="text" name="address" placeholder="Property address" required>
+        <select name="service"><option value="">What do you need?</option><option>New project / installation</option><option>Repair</option><option>Not sure — need an estimate</option></select>
+        <button type="submit" class="btn btn-primary">Get My Free Estimate →</button>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<section id="nbx"><style>#nbx{background:#0f1318;color:#e8eaed;padding:48px 24px;font-family:inherit;line-height:1.6}#nbx *{box-sizing:border-box}#nbx .nbx-wrap{max-width:1080px;margin:0 auto;text-align:center}#nbx .nbx-kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#ea580c;font-weight:800;margin-bottom:16px}#nbx .nbx-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px}#nbx .nbx-chip{border:1px solid #ea580c;color:#fff;border-radius:100px;padding:8px 16px;font-size:.85rem;font-weight:600;white-space:nowrap}#nbx .nbx-line{color:#c2c8d0;font-size:1.02rem;margin:6px 0}#nbx .nbx-line b{color:#fff;font-weight:700}#nbx .nbx-area{color:#9aa1aa;font-size:.92rem;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto}#nbx .nbx-cta{display:inline-flex;align-items:center;gap:8px;margin-top:22px;background:#ea580c;color:#fff;font-weight:800;padding:14px 30px;border-radius:8px;text-decoration:none}</style><div class="nbx-wrap"><div class="nbx-kicker">Why Chicago homeowners choose Upper Deck Builders</div><div class="nbx-chips"><span class="nbx-chip">✓ Licensed & Insured</span><span class="nbx-chip">✓ Free On-Site Estimates</span><span class="nbx-chip">✓ Material Warranty</span><span class="nbx-chip">✓ Locally Owned</span></div><div class="nbx-line">💳 <b>Financing available</b></div><div class="nbx-area">📍 Proudly serving Yorkville, IL — plus Chicago, Oak Park, Evanston, Berwyn, Cicero, Skokie &amp; all surrounding suburbs.</div><a class="nbx-cta" href="tel:8152740043">📞 (815) 274-0043</a></div></section><footer><div class="wrap">
+  <div class="foot-grid">
+    <div><a href="#" class="logo"><span class="mark">◆</span>Upper Deck Builders</a><p>Chicago's trusted, family-owned Deck &amp; Fence Contractor in Chicago. Licensed, bonded, and insured. Serving Yorkville, IL.</p></div>
+    <div><h4>Company</h4><a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">Our Work</a><a href="#quote">Free Estimate</a></div>
+    <div><h4>Get In Touch</h4><a href="tel:8152740043">📞 (815) 274-0043</a><a href="mailto:upperdeck0306@gmail.com">✉ upperdeck0306@gmail.com</a><p style="margin-top:10px">Mon–Sat · 7am–7pm</p></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Upper Deck Builders All rights reserved.</span><span>Site by Nimbus Web Studio</span></div>
+</div></footer>
+<a href="tel:8152740043" class="callbar">📞 Tap to Call — Free Estimate</a>
+<script>
+const hd=document.getElementById('hd');if(hd)addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>40));
+const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+if(burger)burger.addEventListener('click',()=>links.classList.toggle('open'));
+if(links)links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const io=new IntersectionObserver((es)=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*55);io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const f=document.querySelector('form');if(f)f.addEventListener('submit',function(ev){if(this.action.includes('your-id-here')){ev.preventDefault();alert('✅ Demo form — this is where leads get emailed to the business. (Connect Formspree to go live.)');}});
+</script>
+</body>
+</html>
