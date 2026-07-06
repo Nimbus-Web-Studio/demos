@@ -34,3 +34,5 @@ dist/
 *.zip
 *.metallib
 # === end managed ===
+leads-crm.csv
+.DS_Store
