@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- NIMBUS TEMPLATE I · "Luxury" · near-black ground, metallic accent hairlines, refined serif display, understated upscale -->
+<title>Bulletproof Roofing LLC | Roofing Contractor in Whatcom County</title>
+<meta name="description" content="Bulletproof Roofing LLC — licensed, insured, serving Bellingham. Free estimates and quality work backed by a written warranty." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#2563eb; --accent-dark:#1e40af;
+    --bg:#0c0d10; --bg-2:#14161b; --bg-3:#1b1e25; --ink:#f3f1ec; --ink-soft:#9a9b9f;
+    --line:rgba(255,255,255,.1); --radius:2px; --shadow:0 36px 80px -30px rgba(0,0,0,.7);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Hanken Grotesk",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:"Anton",serif;line-height:1.08;letter-spacing:-.005em;font-weight:500}
+  a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;padding:15px 32px;border-radius:var(--radius);transition:transform .2s,background .25s,color .25s,border-color .25s;cursor:pointer;border:none}
+  .btn-gold{background:var(--accent);color:#0c0d10}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px var(--accent)}
+  .btn-line{background:transparent;color:var(--ink);border:1px solid rgba(255,255,255,.28)}
+  .btn-line:hover{border-color:var(--accent);color:var(--accent)}
+  .btn-lg{padding:18px 38px;font-size:.9rem}
+  .kicker{display:inline-flex;align-items:center;gap:12px;color:var(--accent);font-family:"Hanken Grotesk";font-weight:600;letter-spacing:.28em;text-transform:uppercase;font-size:.72rem}
+  .kicker::before{content:"";width:34px;height:1px;background:var(--accent)}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:50;padding:24px 0;transition:.35s}
+  header.scrolled{background:rgba(12,13,16,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:15px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:"Anton";font-size:1.6rem;display:flex;align-items:center;gap:12px;color:var(--ink);font-weight:500}
+  .logo .mark{width:38px;height:38px;border:1px solid var(--accent);color:var(--accent);border-radius:50%;display:grid;place-items:center;font-size:.95rem;font-family:"Hanken Grotesk";font-weight:700}
+  .nav-links{display:flex;gap:34px;align-items:center}
+  .nav-links a{color:var(--ink-soft);font-weight:500;font-size:.88rem;letter-spacing:.04em;transition:color .2s}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-cta{display:flex;align-items:center;gap:18px}
+  .nav-phone{font-weight:600;color:var(--ink);letter-spacing:.03em}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:2px;background:var(--ink);border-radius:2px}
+
+  /* Hero — full-bleed dark image with veil */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.42}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 18%,rgba(12,13,16,.55) 60%,rgba(12,13,16,.78))}
+  .hero-inner{position:relative;z-index:2;max-width:720px;padding:130px 0 70px}
+  .hero .kicker{margin-bottom:26px}
+  .hero h1{font-size:clamp(2.9rem,7vw,5.6rem)}
+  .hero h1 .accent{color:var(--accent);font-style:italic}
+  .hero p{font-size:1.18rem;color:var(--ink-soft);margin:26px 0 38px;max-width:520px}
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+
+  /* Stats — gold hairline strip */
+  .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+  .stat-card{padding:48px 26px;text-align:center;border-right:1px solid var(--line)}
+  .stat-card:last-child{border-right:none}
+  .stat-card .num{font-family:"Anton";font-size:2.9rem;line-height:1;color:var(--accent);font-weight:500}
+  .stat-card .lbl{font-family:"Hanken Grotesk";font-size:.74rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.18em;margin-top:12px;font-weight:600}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.reveal.in{opacity:1;transform:none}
+  section{padding:110px 0}
+  .sec-head{max-width:680px;margin:0 auto 64px;text-align:center}
+  .sec-head .kicker{justify-content:center}.sec-head .kicker::after{content:"";width:34px;height:1px;background:var(--accent)}
+  .sec-head h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-top:20px}
+  .sec-head h2 .accent{color:var(--accent);font-style:italic}
+
+  /* Services — refined dark cards, gold hairline border */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:42px 34px;transition:transform .3s,border-color .3s,background .3s}
+  .card:hover{transform:translateY(-7px);border-color:var(--accent);background:var(--bg-3)}
+  .card .ic{width:64px;height:64px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;font-size:1.6rem;margin-bottom:24px}
+  .card h3{font-size:1.4rem;margin-bottom:12px;color:var(--ink)}.card p{color:var(--ink-soft);font-size:.97rem}
+
+  /* Why band */
+  .features{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+  .feat .fi{font-size:1.9rem;margin-bottom:18px}
+  .feat h3{font-size:1.3rem;margin-bottom:10px;color:var(--ink)}.feat p{color:var(--ink-soft);font-size:.96rem}
+  .feat-divider{width:1px;height:46px;background:var(--accent);margin:0 auto 22px;opacity:.6}
+
+  /* Gallery */
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:185px;gap:16px}
+  .gal-grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);transition:transform .5s,filter .5s;filter:brightness(.82) saturate(.9)}
+  .gal-grid img:hover{transform:scale(1.03);filter:brightness(1) saturate(1.05)}
+  .gal-grid .tall{grid-row:span 2}
+
+  /* Reviews — understated quote cards */
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .review{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:38px 32px;position:relative}
+  .review::before{content:"\201C";font-family:"Anton";font-size:4rem;color:var(--accent);line-height:.6;opacity:.4;position:absolute;top:24px;right:26px}
+  .stars{color:var(--accent);letter-spacing:3px;margin-bottom:16px}
+  .review p{font-family:"Anton";font-size:1.18rem;color:var(--ink);font-style:italic;line-height:1.5}
+  .review .who{margin-top:22px;font-weight:600;font-size:.92rem;letter-spacing:.04em;color:var(--accent)}.review .who span{display:block;color:var(--ink-soft);font-weight:400;font-size:.84rem;letter-spacing:0;margin-top:3px;font-family:"Hanken Grotesk"}
+
+  /* CTA — dark elegant with gold form */
+  .cta{background:var(--bg-2);border-top:1px solid var(--line);text-align:center}
+  .cta h2{font-size:clamp(2.2rem,5.5vw,3.8rem)}
+  .cta h2 .accent{color:var(--accent);font-style:italic}
+  .cta>.wrap>.reveal>p{color:var(--ink-soft);margin:18px auto 36px;max-width:560px;font-size:1.12rem}
+  .qform{background:var(--bg-3);border:1px solid var(--line);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);max-width:560px;margin:0 auto;text-align:left}
+  .qform h3{font-family:"Anton";font-size:1.6rem;margin-bottom:6px;color:var(--ink)}
+  .qform .sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:22px}
+  .qform-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .qform input,.qform select{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:8px;margin-bottom:14px;font-family:inherit;font-size:.97rem;background:var(--bg);color:var(--ink)}
+  .qform input::placeholder{color:var(--ink-soft)}
+  .qform input:focus,.qform select:focus{outline:none;border-color:var(--accent)}
+  .qform option{background:var(--bg-2);color:var(--ink)}
+  .qform .btn-gold{width:100%;justify-content:center;margin-top:4px}
+
+  footer{background:var(--bg);border-top:1px solid var(--line);color:var(--ink-soft);padding:70px 0 32px;font-size:.94rem}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;margin-bottom:46px}
+  footer .logo{color:var(--ink);margin-bottom:16px}
+  footer h4{color:var(--ink);font-weight:600;margin-bottom:15px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase}
+  footer a{display:block;margin-bottom:10px}footer a:hover{color:var(--accent)}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem;color:#6b6c70}
+  .callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--accent);padding:14px;text-align:center;font-weight:700;letter-spacing:.04em;color:#0c0d10}
+
+  @media(max-width:980px){
+    .stat-grid{grid-template-columns:1fr 1fr}.stat-card:nth-child(2){border-right:none}
+    .grid,.feat-grid,.rev-grid{grid-template-columns:1fr 1fr}
+    .gal-grid{grid-template-columns:1fr 1fr}.foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:640px){
+    .nav-links{position:fixed;inset:0 0 0 auto;width:82%;max-width:330px;background:var(--bg-2);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:transform .3s;box-shadow:var(--shadow);z-index:60}
+    .nav-links.open{transform:none}
+    .burger{display:flex;z-index:70}.nav-cta .btn,.nav-phone span{display:none}
+    .stat-grid,.grid,.feat-grid,.rev-grid,.gal-grid,.foot-grid,.qform-row{grid-template-columns:1fr}
+    .stat-card{border-right:none;border-bottom:1px solid var(--line)}
+    .gal-grid .tall{grid-row:span 1}
+    body{padding-bottom:56px}.callbar{display:block}section{padding:70px 0}
+  }
+</style>
+</head>
+<body>
+<header id="hd"><div class="wrap nav">
+  <a href="#" class="logo"><span class="mark">Bulletproof Roofing</span>Bulletproof Roofing</a>
+  <nav class="nav-links" id="navlinks">
+    <a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#quote">Free Estimate</a>
+  </nav>
+  <div class="nav-cta">
+    <a href="tel:3602441806" class="nav-phone">📞 <span>(360) 244-1806</span></a>
+    <a href="#quote" class="btn btn-gold">Free Estimate</a>
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+  </div>
+</div></header>
+
+<section class="hero">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1605450099279-533bd3ce379a?q=80&w=1600&auto=format&fit=crop" alt="Bulletproof Roofing LLC work"></div>
+  <div class="wrap"><div class="hero-inner">
+    <span class="kicker reveal">Local &amp; Family-Owned · Bellingham</span>
+    <h1 class="reveal">A Roof You Can <span class="accent">Trust</span> Over Your Family&#39;s Head.</h1>
+    <p class="reveal">Trusted Whatcom County roofing for years. Storm damage, leaks, or a full replacement — we&#39;ll be out for a <strong>free inspection today.</strong></p>
+    <div class="hero-btns reveal">
+      <a href="#quote" class="btn btn-gold btn-lg">Request a Free Estimate</a>
+      <a href="tel:3602441806" class="btn btn-line btn-lg">📞 (360) 244-1806</a>
+    </div>
+  </div></div>
+</section>
+
+<div class="stats"><div class="wrap stat-grid">
+  <div class="stat-card reveal"><div class="num">100%</div><div class="lbl">Years</div></div>
+  <div class="stat-card reveal"><div class="num">4</div><div class="lbl">Google Reviews</div></div>
+  <div class="stat-card reveal"><div class="num">5.0★</div><div class="lbl">Google Rating</div></div>
+  <div class="stat-card reveal"><div class="num">10yr</div><div class="lbl">Warranty</div></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">What We Do</span><h2>Full-Service Roofing,<br>Done Right the First Time.</h2></div>
+  <div class="grid"><div class="card reveal"><div class="ic">🏠</div><h3>Roof Replacement</h3><p>Complete tear-offs and new installs in asphalt shingle, architectural, and designer systems built to last decades.</p></div>
+      <div class="card reveal"><div class="ic">🔧</div><h3>Roof Repair</h3><p>Leaks, missing shingles, flashing, and ventilation fixed fast — before a small problem becomes a ceiling.</p></div>
+      <div class="card reveal"><div class="ic">⛈️</div><h3>Storm &amp; Hail Damage</h3><p>Free damage assessments and full insurance-claim support. We deal with the adjuster so you don&#39;t have to.</p></div>
+      <div class="card reveal"><div class="ic">🏢</div><h3>Flat &amp; Commercial</h3><p>TPO, EPDM, and modified-bitumen flat-roof systems for two-flats, commercial buildings, and additions.</p></div>
+      <div class="card reveal"><div class="ic">💧</div><h3>Gutters &amp; Soffit</h3><p>Seamless gutters, downspouts, soffit, and fascia to move water away and protect your foundation.</p></div>
+      <div class="card reveal"><div class="ic">🔍</div><h3>Free Inspections</h3><p>Honest, no-pressure roof inspections with photos. We&#39;ll tell you if it can wait — and mean it.</p></div></div>
+</div></section>
+
+<section class="features" id="why"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Why Choose Us</span><h2>Built on Trust, <span class="accent">Backed in Writing.</span></h2></div>
+  <div class="feat-grid">
+    <div class="feat reveal"><div class="feat-divider"></div><div class="fi">🛡️</div><h3>Local &amp; Family-Owned</h3><p>Fully licensed, bonded, and insured — your property is protected on every job.</p></div>
+    <div class="feat reveal"><div class="feat-divider"></div><div class="fi">📋</div><h3>Free, Honest Estimates</h3><p>Clear written quotes, no hidden fees, and we'll tell you what can wait.</p></div>
+    <div class="feat reveal"><div class="feat-divider"></div><div class="fi">✅</div><h3>Written Warranty</h3><p>Every job is backed by a workmanship warranty you can hold us to.</p></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Recent Work</span><h2>Projects We're <span class="accent">Proud Of.</span></h2></div>
+  <div class="gal-grid reveal"><img class="tall" src="https://images.unsplash.com/photo-1528223871781-8f4c984f6164?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1600612707884-c424a2ba812e?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1644604120663-4e5fcdf33104?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1682106446715-e16b19cfffb5?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1643225523483-e2c434191bba?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="tall" src="https://images.unsplash.com/photo-1632759145351-1d592919f522?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy">
+      <img class="" src="https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?q=80&w=800&auto=format&fit=crop" alt="Recent project" loading="lazy"></div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Reviews</span><h2>Clients Who <span class="accent">Trust Us.</span></h2></div>
+  <div class="rev-grid">
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"They were out the next morning, handled everything, and the work looks incredible."</p><div class="who">Maria G.<span>Jefferson Park, Whatcom County</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"The only ones who showed up on time and showed me photos of everything. No regrets."</p><div class="who">Dave R.<span>Oak Park, IL</span></div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>"Honest people. They told me what could wait instead of overselling me."</p><div class="who">Jim &amp; Sandra T.<span>Berwyn, IL</span></div></div>
+  </div>
+</div></section>
+
+<section class="cta" id="quote"><div class="wrap">
+  <div class="reveal" style="margin-bottom:40px">
+    <span class="kicker" style="margin-bottom:18px">Get Started</span>
+    <h2>Get Your Free Roof<br>Inspection Today.</h2>
+    <p>No pressure, no obligation. We'll take a look, send you photos, and give you an honest assessment — often the same day you call.</p>
+  </div>
+  <div class="qform reveal">
+    <h3>Request a Free Estimate</h3>
+    <p class="sub">Fill this out and we'll call you back within the hour.</p>
+    <form action="https://formspree.io/f/your-id-here" method="POST">
+      <div class="qform-row"><input type="text" name="name" placeholder="Your name" required><input type="tel" name="phone" placeholder="Phone number" required></div>
+      <input type="text" name="address" placeholder="Property address" required>
+      <select name="service"><option value="">What do you need?</option><option>New project / installation</option><option>Repair</option><option>Not sure — need an estimate</option></select>
+      <button type="submit" class="btn btn-gold">Get My Free Estimate</button>
+    </form>
+  </div>
+</div></section>
+
+<section id="bafx"><style>#bafx{background:#0d1014;color:#f4f6f8;padding:88px 24px;font-family:inherit}#bafx *{box-sizing:border-box}#bafx .w{max-width:1120px;margin:0 auto}#bafx .k{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:800}#bafx h2{font-size:clamp(1.9rem,4.4vw,3rem);margin:12px 0 8px;line-height:1.05;font-family:inherit}#bafx p.sub{color:#9aa4af;margin-bottom:34px;font-size:1.05rem}#bafx .ba{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;user-select:none;cursor:ew-resize;box-shadow:0 24px 60px -18px rgba(0,0,0,.6);background:#000;touch-action:none}#bafx .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}#bafx .ba .af{z-index:1}#bafx .ba .bf{z-index:2;clip-path:inset(0 50% 0 0);will-change:clip-path}#bafx .ba .hd{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#2563eb;transform:translateX(-50%);z-index:3;pointer-events:none}#bafx .ba .hd span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#2563eb;color:#10131a;display:grid;place-items:center;font-weight:800;font-size:1.2rem}#bafx .ba .tag{position:absolute;bottom:16px;z-index:3;padding:6px 14px;border-radius:100px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fff;background:rgba(0,0,0,.55)}#bafx .ba .t-b{left:16px}#bafx .ba .t-a{right:16px}#bafx .ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4;margin:0}@media(max-width:640px){#bafx .ba{aspect-ratio:4/3}}</style><div class="w"><div class="k">See the Difference</div><h2>Worn & Aging <span style="color:#2563eb">&rarr;</span> Brand-New Roof</h2><p class="sub">Drag to see the transformation — real roofing work by Bulletproof Roofing.</p><div class="ba" data-bafx><img class="af" src="https://images.unsplash.com/photo-1528223871781-8f4c984f6164?q=80&w=1600&auto=format&fit=crop" alt="Brand-New Roof — Bulletproof Roofing"><img class="bf" src="https://images.unsplash.com/photo-1605450099279-533bd3ce379a?q=80&w=1600&auto=format&fit=crop" alt="Worn & Aging"><span class="tag t-b">Worn & Aging</span><span class="tag t-a">Brand-New Roof</span><div class="hd"><span>&#8646;</span></div><input type="range" min="0" max="100" value="50" aria-label="Reveal before and after"></div></div></section><section id="mkfx"><style>#mkfx{background:#0f1216;color:#f4f6f8;padding:90px 24px;font-family:inherit}#mkfx *{box-sizing:border-box}#mkfx .w{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}#mkfx .k{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:800}#mkfx h2{font-size:clamp(1.8rem,4vw,2.8rem);margin:12px 0 16px;line-height:1.08;font-family:inherit}#mkfx p{color:#9aa4af;font-size:1.06rem;margin-bottom:26px}#mkfx a.cta{display:inline-flex;gap:8px;background:#2563eb;color:#fff;font-weight:800;padding:15px 30px;border-radius:8px;text-decoration:none}#mkfx .stats{display:flex;gap:30px;margin:26px 0 0;flex-wrap:wrap}#mkfx .stats .n{font-size:2.1rem;font-weight:800;color:#2563eb;line-height:1}#mkfx .stats .l{font-size:.8rem;color:#9aa4af;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}#mkfx .mask{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 24px 60px -18px rgba(0,0,0,.6)}#mkfx .mask img{width:100%;height:100%;object-fit:cover;display:block;clip-path:inset(100% 0 0 0);transition:clip-path 1.1s cubic-bezier(.16,1,.3,1)}#mkfx .mask.in img{clip-path:inset(0 0 0 0)}@media(max-width:820px){#mkfx .w{grid-template-columns:1fr;gap:32px}}</style><div class="w"><div><div class="k">Why Bulletproof Roofing</div><h2>Craftsmanship you can see from the street.</h2><p>Every roof is installed by our own crew, protected by a real workmanship warranty, and finished like it's going over our own family. No subs, no shortcuts.</p><a class="cta" href="tel:3602441806">Start Your Project &rarr;</a><div class="stats"><div><div class="n nbnum" data-n="100%">100%</div><div class="l">Local & Family-Run</div></div><div><div class="n nbnum" data-n="4">4</div><div class="l">Google Reviews</div></div><div><div class="n nbnum" data-n="5.0★">5.0★</div><div class="l">Rating</div></div></div></div><div class="mask" data-mask><img src="https://images.unsplash.com/photo-1600612707884-c424a2ba812e?q=80&w=1600&auto=format&fit=crop" alt="Bulletproof Roofing work" loading="lazy"></div></div></section><script>
+(function(){
+  if(window.__nbprem)return;window.__nbprem=1;
+  // before/after drag slider (clip-path keeps both images aligned)
+  document.querySelectorAll('[data-bafx]').forEach(function(s){
+    var bf=s.querySelector('.bf'),hd=s.querySelector('.hd'),r=s.querySelector('input');
+    function set(v){v=Math.max(0,Math.min(100,v));bf.style.clipPath='inset(0 '+(100-v)+'% 0 0)';hd.style.left=v+'%'}
+    if(r)r.addEventListener('input',function(){set(+r.value)});
+    function fromX(x){var b=s.getBoundingClientRect();set((x-b.left)/b.width*100)}
+    var drag=false;
+    s.addEventListener('pointerdown',function(e){drag=true;fromX(e.clientX)});
+    addEventListener('pointermove',function(e){if(drag)fromX(e.clientX)});
+    addEventListener('pointerup',function(){drag=false});
+    set(50);
+  });
+  // scroll-mask reveal
+  var mo=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('in');mo.unobserve(e.target)}})},{threshold:.3});
+  document.querySelectorAll('[data-mask]').forEach(function(el){mo.observe(el)});
+  // count-up stats
+  function up(el){var raw=el.getAttribute('data-n')||el.textContent;var m=raw.match(/([\d,\.]+)/);if(!m)return;
+    var tgt=parseFloat(m[1].replace(/,/g,'')),pre=raw.slice(0,m.index),suf=raw.slice(m.index+m[0].length),dec=(m[1].split('.')[1]||'').length,t0=null;
+    function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1100,1);var v=tgt*(0.2+0.8*p);
+      el.textContent=pre+(dec?v.toFixed(dec):Math.floor(v).toLocaleString())+suf;if(p<1)requestAnimationFrame(step);else el.textContent=raw}
+    requestAnimationFrame(step)}
+  var co=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){up(e.target);co.unobserve(e.target)}})},{threshold:.6});
+  document.querySelectorAll('.nbnum').forEach(function(el){co.observe(el)});
+})();
+</script><section id="nbx"><style>#nbx{background:#0f1318;color:#e8eaed;padding:48px 24px;font-family:inherit;line-height:1.6}#nbx *{box-sizing:border-box}#nbx .nbx-wrap{max-width:1080px;margin:0 auto;text-align:center}#nbx .nbx-kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#2563eb;font-weight:800;margin-bottom:16px}#nbx .nbx-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px}#nbx .nbx-chip{border:1px solid #2563eb;color:#fff;border-radius:100px;padding:8px 16px;font-size:.85rem;font-weight:600;white-space:nowrap}#nbx .nbx-line{color:#c2c8d0;font-size:1.02rem;margin:6px 0}#nbx .nbx-line b{color:#fff;font-weight:700}#nbx .nbx-area{color:#9aa1aa;font-size:.92rem;margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto}#nbx .nbx-cta{display:inline-flex;align-items:center;gap:8px;margin-top:22px;background:#2563eb;color:#fff;font-weight:800;padding:14px 30px;border-radius:8px;text-decoration:none}</style><div class="nbx-wrap"><div class="nbx-kicker">Why Whatcom County homeowners choose Bulletproof Roofing</div><div class="nbx-chips"><span class="nbx-chip">✓ Local & Family-Owned</span><span class="nbx-chip">✓ Free Roof Inspections</span><span class="nbx-chip">✓ Workmanship Warranty</span><span class="nbx-chip">✓ Insurance Claims Welcome</span></div><div class="nbx-line">💳 <b>Financing available — flexible monthly plans</b></div><div class="nbx-line">⛑️ <b>24/7 storm & emergency response</b></div><div class="nbx-area">📍 Proudly serving Bellingham — plus Lynden, Bellingham, Ferndale, Everson, Blaine &amp; all of Whatcom County.</div><a class="nbx-cta" href="tel:3602441806">📞 (360) 244-1806</a></div></section><footer><div class="wrap">
+  <div class="foot-grid">
+    <div><a href="#" class="logo"><span class="mark">Bulletproof Roofing</span>Bulletproof Roofing</a><p>Whatcom County's trusted, family-owned Roofing Contractor in Whatcom County. Local &amp; family-owned. Serving Bellingham.</p></div>
+    <div><h4>Company</h4><a href="#services">Services</a><a href="#why">Why Us</a><a href="#work">Our Work</a><a href="#quote">Free Estimate</a></div>
+    <div><h4>Get In Touch</h4><a href="tel:3602441806">📞 (360) 244-1806</a><a href="mailto:">✉ </a><p style="margin-top:10px">Mon–Sat · 7am–7pm</p></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 Bulletproof Roofing LLC All rights reserved.</span><span>Site by Nimbus Web Studio</span></div>
+</div></footer>
+<a href="tel:3602441806" class="callbar">📞 Tap to Call — Free Estimate</a>
+<script>
+const hd=document.getElementById('hd');if(hd)addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>40));
+const burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+if(burger)burger.addEventListener('click',()=>links.classList.toggle('open'));
+if(links)links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const io=new IntersectionObserver((es)=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*55);io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const f=document.querySelector('form');if(f)f.addEventListener('submit',function(ev){if(this.action.includes('your-id-here')){ev.preventDefault();alert('✅ Demo form — this is where leads get emailed to the business. (Connect Formspree to go live.)');}});
+</script>
+</body>
+</html>
